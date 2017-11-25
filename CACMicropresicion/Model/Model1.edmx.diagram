@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b2b68ddb59af4eada42e943558ac54a2" Name="Diagrama1">
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Bitacora" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Cliente" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Compra" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DetalleCompra" Width="1.5" PointX="13.5" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DetalleVenta" Width="1.5" PointX="13.5" PointY="37.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DireccionProveedor" Width="1.5" PointX="5.25" PointY="31" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DireccionUsuario" Width="1.5" PointX="8.25" PointY="40.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Estado" Width="1.5" PointX="0.75" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Factura" Width="1.5" PointX="10.5" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.InfoProveedor" Width="1.5" PointX="8.25" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.InfoUsuario" Width="1.5" PointX="8.25" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Material" Width="1.5" PointX="8.25" PointY="35.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Producto" Width="1.5" PointX="11.25" PointY="38.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Proveedor" Width="1.5" PointX="3" PointY="41.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoMaterial" Width="1.5" PointX="3" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoPago" Width="1.5" PointX="3" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoProducto" Width="1.5" PointX="3" PointY="52.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Usuario" Width="1.5" PointX="3" PointY="56" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Venta" Width="1.5" PointX="5.25" PointY="36" IsExpanded="true" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_29" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_30" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_14" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_32" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_8" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_9" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_13" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_25" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_28" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_17" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_20" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_4" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_7" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_10" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_11" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_15" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_19" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_22" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_23" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_27" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_31" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_35" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_5" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_6" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_34" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_16" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_3" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_12" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_21" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_24" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_33" ManuallyRouted="false" />
+        <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_26" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

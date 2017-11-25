@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CAC_MICROPRECISION_SAModelStoreContainer" CdmEntityContainer="CAC_MICROPRECISION_SAEntities">
+    <EntitySetMapping Name="Bitacora">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Bitacora">
+        <MappingFragment StoreEntitySet="Bitacora">
+          <ScalarProperty Name="IdBitacora" ColumnName="IdBitacora" />
+          <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+          <ScalarProperty Name="Accion" ColumnName="Accion" />
+          <ScalarProperty Name="TablaAfectada" ColumnName="TablaAfectada" />
+          <ScalarProperty Name="ContenidoViejo" ColumnName="ContenidoViejo" />
+          <ScalarProperty Name="ContenidoNuevo" ColumnName="ContenidoNuevo" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cliente">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Cliente">
+        <MappingFragment StoreEntitySet="Cliente">
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Compra">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Compra">
+        <MappingFragment StoreEntitySet="Compra">
+          <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="TotalCompra" ColumnName="TotalCompra" />
+          <ScalarProperty Name="IdTipoPago" ColumnName="IdTipoPago" />
+          <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleCompra">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.DetalleCompra">
+        <MappingFragment StoreEntitySet="DetalleCompra">
+          <ScalarProperty Name="IdDetalleCompra" ColumnName="IdDetalleCompra" />
+          <ScalarProperty Name="Renglon" ColumnName="Renglon" />
+          <ScalarProperty Name="PrecioTotal" ColumnName="PrecioTotal" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="IdMaterial" ColumnName="IdMaterial" />
+          <ScalarProperty Name="IdCompra" ColumnName="IdCompra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DetalleVenta">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.DetalleVenta">
+        <MappingFragment StoreEntitySet="DetalleVenta">
+          <ScalarProperty Name="IdDetalleVenta" ColumnName="IdDetalleVenta" />
+          <ScalarProperty Name="Renglon" ColumnName="Renglon" />
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
+          <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DireccionProveedor">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.DireccionProveedor">
+        <MappingFragment StoreEntitySet="DireccionProveedor">
+          <ScalarProperty Name="IdDireccionProveedor" ColumnName="IdDireccionProveedor" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Canton" ColumnName="Canton" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="DireccionExacta" ColumnName="DireccionExacta" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DireccionUsuario">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.DireccionUsuario">
+        <MappingFragment StoreEntitySet="DireccionUsuario">
+          <ScalarProperty Name="IdDireccionUsuario" ColumnName="IdDireccionUsuario" />
+          <ScalarProperty Name="Provincia" ColumnName="Provincia" />
+          <ScalarProperty Name="Canton" ColumnName="Canton" />
+          <ScalarProperty Name="Distrito" ColumnName="Distrito" />
+          <ScalarProperty Name="DireccionExacta" ColumnName="DireccionExacta" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Factura">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Factura">
+        <MappingFragment StoreEntitySet="Factura">
+          <ScalarProperty Name="IdFactura" ColumnName="IdFactura" />
+          <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+          <ScalarProperty Name="NumImpresion" ColumnName="NumImpresion" />
+          <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoProveedor">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.InfoProveedor">
+        <MappingFragment StoreEntitySet="InfoProveedor">
+          <ScalarProperty Name="IdInfoProveedor" ColumnName="IdInfoProveedor" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InfoUsuario">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.InfoUsuario">
+        <MappingFragment StoreEntitySet="InfoUsuario">
+          <ScalarProperty Name="IdInfoUsuario" ColumnName="IdInfoUsuario" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Material">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Material">
+        <MappingFragment StoreEntitySet="Material">
+          <ScalarProperty Name="IdMaterial" ColumnName="IdMaterial" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdTipoMaterial" ColumnName="IdTipoMaterial" />
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Producto">
+        <MappingFragment StoreEntitySet="Producto">
+          <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="Precio" ColumnName="Precio" />
+          <ScalarProperty Name="Impuesto" ColumnName="Impuesto" />
+          <ScalarProperty Name="CantidadInventariable" ColumnName="CantidadInventariable" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdTipoProducto" ColumnName="IdTipoProducto" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Proveedor">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Proveedor">
+        <MappingFragment StoreEntitySet="Proveedor">
+          <ScalarProperty Name="IdProveedor" ColumnName="IdProveedor" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoMaterial">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.TipoMaterial">
+        <MappingFragment StoreEntitySet="TipoMaterial">
+          <ScalarProperty Name="IdTipoMaterial" ColumnName="IdTipoMaterial" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoPago">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.TipoPago">
+        <MappingFragment StoreEntitySet="TipoPago">
+          <ScalarProperty Name="IdTipoPago" ColumnName="IdTipoPago" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TipoProducto">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.TipoProducto">
+        <MappingFragment StoreEntitySet="TipoProducto">
+          <ScalarProperty Name="IdTipoProducto" ColumnName="IdTipoProducto" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Cedula" ColumnName="Cedula" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="NombreCompleto" ColumnName="NombreCompleto" />
+          <ScalarProperty Name="PrimerApellido" ColumnName="PrimerApellido" />
+          <ScalarProperty Name="SegundoApellido" ColumnName="SegundoApellido" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Contrasena" ColumnName="Contrasena" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="UsuarioAgrega" ColumnName="UsuarioAgrega" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Venta">
+      <EntityTypeMapping TypeName="CAC_MICROPRECISION_SAModel.Venta">
+        <MappingFragment StoreEntitySet="Venta">
+          <ScalarProperty Name="IdVenta" ColumnName="IdVenta" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Total" ColumnName="Total" />
+          <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+          <ScalarProperty Name="Descuento" ColumnName="Descuento" />
+          <ScalarProperty Name="FechaAgrega" ColumnName="FechaAgrega" />
+          <ScalarProperty Name="FechaElimina" ColumnName="FechaElimina" />
+          <ScalarProperty Name="Eliminado" ColumnName="Eliminado" />
+          <ScalarProperty Name="IdEstado" ColumnName="IdEstado" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="IdTipoPago" ColumnName="IdTipoPago" />
+          <ScalarProperty Name="FechaVenta" ColumnName="FechaVenta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

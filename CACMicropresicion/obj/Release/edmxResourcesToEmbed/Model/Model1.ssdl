@@ -1,0 +1,797 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CAC_MICROPRECISION_SAModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="CAC_MICROPRECISION_SAModelStoreContainer">
+    <EntitySet Name="Bitacora" EntityType="CAC_MICROPRECISION_SAModel.Store.Bitacora" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Cliente" EntityType="CAC_MICROPRECISION_SAModel.Store.Cliente" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Compra" EntityType="CAC_MICROPRECISION_SAModel.Store.Compra" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleCompra" EntityType="CAC_MICROPRECISION_SAModel.Store.DetalleCompra" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DetalleVenta" EntityType="CAC_MICROPRECISION_SAModel.Store.DetalleVenta" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DireccionProveedor" EntityType="CAC_MICROPRECISION_SAModel.Store.DireccionProveedor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DireccionUsuario" EntityType="CAC_MICROPRECISION_SAModel.Store.DireccionUsuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Estado" EntityType="CAC_MICROPRECISION_SAModel.Store.Estado" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Factura" EntityType="CAC_MICROPRECISION_SAModel.Store.Factura" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InfoProveedor" EntityType="CAC_MICROPRECISION_SAModel.Store.InfoProveedor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InfoUsuario" EntityType="CAC_MICROPRECISION_SAModel.Store.InfoUsuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Material" EntityType="CAC_MICROPRECISION_SAModel.Store.Material" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Producto" EntityType="CAC_MICROPRECISION_SAModel.Store.Producto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Proveedor" EntityType="CAC_MICROPRECISION_SAModel.Store.Proveedor" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoMaterial" EntityType="CAC_MICROPRECISION_SAModel.Store.TipoMaterial" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoPago" EntityType="CAC_MICROPRECISION_SAModel.Store.TipoPago" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TipoProducto" EntityType="CAC_MICROPRECISION_SAModel.Store.TipoProducto" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Usuario" EntityType="CAC_MICROPRECISION_SAModel.Store.Usuario" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Venta" EntityType="CAC_MICROPRECISION_SAModel.Store.Venta" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="R_10" Association="CAC_MICROPRECISION_SAModel.Store.R_10">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Material" EntitySet="Material" />
+    </AssociationSet>
+    <AssociationSet Name="R_11" Association="CAC_MICROPRECISION_SAModel.Store.R_11">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+    </AssociationSet>
+    <AssociationSet Name="R_12" Association="CAC_MICROPRECISION_SAModel.Store.R_12">
+      <End Role="TipoMaterial" EntitySet="TipoMaterial" />
+      <End Role="Material" EntitySet="Material" />
+    </AssociationSet>
+    <AssociationSet Name="R_13" Association="CAC_MICROPRECISION_SAModel.Store.R_13">
+      <End Role="Material" EntitySet="Material" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="R_14" Association="CAC_MICROPRECISION_SAModel.Store.R_14">
+      <End Role="Compra" EntitySet="Compra" />
+      <End Role="DetalleCompra" EntitySet="DetalleCompra" />
+    </AssociationSet>
+    <AssociationSet Name="R_15" Association="CAC_MICROPRECISION_SAModel.Store.R_15">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Proveedor" EntitySet="Proveedor" />
+    </AssociationSet>
+    <AssociationSet Name="R_16" Association="CAC_MICROPRECISION_SAModel.Store.R_16">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="InfoProveedor" EntitySet="InfoProveedor" />
+    </AssociationSet>
+    <AssociationSet Name="R_17" Association="CAC_MICROPRECISION_SAModel.Store.R_17">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="DireccionProveedor" EntitySet="DireccionProveedor" />
+    </AssociationSet>
+    <AssociationSet Name="R_19" Association="CAC_MICROPRECISION_SAModel.Store.R_19">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="InfoProveedor" EntitySet="InfoProveedor" />
+    </AssociationSet>
+    <AssociationSet Name="R_20" Association="CAC_MICROPRECISION_SAModel.Store.R_20">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="DireccionProveedor" EntitySet="DireccionProveedor" />
+    </AssociationSet>
+    <AssociationSet Name="R_21" Association="CAC_MICROPRECISION_SAModel.Store.R_21">
+      <End Role="Proveedor" EntitySet="Proveedor" />
+      <End Role="Material" EntitySet="Material" />
+    </AssociationSet>
+    <AssociationSet Name="R_22" Association="CAC_MICROPRECISION_SAModel.Store.R_22">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="R_23" Association="CAC_MICROPRECISION_SAModel.Store.R_23">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoProducto" EntitySet="TipoProducto" />
+    </AssociationSet>
+    <AssociationSet Name="R_24" Association="CAC_MICROPRECISION_SAModel.Store.R_24">
+      <End Role="TipoProducto" EntitySet="TipoProducto" />
+      <End Role="Producto" EntitySet="Producto" />
+    </AssociationSet>
+    <AssociationSet Name="R_25" Association="CAC_MICROPRECISION_SAModel.Store.R_25">
+      <End Role="Producto" EntitySet="Producto" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="R_26" Association="CAC_MICROPRECISION_SAModel.Store.R_26">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="R_27" Association="CAC_MICROPRECISION_SAModel.Store.R_27">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="R_28" Association="CAC_MICROPRECISION_SAModel.Store.R_28">
+      <End Role="Venta" EntitySet="Venta" />
+      <End Role="DetalleVenta" EntitySet="DetalleVenta" />
+    </AssociationSet>
+    <AssociationSet Name="R_29" Association="CAC_MICROPRECISION_SAModel.Store.R_29">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Cliente" EntitySet="Cliente" />
+    </AssociationSet>
+    <AssociationSet Name="R_3" Association="CAC_MICROPRECISION_SAModel.Store.R_3">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="InfoUsuario" EntitySet="InfoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="R_30" Association="CAC_MICROPRECISION_SAModel.Store.R_30">
+      <End Role="Cliente" EntitySet="Cliente" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="R_31" Association="CAC_MICROPRECISION_SAModel.Store.R_31">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="TipoPago" EntitySet="TipoPago" />
+    </AssociationSet>
+    <AssociationSet Name="R_32" Association="CAC_MICROPRECISION_SAModel.Store.R_32">
+      <End Role="TipoPago" EntitySet="TipoPago" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="R_33" Association="CAC_MICROPRECISION_SAModel.Store.R_33">
+      <End Role="TipoPago" EntitySet="TipoPago" />
+      <End Role="Venta" EntitySet="Venta" />
+    </AssociationSet>
+    <AssociationSet Name="R_34" Association="CAC_MICROPRECISION_SAModel.Store.R_34">
+      <End Role="Venta" EntitySet="Venta" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="R_35" Association="CAC_MICROPRECISION_SAModel.Store.R_35">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Factura" EntitySet="Factura" />
+    </AssociationSet>
+    <AssociationSet Name="R_4" Association="CAC_MICROPRECISION_SAModel.Store.R_4">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DireccionUsuario" EntitySet="DireccionUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="R_5" Association="CAC_MICROPRECISION_SAModel.Store.R_5">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="R_6" Association="CAC_MICROPRECISION_SAModel.Store.R_6">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="InfoUsuario" EntitySet="InfoUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="R_7" Association="CAC_MICROPRECISION_SAModel.Store.R_7">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="DireccionUsuario" EntitySet="DireccionUsuario" />
+    </AssociationSet>
+    <AssociationSet Name="R_8" Association="CAC_MICROPRECISION_SAModel.Store.R_8">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+    <AssociationSet Name="R_9" Association="CAC_MICROPRECISION_SAModel.Store.R_9">
+      <End Role="Estado" EntitySet="Estado" />
+      <End Role="Compra" EntitySet="Compra" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Bitacora">
+    <Key>
+      <PropertyRef Name="IdBitacora" />
+    </Key>
+    <Property Name="IdBitacora" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fecha" Type="datetime" Nullable="false" />
+    <Property Name="Accion" Type="text" Nullable="false" />
+    <Property Name="TablaAfectada" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="ContenidoViejo" Type="text" />
+    <Property Name="ContenidoNuevo" Type="text" Nullable="false" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Cliente">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Compra">
+    <Key>
+      <PropertyRef Name="IdCompra" />
+    </Key>
+    <Property Name="IdCompra" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="TotalCompra" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="IdTipoPago" Type="int" Nullable="false" />
+    <Property Name="FechaCompra" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleCompra">
+    <Key>
+      <PropertyRef Name="IdDetalleCompra" />
+    </Key>
+    <Property Name="IdDetalleCompra" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Renglon" Type="smallint" Nullable="false" />
+    <Property Name="PrecioTotal" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="IdMaterial" Type="int" />
+    <Property Name="IdCompra" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleVenta">
+    <Key>
+      <PropertyRef Name="IdDetalleVenta" />
+    </Key>
+    <Property Name="IdDetalleVenta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Renglon" Type="smallint" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="IdProducto" Type="int" />
+    <Property Name="Impuesto" Type="decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="IdVenta" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DireccionProveedor">
+    <Key>
+      <PropertyRef Name="IdDireccionProveedor" />
+    </Key>
+    <Property Name="IdDireccionProveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Provincia" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="Canton" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Distrito" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="DireccionExacta" Type="text" Nullable="false" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdProveedor" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DireccionUsuario">
+    <Key>
+      <PropertyRef Name="IdDireccionUsuario" />
+    </Key>
+    <Property Name="IdDireccionUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Provincia" Type="varchar" Nullable="false" MaxLength="15" />
+    <Property Name="Canton" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="Distrito" Type="varchar" Nullable="false" MaxLength="30" />
+    <Property Name="DireccionExacta" Type="text" Nullable="false" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Estado">
+    <Key>
+      <PropertyRef Name="IdEstado" />
+    </Key>
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Factura">
+    <Key>
+      <PropertyRef Name="IdFactura" />
+    </Key>
+    <Property Name="IdFactura" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Referencia" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="NumImpresion" Type="tinyint" Nullable="false" />
+    <Property Name="IdVenta" Type="int" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InfoProveedor">
+    <Key>
+      <PropertyRef Name="IdInfoProveedor" />
+    </Key>
+    <Property Name="IdInfoProveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="tinyint" Nullable="false" />
+    <Property Name="Valor" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdProveedor" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InfoUsuario">
+    <Key>
+      <PropertyRef Name="IdInfoUsuario" />
+    </Key>
+    <Property Name="IdInfoUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tipo" Type="tinyint" Nullable="false" />
+    <Property Name="Valor" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="IdMaterial" />
+    </Key>
+    <Property Name="IdMaterial" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdTipoMaterial" Type="int" Nullable="false" />
+    <Property Name="IdProveedor" Type="int" />
+  </EntityType>
+  <EntityType Name="Producto">
+    <Key>
+      <PropertyRef Name="IdProducto" />
+    </Key>
+    <Property Name="IdProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="Precio" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Impuesto" Type="decimal" Nullable="false" Precision="3" Scale="2" />
+    <Property Name="CantidadInventariable" Type="int" Nullable="false" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdTipoProducto" Type="int" Nullable="false" />
+    <Property Name="Descuento" Type="decimal" Nullable="false" Precision="3" Scale="2" />
+  </EntityType>
+  <EntityType Name="Proveedor">
+    <Key>
+      <PropertyRef Name="IdProveedor" />
+    </Key>
+    <Property Name="IdProveedor" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoMaterial">
+    <Key>
+      <PropertyRef Name="IdTipoMaterial" />
+    </Key>
+    <Property Name="IdTipoMaterial" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoPago">
+    <Key>
+      <PropertyRef Name="IdTipoPago" />
+    </Key>
+    <Property Name="IdTipoPago" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoProducto">
+    <Key>
+      <PropertyRef Name="IdTipoProducto" />
+    </Key>
+    <Property Name="IdTipoProducto" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="200" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Cedula" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Tipo" Type="tinyint" Nullable="false" />
+    <Property Name="NombreCompleto" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PrimerApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="SegundoApellido" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="NombreUsuario" Type="varchar" MaxLength="50" />
+    <Property Name="Contrasena" Type="varchar" MaxLength="50" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="UsuarioAgrega" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Venta">
+    <Key>
+      <PropertyRef Name="IdVenta" />
+    </Key>
+    <Property Name="IdVenta" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="IdUsuario" Type="int" Nullable="false" />
+    <Property Name="Total" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Subtotal" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="Descuento" Type="decimal" Nullable="false" Precision="10" Scale="2" />
+    <Property Name="FechaAgrega" Type="datetime" Nullable="false" />
+    <Property Name="FechaElimina" Type="datetime" />
+    <Property Name="Eliminado" Type="tinyint" Nullable="false" />
+    <Property Name="IdEstado" Type="int" Nullable="false" />
+    <Property Name="IdCliente" Type="int" />
+    <Property Name="IdTipoPago" Type="int" Nullable="false" />
+    <Property Name="FechaVenta" Type="date" Nullable="false" />
+  </EntityType>
+  <Association Name="R_10">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Material" Type="CAC_MICROPRECISION_SAModel.Store.Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Material">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_11">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="TipoMaterial" Type="CAC_MICROPRECISION_SAModel.Store.TipoMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoMaterial">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_12">
+    <End Role="TipoMaterial" Type="CAC_MICROPRECISION_SAModel.Store.TipoMaterial" Multiplicity="1" />
+    <End Role="Material" Type="CAC_MICROPRECISION_SAModel.Store.Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoMaterial">
+        <PropertyRef Name="IdTipoMaterial" />
+      </Principal>
+      <Dependent Role="Material">
+        <PropertyRef Name="IdTipoMaterial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_13">
+    <End Role="Material" Type="CAC_MICROPRECISION_SAModel.Store.Material" Multiplicity="0..1" />
+    <End Role="DetalleCompra" Type="CAC_MICROPRECISION_SAModel.Store.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="IdMaterial" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="IdMaterial" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_14">
+    <End Role="Compra" Type="CAC_MICROPRECISION_SAModel.Store.Compra" Multiplicity="1" />
+    <End Role="DetalleCompra" Type="CAC_MICROPRECISION_SAModel.Store.DetalleCompra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Compra">
+        <PropertyRef Name="IdCompra" />
+      </Principal>
+      <Dependent Role="DetalleCompra">
+        <PropertyRef Name="IdCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_15">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Proveedor" Type="CAC_MICROPRECISION_SAModel.Store.Proveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Proveedor">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_16">
+    <End Role="Proveedor" Type="CAC_MICROPRECISION_SAModel.Store.Proveedor" Multiplicity="1" />
+    <End Role="InfoProveedor" Type="CAC_MICROPRECISION_SAModel.Store.InfoProveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="InfoProveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_17">
+    <End Role="Proveedor" Type="CAC_MICROPRECISION_SAModel.Store.Proveedor" Multiplicity="1" />
+    <End Role="DireccionProveedor" Type="CAC_MICROPRECISION_SAModel.Store.DireccionProveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="DireccionProveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_19">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="InfoProveedor" Type="CAC_MICROPRECISION_SAModel.Store.InfoProveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="InfoProveedor">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_20">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="DireccionProveedor" Type="CAC_MICROPRECISION_SAModel.Store.DireccionProveedor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="DireccionProveedor">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_21">
+    <End Role="Proveedor" Type="CAC_MICROPRECISION_SAModel.Store.Proveedor" Multiplicity="0..1" />
+    <End Role="Material" Type="CAC_MICROPRECISION_SAModel.Store.Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Proveedor">
+        <PropertyRef Name="IdProveedor" />
+      </Principal>
+      <Dependent Role="Material">
+        <PropertyRef Name="IdProveedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_22">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Producto" Type="CAC_MICROPRECISION_SAModel.Store.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_23">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="TipoProducto" Type="CAC_MICROPRECISION_SAModel.Store.TipoProducto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoProducto">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_24">
+    <End Role="TipoProducto" Type="CAC_MICROPRECISION_SAModel.Store.TipoProducto" Multiplicity="1" />
+    <End Role="Producto" Type="CAC_MICROPRECISION_SAModel.Store.Producto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoProducto">
+        <PropertyRef Name="IdTipoProducto" />
+      </Principal>
+      <Dependent Role="Producto">
+        <PropertyRef Name="IdTipoProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_25">
+    <End Role="Producto" Type="CAC_MICROPRECISION_SAModel.Store.Producto" Multiplicity="0..1" />
+    <End Role="DetalleVenta" Type="CAC_MICROPRECISION_SAModel.Store.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Producto">
+        <PropertyRef Name="IdProducto" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="IdProducto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_26">
+    <End Role="Usuario" Type="CAC_MICROPRECISION_SAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Venta" Type="CAC_MICROPRECISION_SAModel.Store.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_27">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Venta" Type="CAC_MICROPRECISION_SAModel.Store.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_28">
+    <End Role="Venta" Type="CAC_MICROPRECISION_SAModel.Store.Venta" Multiplicity="1" />
+    <End Role="DetalleVenta" Type="CAC_MICROPRECISION_SAModel.Store.DetalleVenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venta">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="DetalleVenta">
+        <PropertyRef Name="IdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_29">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Cliente" Type="CAC_MICROPRECISION_SAModel.Store.Cliente" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Cliente">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_3">
+    <End Role="Usuario" Type="CAC_MICROPRECISION_SAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="InfoUsuario" Type="CAC_MICROPRECISION_SAModel.Store.InfoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="InfoUsuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_30">
+    <End Role="Cliente" Type="CAC_MICROPRECISION_SAModel.Store.Cliente" Multiplicity="0..1" />
+    <End Role="Venta" Type="CAC_MICROPRECISION_SAModel.Store.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cliente">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_31">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="TipoPago" Type="CAC_MICROPRECISION_SAModel.Store.TipoPago" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="TipoPago">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_32">
+    <End Role="TipoPago" Type="CAC_MICROPRECISION_SAModel.Store.TipoPago" Multiplicity="1" />
+    <End Role="Compra" Type="CAC_MICROPRECISION_SAModel.Store.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPago">
+        <PropertyRef Name="IdTipoPago" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdTipoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_33">
+    <End Role="TipoPago" Type="CAC_MICROPRECISION_SAModel.Store.TipoPago" Multiplicity="1" />
+    <End Role="Venta" Type="CAC_MICROPRECISION_SAModel.Store.Venta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoPago">
+        <PropertyRef Name="IdTipoPago" />
+      </Principal>
+      <Dependent Role="Venta">
+        <PropertyRef Name="IdTipoPago" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_34">
+    <End Role="Venta" Type="CAC_MICROPRECISION_SAModel.Store.Venta" Multiplicity="0..1" />
+    <End Role="Factura" Type="CAC_MICROPRECISION_SAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Venta">
+        <PropertyRef Name="IdVenta" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_35">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Factura" Type="CAC_MICROPRECISION_SAModel.Store.Factura" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Factura">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_4">
+    <End Role="Usuario" Type="CAC_MICROPRECISION_SAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="DireccionUsuario" Type="CAC_MICROPRECISION_SAModel.Store.DireccionUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DireccionUsuario">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_5">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Usuario" Type="CAC_MICROPRECISION_SAModel.Store.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_6">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="InfoUsuario" Type="CAC_MICROPRECISION_SAModel.Store.InfoUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="InfoUsuario">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_7">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="DireccionUsuario" Type="CAC_MICROPRECISION_SAModel.Store.DireccionUsuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="DireccionUsuario">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_8">
+    <End Role="Usuario" Type="CAC_MICROPRECISION_SAModel.Store.Usuario" Multiplicity="1" />
+    <End Role="Compra" Type="CAC_MICROPRECISION_SAModel.Store.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_9">
+    <End Role="Estado" Type="CAC_MICROPRECISION_SAModel.Store.Estado" Multiplicity="1" />
+    <End Role="Compra" Type="CAC_MICROPRECISION_SAModel.Store.Compra" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Estado">
+        <PropertyRef Name="IdEstado" />
+      </Principal>
+      <Dependent Role="Compra">
+        <PropertyRef Name="IdEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

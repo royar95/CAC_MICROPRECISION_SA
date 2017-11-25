@@ -1,0 +1,209 @@
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.Form1.resources
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.LoginBunifu.resources
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.resources
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Login.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register1.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register2.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.dll
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.xml
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MainView.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.AddProduct.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.Products.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.Providers.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.AddCategory.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.Categories.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.EditCategory.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.ViewCategories.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.EditProduct.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.ViewProducts.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.AddProvider.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.EditProvider.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.ViewProviders.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.NewUser.resources
+C:\Users\ADC-ROY\Desktop\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.Users.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.dll
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.xml
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.AddCategory.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.Categories.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.EditCategory.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.ViewCategories.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Login.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MainView.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.AddProduct.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.EditProduct.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.Products.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.ViewProducts.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.AddProvider.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.EditProvider.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.Providers.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.ViewProviders.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register1.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register2.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.NewUser.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.Users.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.CoreCompileInputs.cache
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Purchases.Purchase.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Sales.Sale.resources
+C:\Users\Mario Alvarado\Documents\CAC\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MenuProducts.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.dll
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.xml
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.AddCategory.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.Categories.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.EditCategory.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.ViewCategories.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Login.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.AuditoryControl.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.CategoriesControl.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.DataControl.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MainView.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ManagamentOptions.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MenuProducts.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ProcessesControl.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.SecurityControl.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.AddProduct.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.EditProduct.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.Products.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.ViewProducts.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.AddProvider.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.EditProvider.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.Providers.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.ViewProviders.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Purchases.Purchase.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register1.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register2.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Sales.Sale.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddUser.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ModifyUser.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.DeleteUser.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ViewUsers.resources
+C:\Users\ADC-ROY\Downloads\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.dll
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.xml
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.AddCategory.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.Categories.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.EditCategory.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.ViewCategories.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Login.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.AuditoryControl.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.CategoriesControl.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.DataControl.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MainView.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ManagamentOptions.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MenuProducts.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ProcessesControl.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.SecurityControl.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.AddProduct.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.EditProduct.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.Products.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.ViewProducts.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.AddProvider.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.EditProvider.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.Providers.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.ViewProviders.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Purchases.Purchase.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register1.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register2.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Sales.Sale.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddUser.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.DeleteUser.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ModifyUser.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ViewUsers.resources
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddContactInfo.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.exe
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.dll
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.xml
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.AddCategory.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.Categories.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.EditCategory.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Categories.ViewCategories.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Login.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.AuditoryControl.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.CategoriesControl.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.DataControl.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MainView.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ManagamentOptions.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MenuProducts.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ProcessesControl.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.SecurityControl.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.AddProduct.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.EditProduct.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.Products.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.ViewProducts.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.AddProvider.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.EditProvider.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.Providers.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.ViewProviders.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Purchases.Purchase.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register1.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register2.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Sales.Sale.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddContactInfo.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddUser.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.DeleteUser.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ModifyUser.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ViewUsers.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
