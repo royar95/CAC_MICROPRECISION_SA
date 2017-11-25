@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CACMicropresicion.View;
 using CACMicropresicion.Globals;
-using CACMicropresicion.View.Providers;
+using CACMicropresicion.View;
 
 namespace CACMicropresicion.View.Main
 {

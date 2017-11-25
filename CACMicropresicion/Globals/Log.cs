@@ -15,7 +15,9 @@ namespace CACMicropresicion.Globals
 
         //Tablas de la base de datos
         public static string User = "Usuario";
+        public static string Client = "Cliente";
         public static string InfoUser = "InfoUsuario";
+        public static string State = "Estado";
 
     }
 }

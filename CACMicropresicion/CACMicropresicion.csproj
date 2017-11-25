@@ -80,6 +80,7 @@
     <Compile Include="Controller\BaseController.cs" />
     <Compile Include="Controller\ClientsController.cs" />
     <Compile Include="Controller\LoginCtrl.cs" />
+    <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
     <Compile Include="Globals\ContactInfoType.cs" />
     <Compile Include="Globals\Log.cs" />
@@ -161,29 +162,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="View\Categories\AddCategory.cs">
+    <Compile Include="View\Clients\AddClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Categories\AddCategory.designer.cs">
-      <DependentUpon>AddCategory.cs</DependentUpon>
+    <Compile Include="View\Clients\AddClient.designer.cs">
+      <DependentUpon>AddClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Categories\Categories.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Categories\Categories.designer.cs">
-      <DependentUpon>Categories.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Categories\EditCategory.cs">
+    <Compile Include="View\Clients\ClientsList.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Categories\EditCategory.designer.cs">
-      <DependentUpon>EditCategory.cs</DependentUpon>
+    <Compile Include="View\Clients\ClientsList.designer.cs">
+      <DependentUpon>ClientsList.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Categories\ViewCategories.cs">
+    <Compile Include="View\Clients\DeleteClient.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Categories\ViewCategories.designer.cs">
-      <DependentUpon>ViewCategories.cs</DependentUpon>
+    <Compile Include="View\Clients\DeleteClient.designer.cs">
+      <DependentUpon>DeleteClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Clients\ModifyClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Clients\ModifyClient.designer.cs">
+      <DependentUpon>ModifyClient.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Login.cs">
       <SubType>Form</SubType>
@@ -221,12 +222,6 @@
     <Compile Include="View\Main\ManagamentOptions.Designer.cs">
       <DependentUpon>ManagamentOptions.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Main\MenuProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Main\MenuProducts.Designer.cs">
-      <DependentUpon>MenuProducts.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Main\ProcessesControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -238,60 +233,6 @@
     </Compile>
     <Compile Include="View\Main\SecurityControl.Designer.cs">
       <DependentUpon>SecurityControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Products\AddProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Products\AddProduct.designer.cs">
-      <DependentUpon>AddProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Products\EditProduct.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Products\EditProduct.designer.cs">
-      <DependentUpon>EditProduct.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Products\Products.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Products\Products.designer.cs">
-      <DependentUpon>Products.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Products\ViewProducts.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Products\ViewProducts.designer.cs">
-      <DependentUpon>ViewProducts.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\AddProvider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Providers\AddProvider.designer.cs">
-      <DependentUpon>AddProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\EditProvider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Providers\EditProvider.designer.cs">
-      <DependentUpon>EditProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\Providers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Providers\Providers.designer.cs">
-      <DependentUpon>Providers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\ViewProviders.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Providers\ViewProviders.designer.cs">
-      <DependentUpon>ViewProviders.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Purchases\Purchase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Purchases\Purchase.designer.cs">
-      <DependentUpon>Purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Register1.cs">
       <SubType>Form</SubType>
@@ -305,11 +246,29 @@
     <Compile Include="View\Register2.Designer.cs">
       <DependentUpon>Register2.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Sales\Sale.cs">
-      <SubType>Form</SubType>
+    <Compile Include="View\States\AddState.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="View\Sales\Sale.Designer.cs">
-      <DependentUpon>Sale.cs</DependentUpon>
+    <Compile Include="View\States\AddState.designer.cs">
+      <DependentUpon>AddState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\States\DeleteState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\States\DeleteState.designer.cs">
+      <DependentUpon>DeleteState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\States\ModifyState.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\States\ModifyState.designer.cs">
+      <DependentUpon>ModifyState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\States\ViewStates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\States\ViewStates.designer.cs">
+      <DependentUpon>ViewStates.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Users\AddContactInfo.cs">
       <SubType>Form</SubType>
@@ -350,17 +309,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\Categories\AddCategory.resx">
-      <DependentUpon>AddCategory.cs</DependentUpon>
+    <EmbeddedResource Include="View\Clients\AddClient.resx">
+      <DependentUpon>AddClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Categories\Categories.resx">
-      <DependentUpon>Categories.cs</DependentUpon>
+    <EmbeddedResource Include="View\Clients\ClientsList.resx">
+      <DependentUpon>ClientsList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Categories\EditCategory.resx">
-      <DependentUpon>EditCategory.cs</DependentUpon>
+    <EmbeddedResource Include="View\Clients\DeleteClient.resx">
+      <DependentUpon>DeleteClient.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Categories\ViewCategories.resx">
-      <DependentUpon>ViewCategories.cs</DependentUpon>
+    <EmbeddedResource Include="View\Clients\ModifyClient.resx">
+      <DependentUpon>ModifyClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -380,41 +339,11 @@
     <EmbeddedResource Include="View\Main\ManagamentOptions.resx">
       <DependentUpon>ManagamentOptions.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Main\MenuProducts.resx">
-      <DependentUpon>MenuProducts.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Main\ProcessesControl.resx">
       <DependentUpon>ProcessesControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main\SecurityControl.resx">
       <DependentUpon>SecurityControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Products\AddProduct.resx">
-      <DependentUpon>AddProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Products\EditProduct.resx">
-      <DependentUpon>EditProduct.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Products\Products.resx">
-      <DependentUpon>Products.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Products\ViewProducts.resx">
-      <DependentUpon>ViewProducts.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\AddProvider.resx">
-      <DependentUpon>AddProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\EditProvider.resx">
-      <DependentUpon>EditProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\Providers.resx">
-      <DependentUpon>Providers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\ViewProviders.resx">
-      <DependentUpon>ViewProviders.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Purchases\Purchase.resx">
-      <DependentUpon>Purchase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Register1.resx">
       <DependentUpon>Register1.cs</DependentUpon>
@@ -422,8 +351,17 @@
     <EmbeddedResource Include="View\Register2.resx">
       <DependentUpon>Register2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Sales\Sale.resx">
-      <DependentUpon>Sale.cs</DependentUpon>
+    <EmbeddedResource Include="View\States\AddState.resx">
+      <DependentUpon>AddState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\States\DeleteState.resx">
+      <DependentUpon>DeleteState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\States\ModifyState.resx">
+      <DependentUpon>ModifyState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\States\ViewStates.resx">
+      <DependentUpon>ViewStates.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Users\AddContactInfo.resx">
       <DependentUpon>AddContactInfo.cs</DependentUpon>
@@ -489,6 +427,12 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="View\Categories\" />
+    <Folder Include="View\Products\" />
+    <Folder Include="View\Providers\" />
+    <Folder Include="View\Purchases\" />
+    <Folder Include="View\Sales\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

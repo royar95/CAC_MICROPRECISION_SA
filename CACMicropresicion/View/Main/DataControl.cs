@@ -19,10 +19,11 @@ namespace CACMicropresicion.View.Main
             this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
         }
 
-        private void btnUsers_Click(object sender, EventArgs e)
+        private void btnClients_Click(object sender, EventArgs e)
         {
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "Clients";
             Parent.Controls.Add(managament);
         }
 
@@ -54,10 +55,11 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.Add(managament);
         }
 
-        private void bunifuFlatButton5_Click(object sender, EventArgs e)
+        private void btnStatus_Click(object sender, EventArgs e)
         {
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "States";
             Parent.Controls.Add(managament);
         }
 
@@ -65,9 +67,17 @@ namespace CACMicropresicion.View.Main
         {
             Parent.Controls.RemoveByKey("ManagamentOptions");
             Parent.Controls.RemoveByKey("AddUser");
+            Parent.Controls.RemoveByKey("AddClient");
+            Parent.Controls.RemoveByKey("AddState");
             Parent.Controls.RemoveByKey("ModifyUser");
+            Parent.Controls.RemoveByKey("ModifyClient");
+            Parent.Controls.RemoveByKey("ModifyState");
             Parent.Controls.RemoveByKey("DeleteUser");
+            Parent.Controls.RemoveByKey("DeleteClient");
+            Parent.Controls.RemoveByKey("DeleteState");
             Parent.Controls.RemoveByKey("ViewUsers");
+            Parent.Controls.RemoveByKey("ClientsList");
+            Parent.Controls.RemoveByKey("ViewStates");
         }
 
     }

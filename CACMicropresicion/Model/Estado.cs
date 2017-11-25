@@ -39,6 +39,13 @@ namespace CACMicropresicion.Model
         public Nullable<System.DateTime> FechaElimina { get; set; }
         public string UsuarioAgrega { get; set; }
         public byte Eliminado { get; set; }
+
+        public string toString()
+        {
+            return "Codigo de estado: " + IdEstado + ", Descripcion: " + Descripcion +
+                ", Fecha agregado: " + FechaAgrega + ", Fecha Eliminado: " + FechaElimina +
+                ", Agregador por: " + UsuarioAgrega + ", Eliminado: " + Eliminado;
+        }
     
         public virtual ICollection<Cliente> Cliente { get; set; }
         public virtual ICollection<Compra> Compra { get; set; }

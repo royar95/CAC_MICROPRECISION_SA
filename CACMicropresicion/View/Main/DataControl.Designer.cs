@@ -29,52 +29,52 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DataControl));
-            this.btnUsers = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnClients = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnStatus = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
-            // btnUsers
+            // btnClients
             // 
-            this.btnUsers.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnClients.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnClients.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUsers.BackColor = System.Drawing.Color.Teal;
-            this.btnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUsers.BorderRadius = 0;
-            this.btnUsers.ButtonText = "Clientes";
-            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsers.DisabledColor = System.Drawing.Color.Gray;
-            this.btnUsers.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnUsers.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUsers.Iconimage")));
-            this.btnUsers.Iconimage_right = null;
-            this.btnUsers.Iconimage_right_Selected = null;
-            this.btnUsers.Iconimage_Selected = null;
-            this.btnUsers.IconMarginLeft = 0;
-            this.btnUsers.IconMarginRight = 0;
-            this.btnUsers.IconRightVisible = true;
-            this.btnUsers.IconRightZoom = 0D;
-            this.btnUsers.IconVisible = false;
-            this.btnUsers.IconZoom = 90D;
-            this.btnUsers.IsTab = false;
-            this.btnUsers.Location = new System.Drawing.Point(0, 0);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Normalcolor = System.Drawing.Color.Teal;
-            this.btnUsers.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnUsers.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnUsers.selected = false;
-            this.btnUsers.Size = new System.Drawing.Size(239, 48);
-            this.btnUsers.TabIndex = 1;
-            this.btnUsers.Text = "Clientes";
-            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUsers.Textcolor = System.Drawing.Color.White;
-            this.btnUsers.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            this.btnClients.BackColor = System.Drawing.Color.Teal;
+            this.btnClients.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClients.BorderRadius = 0;
+            this.btnClients.ButtonText = "Clientes";
+            this.btnClients.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnClients.DisabledColor = System.Drawing.Color.Gray;
+            this.btnClients.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnClients.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnClients.Iconimage")));
+            this.btnClients.Iconimage_right = null;
+            this.btnClients.Iconimage_right_Selected = null;
+            this.btnClients.Iconimage_Selected = null;
+            this.btnClients.IconMarginLeft = 0;
+            this.btnClients.IconMarginRight = 0;
+            this.btnClients.IconRightVisible = true;
+            this.btnClients.IconRightZoom = 0D;
+            this.btnClients.IconVisible = false;
+            this.btnClients.IconZoom = 90D;
+            this.btnClients.IsTab = false;
+            this.btnClients.Location = new System.Drawing.Point(0, 0);
+            this.btnClients.Name = "btnClients";
+            this.btnClients.Normalcolor = System.Drawing.Color.Teal;
+            this.btnClients.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnClients.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnClients.selected = false;
+            this.btnClients.Size = new System.Drawing.Size(239, 48);
+            this.btnClients.TabIndex = 1;
+            this.btnClients.Text = "Clientes";
+            this.btnClients.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnClients.Textcolor = System.Drawing.Color.White;
+            this.btnClients.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClients.Click += new System.EventHandler(this.btnClients_Click);
             // 
             // bunifuFlatButton1
             // 
@@ -224,42 +224,42 @@
             this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton4.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
-            // bunifuFlatButton5
+            // btnStatus
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnStatus.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnStatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Estados";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = true;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = false;
-            this.bunifuFlatButton5.IconZoom = 90D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(0, 314);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(239, 48);
-            this.bunifuFlatButton5.TabIndex = 6;
-            this.bunifuFlatButton5.Text = "Estados";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButton5.Click += new System.EventHandler(this.bunifuFlatButton5_Click);
+            this.btnStatus.BackColor = System.Drawing.Color.Teal;
+            this.btnStatus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnStatus.BorderRadius = 0;
+            this.btnStatus.ButtonText = "Estados";
+            this.btnStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStatus.DisabledColor = System.Drawing.Color.Gray;
+            this.btnStatus.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnStatus.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnStatus.Iconimage")));
+            this.btnStatus.Iconimage_right = null;
+            this.btnStatus.Iconimage_right_Selected = null;
+            this.btnStatus.Iconimage_Selected = null;
+            this.btnStatus.IconMarginLeft = 0;
+            this.btnStatus.IconMarginRight = 0;
+            this.btnStatus.IconRightVisible = true;
+            this.btnStatus.IconRightZoom = 0D;
+            this.btnStatus.IconVisible = false;
+            this.btnStatus.IconZoom = 90D;
+            this.btnStatus.IsTab = false;
+            this.btnStatus.Location = new System.Drawing.Point(0, 314);
+            this.btnStatus.Name = "btnStatus";
+            this.btnStatus.Normalcolor = System.Drawing.Color.Teal;
+            this.btnStatus.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnStatus.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnStatus.selected = false;
+            this.btnStatus.Size = new System.Drawing.Size(239, 48);
+            this.btnStatus.TabIndex = 6;
+            this.btnStatus.Text = "Estados";
+            this.btnStatus.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnStatus.Textcolor = System.Drawing.Color.White;
+            this.btnStatus.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
             // 
             // bunifuFlatButton6
             // 
@@ -340,12 +340,12 @@
             this.BackColor = System.Drawing.Color.LightBlue;
             this.Controls.Add(this.bunifuFlatButton7);
             this.Controls.Add(this.bunifuFlatButton6);
-            this.Controls.Add(this.bunifuFlatButton5);
+            this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.bunifuFlatButton4);
             this.Controls.Add(this.bunifuFlatButton3);
             this.Controls.Add(this.bunifuFlatButton2);
             this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.btnUsers);
+            this.Controls.Add(this.btnClients);
             this.Name = "DataControl";
             this.Size = new System.Drawing.Size(237, 441);
             this.ResumeLayout(false);
@@ -354,12 +354,12 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton btnUsers;
+        private Bunifu.Framework.UI.BunifuFlatButton btnClients;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
+        private Bunifu.Framework.UI.BunifuFlatButton btnStatus;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
     }

@@ -26,6 +26,12 @@ namespace CACMicropresicion.Model
         public string UsuarioAgrega { get; set; }
         public byte Eliminado { get; set; }
         public int IdEstado { get; set; }
+
+        public string toString()
+        {
+            return "Descripcion: " + Descripcion + ", Fecha agregado: " + FechaAgrega + ", Fecha Eliminado: " + FechaElimina +
+                ", Agregador por: " + UsuarioAgrega + ", Eliminado: " + Eliminado + ", Estado:" + IdEstado;
+        }
     
         public virtual Estado Estado { get; set; }
         public virtual ICollection<Venta> Venta { get; set; }
