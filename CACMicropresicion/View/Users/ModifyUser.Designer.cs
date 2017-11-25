@@ -195,7 +195,7 @@
             this.modtxtName.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
             this.modtxtName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.modtxtName.isPassword = false;
-            this.modtxtName.Location = new System.Drawing.Point(72, 206);
+            this.modtxtName.Location = new System.Drawing.Point(74, 196);
             this.modtxtName.Margin = new System.Windows.Forms.Padding(4);
             this.modtxtName.Name = "modtxtName";
             this.modtxtName.Size = new System.Drawing.Size(229, 34);

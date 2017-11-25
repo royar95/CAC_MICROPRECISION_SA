@@ -21,7 +21,7 @@ namespace CACMicropresicion.View.Main
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            Parent.Controls.RemoveByKey("ManagamentOptions");
+            removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
             managament.Mantenimiento = "Users";
             Parent.Controls.Add(managament);
@@ -30,9 +30,17 @@ namespace CACMicropresicion.View.Main
         private void removeAllControls() {
             Parent.Controls.RemoveByKey("ManagamentOptions");
             Parent.Controls.RemoveByKey("AddUser");
+            Parent.Controls.RemoveByKey("AddClient");
+            Parent.Controls.RemoveByKey("AddState");
             Parent.Controls.RemoveByKey("ModifyUser");
+            Parent.Controls.RemoveByKey("ModifyClient");
+            Parent.Controls.RemoveByKey("ModifyState");
             Parent.Controls.RemoveByKey("DeleteUser");
+            Parent.Controls.RemoveByKey("DeleteClient");
+            Parent.Controls.RemoveByKey("DeleteState");
             Parent.Controls.RemoveByKey("ViewUsers");
+            Parent.Controls.RemoveByKey("ClientsList");
+            Parent.Controls.RemoveByKey("ViewStates");
         }
 
     }

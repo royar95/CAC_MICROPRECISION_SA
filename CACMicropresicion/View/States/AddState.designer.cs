@@ -47,7 +47,7 @@
             this.txtId.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtId.isPassword = false;
-            this.txtId.Location = new System.Drawing.Point(33, 111);
+            this.txtId.Location = new System.Drawing.Point(71, 136);
             this.txtId.Margin = new System.Windows.Forms.Padding(4);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(229, 34);
@@ -59,7 +59,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(28, 82);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(66, 107);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(157, 25);
             this.bunifuCustomLabel1.TabIndex = 6;
@@ -70,7 +70,7 @@
             this.lblNewState.AutoSize = true;
             this.lblNewState.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNewState.Location = new System.Drawing.Point(26, 18);
+            this.lblNewState.Location = new System.Drawing.Point(64, 28);
             this.lblNewState.Name = "lblNewState";
             this.lblNewState.Size = new System.Drawing.Size(293, 40);
             this.lblNewState.TabIndex = 5;
@@ -86,7 +86,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescription.isPassword = false;
-            this.txtDescription.Location = new System.Drawing.Point(42, 223);
+            this.txtDescription.Location = new System.Drawing.Point(71, 224);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(229, 34);
@@ -98,7 +98,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(37, 194);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(66, 195);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(79, 25);
             this.bunifuCustomLabel2.TabIndex = 8;
@@ -126,7 +126,7 @@
             this.btnAddSaveState.IconVisible = false;
             this.btnAddSaveState.IconZoom = 90D;
             this.btnAddSaveState.IsTab = false;
-            this.btnAddSaveState.Location = new System.Drawing.Point(212, 328);
+            this.btnAddSaveState.Location = new System.Drawing.Point(71, 295);
             this.btnAddSaveState.Name = "btnAddSaveState";
             this.btnAddSaveState.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnAddSaveState.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));

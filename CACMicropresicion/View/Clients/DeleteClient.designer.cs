@@ -32,10 +32,10 @@ namespace CACMicropresicion.View.Cients
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeleteClient));
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.lblDeleteClient = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.delBtnDeleteClient = new Bunifu.Framework.UI.BunifuFlatButton();
             this.delDropClientId = new System.Windows.Forms.ComboBox();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
@@ -43,27 +43,18 @@ namespace CACMicropresicion.View.Cients
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(67, 123);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(78, 158);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 30;
             this.bunifuCustomLabel1.Text = "Descripcion";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Enabled = false;
-            this.txtDescription.Location = new System.Drawing.Point(72, 161);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(457, 130);
-            this.txtDescription.TabIndex = 29;
-            this.txtDescription.Text = "";
             // 
             // lblDeleteClient
             // 
             this.lblDeleteClient.AutoSize = true;
             this.lblDeleteClient.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDeleteClient.Location = new System.Drawing.Point(46, 22);
+            this.lblDeleteClient.Location = new System.Drawing.Point(76, 34);
             this.lblDeleteClient.Name = "lblDeleteClient";
             this.lblDeleteClient.Size = new System.Drawing.Size(207, 40);
             this.lblDeleteClient.TabIndex = 27;
@@ -91,7 +82,7 @@ namespace CACMicropresicion.View.Cients
             this.delBtnDeleteClient.IconVisible = false;
             this.delBtnDeleteClient.IconZoom = 90D;
             this.delBtnDeleteClient.IsTab = false;
-            this.delBtnDeleteClient.Location = new System.Drawing.Point(216, 360);
+            this.delBtnDeleteClient.Location = new System.Drawing.Point(83, 252);
             this.delBtnDeleteClient.Name = "delBtnDeleteClient";
             this.delBtnDeleteClient.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.delBtnDeleteClient.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -110,20 +101,29 @@ namespace CACMicropresicion.View.Cients
             this.delDropClientId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.delDropClientId.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delDropClientId.FormattingEnabled = true;
-            this.delDropClientId.Location = new System.Drawing.Point(72, 78);
+            this.delDropClientId.Location = new System.Drawing.Point(83, 109);
             this.delDropClientId.Name = "delDropClientId";
             this.delDropClientId.Size = new System.Drawing.Size(229, 25);
             this.delDropClientId.TabIndex = 46;
             this.delDropClientId.SelectedIndexChanged += new System.EventHandler(this.delDropClientId_SelectedIndexChanged);
             // 
+            // txtDescription
+            // 
+            this.txtDescription.Enabled = false;
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(83, 186);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(389, 25);
+            this.txtDescription.TabIndex = 53;
+            // 
             // DeleteClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.delDropClientId);
             this.Controls.Add(this.delBtnDeleteClient);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblDeleteClient);
             this.Name = "DeleteClient";
             this.Size = new System.Drawing.Size(654, 432);
@@ -135,9 +135,9 @@ namespace CACMicropresicion.View.Cients
 
         #endregion
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.RichTextBox txtDescription;
         private Bunifu.Framework.UI.BunifuCustomLabel lblDeleteClient;
         private Bunifu.Framework.UI.BunifuFlatButton delBtnDeleteClient;
         private ComboBox delDropClientId;
+        private TextBox txtDescription;
     }
 }

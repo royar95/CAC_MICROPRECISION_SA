@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifyClient));
             this.lblEditClient = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.modDropClientStatus = new System.Windows.Forms.ComboBox();
             this.modDropClientId = new System.Windows.Forms.ComboBox();
             this.modBtnSaveClientChanges = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtDescription = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.SuspendLayout();
             // 
             // lblEditClient
@@ -43,26 +43,18 @@
             this.lblEditClient.AutoSize = true;
             this.lblEditClient.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEditClient.Location = new System.Drawing.Point(39, 15);
+            this.lblEditClient.Location = new System.Drawing.Point(77, 30);
             this.lblEditClient.Name = "lblEditClient";
             this.lblEditClient.Size = new System.Drawing.Size(180, 40);
             this.lblEditClient.TabIndex = 20;
             this.lblEditClient.Text = "Editar Cliente";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Location = new System.Drawing.Point(110, 163);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(457, 130);
-            this.txtDescription.TabIndex = 22;
-            this.txtDescription.Text = "";
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(105, 125);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(79, 149);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 23;
@@ -73,7 +65,7 @@
             this.modDropClientStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modDropClientStatus.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modDropClientStatus.FormattingEnabled = true;
-            this.modDropClientStatus.Location = new System.Drawing.Point(110, 338);
+            this.modDropClientStatus.Location = new System.Drawing.Point(84, 254);
             this.modDropClientStatus.Name = "modDropClientStatus";
             this.modDropClientStatus.Size = new System.Drawing.Size(225, 25);
             this.modDropClientStatus.TabIndex = 38;
@@ -83,7 +75,7 @@
             this.modDropClientId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modDropClientId.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modDropClientId.FormattingEnabled = true;
-            this.modDropClientId.Location = new System.Drawing.Point(110, 80);
+            this.modDropClientId.Location = new System.Drawing.Point(84, 98);
             this.modDropClientId.Name = "modDropClientId";
             this.modDropClientId.Size = new System.Drawing.Size(225, 25);
             this.modDropClientId.TabIndex = 39;
@@ -111,7 +103,7 @@
             this.modBtnSaveClientChanges.IconVisible = false;
             this.modBtnSaveClientChanges.IconZoom = 90D;
             this.modBtnSaveClientChanges.IsTab = false;
-            this.modBtnSaveClientChanges.Location = new System.Drawing.Point(36, 386);
+            this.modBtnSaveClientChanges.Location = new System.Drawing.Point(84, 325);
             this.modBtnSaveClientChanges.Name = "modBtnSaveClientChanges";
             this.modBtnSaveClientChanges.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.modBtnSaveClientChanges.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -130,22 +122,39 @@
             this.bunifuCustomLabel7.AutoSize = true;
             this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel7.Location = new System.Drawing.Point(105, 310);
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(79, 226);
             this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
             this.bunifuCustomLabel7.Size = new System.Drawing.Size(66, 25);
             this.bunifuCustomLabel7.TabIndex = 41;
             this.bunifuCustomLabel7.Text = "Estado";
             // 
+            // txtDescription
+            // 
+            this.txtDescription.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtDescription.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescription.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtDescription.BorderThickness = 3;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
+            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescription.isPassword = false;
+            this.txtDescription.Location = new System.Drawing.Point(84, 178);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(375, 34);
+            this.txtDescription.TabIndex = 42;
+            this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // ModifyClient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.modBtnSaveClientChanges);
             this.Controls.Add(this.modDropClientId);
             this.Controls.Add(this.modDropClientStatus);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblEditClient);
             this.Name = "ModifyClient";
             this.Size = new System.Drawing.Size(650, 448);
@@ -157,11 +166,11 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomLabel lblEditClient;
-        private System.Windows.Forms.RichTextBox txtDescription;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private System.Windows.Forms.ComboBox modDropClientStatus;
         private System.Windows.Forms.ComboBox modDropClientId;
         private Bunifu.Framework.UI.BunifuFlatButton modBtnSaveClientChanges;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtDescription;
     }
 }
