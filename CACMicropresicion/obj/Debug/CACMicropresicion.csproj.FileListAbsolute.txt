@@ -207,7 +207,6 @@ C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.xml
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Cients.AddClient.resources
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Cients.ClientsList.resources

@@ -183,6 +183,33 @@ namespace CACMicropresicion.Controller
 
 
 
+        public Dictionary<Object, dynamic> getAllClients()
+        {
+            try
+            {
+
+                var query = from c in db.Cliente
+                            join s in db.Estado on c.IdEstado equals s.IdEstado
+                            where c.Eliminado == 0
+                            select new
+                            {
+                                identification = c.IdCliente,
+                                description = c.Descripcion,
+                                status = s.Descripcion,
+                                deleted = (c.Eliminado == 1) ? "Si" : "No"
+                            };
+
+                var users = query.ToList();
+                return result(Result.Processed, null, users);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }
+
 
 
 

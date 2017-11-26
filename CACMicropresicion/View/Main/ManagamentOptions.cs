@@ -140,9 +140,18 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+
                 case "Clients":
                     ClientsList clientsList = new ClientsList();
-                    Parent.Controls.Add(clientsList);
+                    ClientsController cont = new ClientsController();
+                    clientsList.Height = Parent.Height;
+                    clientsList.Width = Parent.Width;
+                    Dictionary<Object, dynamic> res = cont.getAllClients();
+                    if (res["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(res["msg"]);
+                        return;
+                    }
                     break;
 
                 case "States":
