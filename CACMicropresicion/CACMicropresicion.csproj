@@ -80,6 +80,7 @@
     <Compile Include="Controller\BaseController.cs" />
     <Compile Include="Controller\ClientsController.cs" />
     <Compile Include="Controller\LoginCtrl.cs" />
+    <Compile Include="Controller\PaymentMethodController.cs" />
     <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
     <Compile Include="Globals\ContactInfoType.cs" />
@@ -234,6 +235,30 @@
     <Compile Include="View\Main\SecurityControl.Designer.cs">
       <DependentUpon>SecurityControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PaymentMethods\AddPaymentMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PaymentMethods\AddPaymentMethod.Designer.cs">
+      <DependentUpon>AddPaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaymentMethods\DeletePaymentMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PaymentMethods\DeletePaymentMethod.Designer.cs">
+      <DependentUpon>DeletePaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaymentMethods\ModifyPaymentMethod.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PaymentMethods\ModifyPaymentMethod.Designer.cs">
+      <DependentUpon>ModifyPaymentMethod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PaymentMethods\ViewPaymentMethods.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\PaymentMethods\ViewPaymentMethods.Designer.cs">
+      <DependentUpon>ViewPaymentMethods.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Register1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -344,6 +369,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main\SecurityControl.resx">
       <DependentUpon>SecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PaymentMethods\AddPaymentMethod.resx">
+      <DependentUpon>AddPaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PaymentMethods\DeletePaymentMethod.resx">
+      <DependentUpon>DeletePaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PaymentMethods\ModifyPaymentMethod.resx">
+      <DependentUpon>ModifyPaymentMethod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PaymentMethods\ViewPaymentMethods.resx">
+      <DependentUpon>ViewPaymentMethods.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Register1.resx">
       <DependentUpon>Register1.cs</DependentUpon>

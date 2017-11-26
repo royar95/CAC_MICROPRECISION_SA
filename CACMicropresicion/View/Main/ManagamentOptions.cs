@@ -12,6 +12,7 @@ using CACMicropresicion.View.Users;
 using CACMicropresicion.View.Cients;
 using CACMicropresicion.View.States;
 using CACMicropresicion.Globals;
+using CACMicropresicion.View.PaymentMethods;
 
 namespace CACMicropresicion.View.Main
 {
@@ -47,6 +48,11 @@ namespace CACMicropresicion.View.Main
                     AddState addState = new AddState();
                     Parent.Controls.Add(addState);
                     break;
+
+                case "PaymentMethods":
+                    AddPaymentMethod deletePayment = new AddPaymentMethod();
+                    Parent.Controls.Add(deletePayment);
+                    break;
             }
 
         }
@@ -70,6 +76,11 @@ namespace CACMicropresicion.View.Main
                     ModifyState modifyState = new ModifyState();
                     Parent.Controls.Add(modifyState);
                     break;
+
+                case "ModifyPaymentMethod":
+                    ModifyState modifyPaymentMethod = new ModifyState();
+                    Parent.Controls.Add(modifyPaymentMethod);
+                    break;
             }
         }
 
@@ -91,6 +102,11 @@ namespace CACMicropresicion.View.Main
                 case "States":
                     DeleteState deleteState = new DeleteState();
                     Parent.Controls.Add(deleteState);
+                    break;
+
+                case "PaymentMethods":
+                    DeletePaymentMethod deletePayment = new DeletePaymentMethod();
+                    Parent.Controls.Add(deletePayment);
                     break;
             }
         }
@@ -170,7 +186,11 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
-            
+            Parent.Controls.RemoveByKey("DeletePaymentMethod");
+            Parent.Controls.RemoveByKey("AddPaymentMethod");
+            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
+            Parent.Controls.RemoveByKey("ViewPaymentMethod");
+
         }
 
 
