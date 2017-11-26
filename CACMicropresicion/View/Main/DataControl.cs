@@ -52,6 +52,7 @@ namespace CACMicropresicion.View.Main
         {
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "PaymentMethods";
             Parent.Controls.Add(managament);
         }
 

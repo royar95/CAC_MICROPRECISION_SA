@@ -78,7 +78,7 @@ namespace CACMicropresicion.View.Main
                     break;
 
                 case "ModifyPaymentMethod":
-                    ModifyState modifyPaymentMethod = new ModifyState();
+                    ModifyPaymentMethod modifyPaymentMethod = new ModifyPaymentMethod();
                     Parent.Controls.Add(modifyPaymentMethod);
                     break;
             }
@@ -173,6 +173,29 @@ namespace CACMicropresicion.View.Main
                     {
                         viewState.loadDataGrid(this.result["content"]);
                         Parent.Controls.Add(viewState);
+                    }
+
+                    break;
+
+                case "PaymentMethods":
+
+                    ViewPaymentMethods viewPayment = new ViewPaymentMethods();
+                    PaymentMethodController cnt = new PaymentMethodController();
+
+                    viewPayment.Height = Parent.Height;
+                    viewPayment.Width = Parent.Width;
+
+                    this.result = cnt.getAllPaymentMethods();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        viewPayment.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewPayment);
                     }
 
                     break;

@@ -238,3 +238,4 @@ C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.DeletePaymentMethod.resources
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ModifyPaymentMethod.resources
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ViewPaymentMethods.resources
+C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
