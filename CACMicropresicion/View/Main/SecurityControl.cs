@@ -27,7 +27,8 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.Add(managament);
         }
 
-        private void removeAllControls() {
+         private void removeAllControls()
+        {
             Parent.Controls.RemoveByKey("ManagamentOptions");
             Parent.Controls.RemoveByKey("AddUser");
             Parent.Controls.RemoveByKey("AddClient");
@@ -41,6 +42,10 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
+            Parent.Controls.RemoveByKey("ViewPaymentMethods");
+            Parent.Controls.RemoveByKey("UpdatePaymentMethod");
+            Parent.Controls.RemoveByKey("DeletePaymentMethod");
+            Parent.Controls.RemoveByKey("AddPaymentMethod");
         }
 
     }

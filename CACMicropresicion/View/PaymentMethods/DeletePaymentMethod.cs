@@ -41,11 +41,11 @@ namespace CACMicropresicion.View.PaymentMethods
 
             if (resultPaymentMethod["code"] == Result.Processed)
             {
-                loadClientsComboBox(resultPaymentMethod["content"]);
+                loadPaymentMethodsComboBox(resultPaymentMethod["content"]);
             }
         }
 
-        public void loadClientsComboBox(Object data)
+        public void loadPaymentMethodsComboBox(Object data)
         {
             this.delDropPaymentId.DataSource = data;
             this.delDropPaymentId.ValueMember = "IdTipoPago";

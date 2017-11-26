@@ -84,7 +84,6 @@ namespace CACMicropresicion.View.PaymentMethods
                 Eliminado = registeredPaymentMethod.Eliminado
             };
 
-
             //  data["user"] = Session.getInstance().session["identification"];
             data["user"] = "probando";
             //quite el otro porque a yo estoy trabajando con mi version  y no esta enlazado el login
