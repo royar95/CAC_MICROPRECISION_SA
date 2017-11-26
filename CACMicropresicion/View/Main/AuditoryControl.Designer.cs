@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuditoryControl));
             this.btnUsers = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnLog = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
             // btnUsers
@@ -69,48 +69,49 @@
             this.btnUsers.Textcolor = System.Drawing.Color.White;
             this.btnUsers.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // bunifuFlatButton1
+            // btnLog
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnLog.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnLog.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Bitácoras";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = false;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Teal;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(237, 48);
-            this.bunifuFlatButton1.TabIndex = 3;
-            this.bunifuFlatButton1.Text = "Bitácoras";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLog.BackColor = System.Drawing.Color.Teal;
+            this.btnLog.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnLog.BorderRadius = 0;
+            this.btnLog.ButtonText = "Bitácoras";
+            this.btnLog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLog.DisabledColor = System.Drawing.Color.Gray;
+            this.btnLog.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnLog.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnLog.Iconimage")));
+            this.btnLog.Iconimage_right = null;
+            this.btnLog.Iconimage_right_Selected = null;
+            this.btnLog.Iconimage_Selected = null;
+            this.btnLog.IconMarginLeft = 0;
+            this.btnLog.IconMarginRight = 0;
+            this.btnLog.IconRightVisible = true;
+            this.btnLog.IconRightZoom = 0D;
+            this.btnLog.IconVisible = false;
+            this.btnLog.IconZoom = 90D;
+            this.btnLog.IsTab = false;
+            this.btnLog.Location = new System.Drawing.Point(0, 0);
+            this.btnLog.Name = "btnLog";
+            this.btnLog.Normalcolor = System.Drawing.Color.Teal;
+            this.btnLog.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnLog.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnLog.selected = false;
+            this.btnLog.Size = new System.Drawing.Size(237, 48);
+            this.btnLog.TabIndex = 3;
+            this.btnLog.Text = "Bitácoras";
+            this.btnLog.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLog.Textcolor = System.Drawing.Color.White;
+            this.btnLog.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // AuditoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
-            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.btnLog);
             this.Controls.Add(this.btnUsers);
             this.Name = "AuditoryControl";
             this.Size = new System.Drawing.Size(237, 441);
@@ -121,6 +122,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuFlatButton btnUsers;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private Bunifu.Framework.UI.BunifuFlatButton btnLog;
     }
 }

@@ -200,3 +200,4 @@ C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.ModifyState.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.ViewStates.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Log.LogList.resources

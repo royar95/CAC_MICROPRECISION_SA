@@ -19,7 +19,7 @@ namespace CACMicropresicion.Controller
         public Dictionary<Object,dynamic> populateClientsList()
         {
             List<Cliente> list = new List<Cliente>();
-            var query = from clients in db.Cliente where clients.IdEstado == 10 select clients;
+            var query = from clients in db.Cliente where clients.Eliminado == 0 select clients;
             return result(Result.Processed, Result.Modified, query.ToList());
             
         }
