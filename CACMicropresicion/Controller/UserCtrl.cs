@@ -237,6 +237,10 @@ namespace CACMicropresicion.Controller
 
         public Dictionary<Object, dynamic> insertContactInformation() {
 
+            if (String.IsNullOrEmpty(data["value"])) {
+                return result(Result.Failed, Result.Empty, null);
+            }
+
             try {
 
                 data["entity"] = db.Usuario.Find(((Usuario)data["entity"]).IdUsuario);

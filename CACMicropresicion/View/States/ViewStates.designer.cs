@@ -38,13 +38,13 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgViewStates.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgViewStates.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgViewStates.BackgroundColor = System.Drawing.Color.White;
             this.dgViewStates.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgViewStates.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -52,8 +52,8 @@
             this.dgViewStates.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewStates.DoubleBuffered = true;
             this.dgViewStates.EnableHeadersVisualStyles = false;
-            this.dgViewStates.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgViewStates.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgViewStates.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
+            this.dgViewStates.HeaderForeColor = System.Drawing.Color.Black;
             this.dgViewStates.Location = new System.Drawing.Point(3, 0);
             this.dgViewStates.Name = "dgViewStates";
             this.dgViewStates.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

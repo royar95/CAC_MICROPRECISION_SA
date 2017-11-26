@@ -32,8 +32,8 @@
             this.delDropStateId = new System.Windows.Forms.ComboBox();
             this.delBtnDeleteState = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.txtDescription = new System.Windows.Forms.RichTextBox();
             this.lblDeleteStatus = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtDescription = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // delDropStateId
@@ -41,7 +41,7 @@
             this.delDropStateId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.delDropStateId.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delDropStateId.FormattingEnabled = true;
-            this.delDropStateId.Location = new System.Drawing.Point(86, 78);
+            this.delDropStateId.Location = new System.Drawing.Point(66, 143);
             this.delDropStateId.Name = "delDropStateId";
             this.delDropStateId.Size = new System.Drawing.Size(229, 25);
             this.delDropStateId.TabIndex = 51;
@@ -69,7 +69,7 @@
             this.delBtnDeleteState.IconVisible = false;
             this.delBtnDeleteState.IconZoom = 90D;
             this.delBtnDeleteState.IsTab = false;
-            this.delBtnDeleteState.Location = new System.Drawing.Point(230, 360);
+            this.delBtnDeleteState.Location = new System.Drawing.Point(66, 251);
             this.delBtnDeleteState.Name = "delBtnDeleteState";
             this.delBtnDeleteState.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.delBtnDeleteState.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -88,43 +88,43 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(81, 123);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(61, 115);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(72, 25);
             this.bunifuCustomLabel1.TabIndex = 49;
-            this.bunifuCustomLabel1.Text = "Descripcion";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.Enabled = false;
-            this.txtDescription.Location = new System.Drawing.Point(86, 161);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(457, 130);
-            this.txtDescription.TabIndex = 48;
-            this.txtDescription.Text = "";
+            this.bunifuCustomLabel1.Text = "Código";
             // 
             // lblDeleteStatus
             // 
             this.lblDeleteStatus.AutoSize = true;
             this.lblDeleteStatus.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDeleteStatus.Location = new System.Drawing.Point(60, 22);
+            this.lblDeleteStatus.Location = new System.Drawing.Point(59, 33);
             this.lblDeleteStatus.Name = "lblDeleteStatus";
             this.lblDeleteStatus.Size = new System.Drawing.Size(203, 40);
             this.lblDeleteStatus.TabIndex = 47;
             this.lblDeleteStatus.Text = "Eliminar Estado";
             // 
+            // txtDescription
+            // 
+            this.txtDescription.Enabled = false;
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(66, 189);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(389, 25);
+            this.txtDescription.TabIndex = 52;
+            // 
             // DeleteState
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.delDropStateId);
             this.Controls.Add(this.delBtnDeleteState);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblDeleteStatus);
             this.Name = "DeleteState";
-            this.Size = new System.Drawing.Size(694, 482);
+            this.Size = new System.Drawing.Size(650, 383);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -135,7 +135,7 @@
         private System.Windows.Forms.ComboBox delDropStateId;
         private Bunifu.Framework.UI.BunifuFlatButton delBtnDeleteState;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.RichTextBox txtDescription;
         private Bunifu.Framework.UI.BunifuCustomLabel lblDeleteStatus;
+        private System.Windows.Forms.TextBox txtDescription;
     }
 }
