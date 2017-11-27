@@ -326,6 +326,7 @@ namespace CACMicropresicion.Controller
 
             var query = from u in db.Usuario
                         where u.Cedula == identification
+                        where u.Eliminado == ((byte)0)
                         select u;
 
             Usuario user = query.FirstOrDefault<Usuario>();

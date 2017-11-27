@@ -46,6 +46,7 @@ namespace CACMicropresicion.Controller
             var query = from u in db.Usuario
                         where u.NombreUsuario == userName
                         where u.Contrasena == password
+                        where u.Eliminado == ((byte)0)
                         select u;
 
             return query.FirstOrDefault<Usuario>();
