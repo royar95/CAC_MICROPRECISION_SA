@@ -296,6 +296,7 @@
             this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton6.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton6.Click += new System.EventHandler(this.bunifuFlatButton6_Click);
             // 
             // bunifuFlatButton7
             // 

@@ -35,7 +35,7 @@ namespace CACMicropresicion.Model
         public string toString() {
             return ("Codigo de categoria: " + IdTipoMaterial + ", Descripcion: " + Descripcion +
                ", Fecha agregado: " + FechaAgrega + ", Fecha Eliminado: " + FechaElimina +
-                ", Agregador por: " + UsuarioAgrega + ", Eliminado: " + Eliminado + ", Estado:" + IdEstado;
+                ", Agregador por: " + UsuarioAgrega + ", Eliminado: " + Eliminado + ", Estado:" + IdEstado );
         }
 
     }

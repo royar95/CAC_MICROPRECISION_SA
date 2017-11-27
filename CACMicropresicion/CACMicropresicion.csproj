@@ -401,6 +401,12 @@
     <EmbeddedResource Include="View\MaterialTypes\DeleteMaterialType.resx">
       <DependentUpon>DeleteMaterialType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\MaterialTypes\ModifyMaterialType.resx">
+      <DependentUpon>ModifyMaterialType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MaterialTypes\ViewMaterialTypes.resx">
+      <DependentUpon>ViewMaterialTypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\PaymentMethods\AddPaymentMethod.resx">
       <DependentUpon>AddPaymentMethod.cs</DependentUpon>
     </EmbeddedResource>

@@ -49,6 +49,7 @@ namespace CACMicropresicion.Controller
 
         }
 
+        
 
         public TipoMaterial CreateMaterialType()
         {
@@ -78,10 +79,8 @@ namespace CACMicropresicion.Controller
 
         public Dictionary<Object, dynamic> getDataToFillMaterialsCombo()
         {
-
             try
             {
-
                 var query = from t in db.TipoMaterial
                             where t.Eliminado == 0
                             orderby t.IdTipoMaterial
@@ -126,5 +125,70 @@ namespace CACMicropresicion.Controller
             }
 
         }
+
+        public Dictionary<Object, dynamic> modifyMaterialType(TipoMaterial registeredMaterial, TipoMaterial modifiedMaterial)
+        {
+
+            if (String.IsNullOrEmpty(modifiedMaterial.Descripcion))
+            {
+                return result(Result.Failed, Result.Empty, null);
+            }
+
+            if (registeredMaterial.Descripcion.Equals(registeredMaterial.Descripcion))
+            {
+                return result(Result.Failed, Result.Same, null);
+            }
+
+            try
+            {
+
+                string oldContent = registeredMaterial.toString();
+                string newContent = modifiedMaterial.toString();
+
+                TipoMaterial newMaterialType = db.TipoMaterial.Find(modifiedMaterial.IdTipoMaterial);
+                db.Entry(newMaterialType).CurrentValues.SetValues(modifiedMaterial);
+                db.Entry(newMaterialType).State = System.Data.Entity.EntityState.Modified;
+
+                Bitacora MaterialTypeLog = createLog(Log.Modify, Log.MaterialType, oldContent, newContent);
+                db.Bitacora.Add(MaterialTypeLog);
+
+                db.SaveChanges();
+
+                return result(Result.Processed, Result.Modified, null);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al modificar el registro: " + ex.Message, null);
+            }
+
+        }
+
+        public Dictionary<Object, dynamic> getAllMaterialTypes()
+        {
+            try
+            {
+
+                var query = from t in db.TipoMaterial
+                            where t.Eliminado == 0
+                            select new
+                            {
+                                idMaterial = t.IdTipoMaterial,
+                                description = t.Descripcion
+                            };
+
+                var users = query.ToList();
+                return result(Result.Processed, null, users);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }
+
+
+
     }
 }

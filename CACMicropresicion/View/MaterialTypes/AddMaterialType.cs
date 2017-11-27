@@ -41,7 +41,7 @@ namespace CACMicropresicion.View.MaterialTypes
             MaterialTypeController controller = new MaterialTypeController();
             data["user"] = Session.getInstance().session["identification"];
             controller.data = this.data;
-            Dictionary<Object, dynamic> result = controller.insertPaymentMethodFromMaintenance();
+            Dictionary<Object, dynamic> result = controller.insertMaterialTypeFromMaintenance();
             MessageBox.Show(result["msg"]);
         }
     }
