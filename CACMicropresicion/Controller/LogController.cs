@@ -11,6 +11,8 @@ namespace CACMicropresicion.Controller
     class LogController: BaseController
     {
 
+        public Dictionary<Object, dynamic> data { get; set; }
+
         public LogController() { 
         }
 
@@ -19,7 +21,14 @@ namespace CACMicropresicion.Controller
             try
             {
 
+                string identification = data["userId"];
+                DateTime startDate = data["startDate"];
+                DateTime endDate = data["endDate"];
+
                 var query = from log in db.Bitacora
+                            where log.UsuarioAgrega == identification
+                            where log.Fecha >= startDate
+                            where log.Fecha <= endDate
                             orderby log.Fecha
                             select new
                             {

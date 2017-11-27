@@ -199,5 +199,9 @@ C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.DeleteState.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.ModifyState.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.ViewStates.resources
-C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Log.LogList.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.AddPaymentMethod.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.DeletePaymentMethod.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ModifyPaymentMethod.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ViewPaymentMethods.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.LogOptions.resources

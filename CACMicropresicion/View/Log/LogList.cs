@@ -15,7 +15,7 @@ namespace CACMicropresicion.View.Log
         public LogList()
         {
             InitializeComponent();
-            this.Location = new Point(237, 50);
+            this.Location = new Point(237, 97);
             this.Anchor = AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Top;
         }
 

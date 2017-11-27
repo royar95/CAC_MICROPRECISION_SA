@@ -12,6 +12,7 @@ using CACMicropresicion.View.Users;
 using CACMicropresicion.View.Cients;
 using CACMicropresicion.View.States;
 using CACMicropresicion.Globals;
+using CACMicropresicion.View.PaymentMethods;
 
 namespace CACMicropresicion.View.Main
 {
@@ -47,6 +48,11 @@ namespace CACMicropresicion.View.Main
                     AddState addState = new AddState();
                     Parent.Controls.Add(addState);
                     break;
+
+                case "PaymentMethods":
+                    AddPaymentMethod deletePayment = new AddPaymentMethod();
+                    Parent.Controls.Add(deletePayment);
+                    break;
             }
 
         }
@@ -70,6 +76,11 @@ namespace CACMicropresicion.View.Main
                     ModifyState modifyState = new ModifyState();
                     Parent.Controls.Add(modifyState);
                     break;
+
+                case "PaymentMethods":
+                    ModifyPaymentMethod modifyPaymentMethod = new ModifyPaymentMethod();
+                    Parent.Controls.Add(modifyPaymentMethod);
+                    break;
             }
         }
 
@@ -91,6 +102,11 @@ namespace CACMicropresicion.View.Main
                 case "States":
                     DeleteState deleteState = new DeleteState();
                     Parent.Controls.Add(deleteState);
+                    break;
+
+                case "PaymentMethods":
+                    DeletePaymentMethod deletePayment = new DeletePaymentMethod();
+                    Parent.Controls.Add(deletePayment);
                     break;
             }
         }
@@ -124,9 +140,18 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+
                 case "Clients":
                     ClientsList clientsList = new ClientsList();
-                    Parent.Controls.Add(clientsList);
+                    ClientsController cont = new ClientsController();
+                    clientsList.Height = Parent.Height;
+                    clientsList.Width = Parent.Width;
+                    Dictionary<Object, dynamic> res = cont.getAllClients();
+                    if (res["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(res["msg"]);
+                        return;
+                    }
                     break;
 
                 case "States":
@@ -151,6 +176,29 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+
+                case "PaymentMethods":
+
+                    ViewPaymentMethods viewPayment = new ViewPaymentMethods();
+                    PaymentMethodController cnt = new PaymentMethodController();
+
+                    viewPayment.Height = Parent.Height;
+                    viewPayment.Width = Parent.Width;
+
+                    this.result = cnt.getAllPaymentMethods();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        viewPayment.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewPayment);
+                    }
+
+                    break;
             }
 
         }
@@ -170,8 +218,11 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
-            Parent.Controls.RemoveByKey("LogList");
-            
+            Parent.Controls.RemoveByKey("DeletePaymentMethod");
+            Parent.Controls.RemoveByKey("AddPaymentMethod");
+            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
+            Parent.Controls.RemoveByKey("ViewPaymentMethods");
+
         }
 
 

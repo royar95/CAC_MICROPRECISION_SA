@@ -24,20 +24,11 @@ namespace CACMicropresicion.View.Main
 
         private void btnLog_Click(object sender, EventArgs e)
         {
+
             removeAllControls();
-
-            LogController controller = new LogController();
-            LogList control = new LogList();
-
-            Dictionary<Object, dynamic> result = controller.getLogs();
-            if (result["code"] == Result.Failed) {
-                MessageBox.Show(result["msg"]);
-            }
-
-            if (result["code"] == Result.Processed) {
-                control.loadDataGrid(result["content"]);
-                Parent.Controls.Add(control);
-            }
+            LogOptions control = new LogOptions();
+            control.loadCombos();
+            Parent.Controls.Add(control);
 
         }
 
@@ -56,6 +47,11 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
+            Parent.Controls.RemoveByKey("DeletePaymentMethod");
+            Parent.Controls.RemoveByKey("AddPaymentMethod");
+            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
+            Parent.Controls.RemoveByKey("ViewPaymentMethods");
+            Parent.Controls.RemoveByKey("LogOptions");
             Parent.Controls.RemoveByKey("LogList");
         }
 

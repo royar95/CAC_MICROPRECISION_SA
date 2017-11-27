@@ -13,7 +13,7 @@ namespace CACMicropresicion.View.Cients
 {
     public partial class ClientsList : UserControl
     {
-        ClientsController controller = new ClientsController();   
+        ClientsController controller = new ClientsController();
         public ClientsList()
         {
             InitializeComponent();
@@ -21,18 +21,41 @@ namespace CACMicropresicion.View.Cients
             this.Anchor = AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Top;
         }
 
-        private void ClientsList_Load(object sender, EventArgs e)
+        public void loadDataGrid(Object list)
         {
-            var result = controller.populateClientsList();
-
-            dataGridViewClients.DataSource = result["content"];
+            this.dataGridViewClients.DataSource = list;
+            changeHeadersText();
+            setColumnsSize();
+            setFontConf();
         }
 
-        private void dataGridViewClients_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void changeHeadersText()
         {
-            var result = controller.populateClientsList();
-
-            dataGridViewClients.DataSource = result["content"];
+            this.dataGridViewClients.Columns[0].HeaderText = "Código";
+            this.dataGridViewClients.Columns[1].HeaderText = "Descripcion";
+            this.dataGridViewClients.Columns[2].HeaderText = "Estado";
+            this.dataGridViewClients.Columns[3].HeaderText = "Eliminado";
         }
+
+        private void setColumnsSize()
+        {
+            this.dataGridViewClients.Columns[0].Width = 170;
+            this.dataGridViewClients.Columns[1].Width = 250;
+            this.dataGridViewClients.Columns[2].Width = 180;
+            this.dataGridViewClients.Columns[3].Width = 170;
+        }
+
+        private void setFontConf()
+        {
+            foreach (DataGridViewColumn column in this.dataGridViewClients.Columns)
+            {
+                column.DefaultCellStyle.Font = new Font("Segoe UI Light", 11);
+                column.HeaderCell.Style.Font = new Font("Segoe UI Light", 12, FontStyle.Bold);
+                column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+        }
+
+
     }
 }
