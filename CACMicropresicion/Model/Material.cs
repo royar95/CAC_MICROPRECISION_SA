@@ -35,5 +35,13 @@ namespace CACMicropresicion.Model
         public virtual Estado Estado { get; set; }
         public virtual TipoMaterial TipoMaterial { get; set; }
         public virtual Proveedor Proveedor { get; set; }
+
+        public string toString()
+        {
+            return "Descripcion: " + Descripcion + ", Fecha agregado: " + FechaAgrega + ", Fecha Eliminado: " + FechaElimina +
+                ", Agregador por: " + UsuarioAgrega + ", Eliminado: " + Eliminado + ", Estado: " + IdEstado + ",Tipo: " + IdTipoMaterial + 
+                ", Proveedor: " + IdProveedor;
+        }
+
     }
 }

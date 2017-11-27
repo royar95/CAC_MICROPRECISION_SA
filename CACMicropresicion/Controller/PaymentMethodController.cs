@@ -133,7 +133,7 @@ namespace CACMicropresicion.Controller
                 return result(Result.Failed, Result.Empty, null);
             }
 
-            if (registeredPayment.Descripcion.Equals(registeredPayment.Descripcion))
+            if (registeredPayment.Descripcion.Equals(modifiedPayment.Descripcion))
             {
                 return result(Result.Failed, Result.Same, null);
             }

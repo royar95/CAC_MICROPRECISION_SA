@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CACMicropresicion.Controller;
+using CACMicropresicion.Globals;
 
 namespace CACMicropresicion.View.PaymentMethods
 {
@@ -32,22 +33,21 @@ namespace CACMicropresicion.View.PaymentMethods
         private void storeDataIntoArray()
         {
             this.data = new Dictionary<string, dynamic>();
-
             data["description"] = this.description.TrimStart().TrimEnd();
 
         }
 
-        private void btnAddClient_Click(object sender, EventArgs e)
+        private void btnAddPaymentMethod_Click(object sender, EventArgs e)
         {
             catchInformation();
             storeDataIntoArray();
 
             PaymentMethodController controller = new PaymentMethodController();
-            //data["user"] = Session.getInstance().session["identification"];
-            data["user"] = "userTest";
+            data["user"] = Session.getInstance().session["identification"];
             controller.data = this.data;
             Dictionary<Object, dynamic> result = controller.insertPaymentMethodFromMaintenance();
             MessageBox.Show(result["msg"]);
+
         }
     }
 }

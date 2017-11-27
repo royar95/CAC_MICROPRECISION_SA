@@ -41,11 +41,11 @@ namespace CACMicropresicion.View.PaymentMethods
 
             if (resultPaymentMethod["code"] == Result.Processed)
             {
-                loadClientsComboBox(resultPaymentMethod["content"]);
+                loadPaymentMethodsComboBox(resultPaymentMethod["content"]);
             }
         }
 
-        public void loadClientsComboBox(Object data)
+        public void loadPaymentMethodsComboBox(Object data)
         {
             this.delDropPaymentId.DataSource = data;
             this.delDropPaymentId.ValueMember = "IdTipoPago";
@@ -60,8 +60,7 @@ namespace CACMicropresicion.View.PaymentMethods
 
             this.registeredPaymentMethod = (TipoPago)delDropPaymentId.SelectedItem;
             data["id"] = registeredPaymentMethod.IdTipoPago;
-            //  data["user"] = Session.getInstance().session["identification"];
-            data["user"] = "userTest";
+            data["user"] = Session.getInstance().session["identification"];
             controller.data = data;
 
             Dictionary<Object, dynamic> result = controller.deletePaymentMethod(registeredPaymentMethod);
@@ -73,5 +72,6 @@ namespace CACMicropresicion.View.PaymentMethods
 
             MessageBox.Show(result["msg"]);
         }
+
     }
 }

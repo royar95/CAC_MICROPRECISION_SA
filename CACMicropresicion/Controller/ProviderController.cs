@@ -22,10 +22,6 @@ namespace CACMicropresicion.Controller
         {
         }
 
-        public Dictionary<Object, dynamic> getAddress(int providerID)
-        {
-
-        }
 
         public Dictionary<Object, dynamic> getAllProviders()
         {

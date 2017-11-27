@@ -31,5 +31,12 @@ namespace CACMicropresicion.Model
         public virtual Estado Estado { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Material> Material { get; set; }
+
+        public string toString() {
+            return ("Codigo de categoria: " + IdTipoMaterial + ", Descripcion: " + Descripcion +
+               ", Fecha agregado: " + FechaAgrega + ", Fecha Eliminado: " + FechaElimina +
+                ", Agregador por: " + UsuarioAgrega + ", Eliminado: " + Eliminado + ", Estado:" + IdEstado );
+        }
+
     }
 }

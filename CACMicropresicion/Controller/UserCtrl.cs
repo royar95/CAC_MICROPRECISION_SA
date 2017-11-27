@@ -306,6 +306,20 @@ namespace CACMicropresicion.Controller
 
         }
 
+        private bool userExists(string identification)
+        {
+
+            var query = from u in db.Usuario
+                        where u.Cedula == identification
+                        where u.Eliminado == ((byte)0)
+                        select u;
+
+            Usuario user = query.FirstOrDefault<Usuario>();
+
+            return user != null;
+
+        }
+
         private Bitacora createLog(string action, string table, string oldContent, string newContent)
         {
 
@@ -318,19 +332,6 @@ namespace CACMicropresicion.Controller
                 ContenidoNuevo = newContent,
                 UsuarioAgrega = data["user"]
             };
-
-        }
-
-        private bool userExists(string identification)
-        {
-
-            var query = from u in db.Usuario
-                        where u.Cedula == identification
-                        select u;
-
-            Usuario user = query.FirstOrDefault<Usuario>();
-
-            return user != null;
 
         }
 

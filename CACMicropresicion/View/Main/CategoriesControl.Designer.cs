@@ -141,7 +141,7 @@
             this.btnData.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.btnData.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnData.BorderRadius = 0;
-            this.btnData.ButtonText = "DATOS";
+            this.btnData.ButtonText = "DATOS GENERALES";
             this.btnData.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnData.DisabledColor = System.Drawing.Color.Gray;
             this.btnData.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -167,7 +167,7 @@
             this.btnData.selected = false;
             this.btnData.Size = new System.Drawing.Size(146, 51);
             this.btnData.TabIndex = 2;
-            this.btnData.Text = "DATOS";
+            this.btnData.Text = "DATOS GENERALES";
             this.btnData.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnData.Textcolor = System.Drawing.Color.Black;
             this.btnData.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

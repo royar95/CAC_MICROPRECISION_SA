@@ -38,13 +38,13 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgViewPayments.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgViewPayments.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgViewPayments.BackgroundColor = System.Drawing.Color.White;
             this.dgViewPayments.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgViewPayments.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -52,8 +52,8 @@
             this.dgViewPayments.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewPayments.DoubleBuffered = true;
             this.dgViewPayments.EnableHeadersVisualStyles = false;
-            this.dgViewPayments.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgViewPayments.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgViewPayments.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
+            this.dgViewPayments.HeaderForeColor = System.Drawing.Color.Black;
             this.dgViewPayments.Location = new System.Drawing.Point(0, 0);
             this.dgViewPayments.Name = "dgViewPayments";
             this.dgViewPayments.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

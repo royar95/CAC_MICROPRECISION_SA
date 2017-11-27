@@ -56,39 +56,30 @@ namespace CACMicropresicion.View.PaymentMethods
 
         }
 
-        private void fillPaymentInputs()
+        private void modDropPaymentId_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.registeredPaymentMethod = (TipoPago)this.modDropPaymentId.SelectedItem;
-            txtDescripcion.Text = this.registeredPaymentMethod.Descripcion;
-
+            txtDescription.Text = this.registeredPaymentMethod.Descripcion;
         }
 
-        private void modDropClientId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fillPaymentInputs();
-        }
-
-
-
-        private void modBtnSaveClientChanges_Click(object sender, EventArgs e)
+        private void modBtnSavePaymentChanges_Click(object sender, EventArgs e)
         {
             this.controller = new PaymentMethodController();
             Dictionary<string, dynamic> data = new Dictionary<string, dynamic>();
 
             TipoPago modifiedPaymentMethod = new TipoPago()
             {
-                Descripcion = txtDescripcion.Text.TrimStart().TrimEnd(),
+                IdTipoPago = registeredPaymentMethod.IdTipoPago,
+                Descripcion = txtDescription.Text.TrimStart().TrimEnd(),
                 FechaAgrega = registeredPaymentMethod.FechaAgrega,
                 FechaElimina = registeredPaymentMethod.FechaElimina,
                 UsuarioAgrega = registeredPaymentMethod.UsuarioAgrega,
-                Eliminado = registeredPaymentMethod.Eliminado
+                Eliminado = registeredPaymentMethod.Eliminado,
+                IdEstado = registeredPaymentMethod.IdEstado
             };
 
 
-            //  data["user"] = Session.getInstance().session["identification"];
-            data["user"] = "probando";
-            //quite el otro porque a yo estoy trabajando con mi version  y no esta enlazado el login
-            //entonces nada mas descomentelo y elimine ese de arriba.
+            data["user"] = Session.getInstance().session["identification"];
             controller.data = data;
 
             Dictionary<Object, dynamic> result = controller.modifyPaymentMethod(registeredPaymentMethod, modifiedPaymentMethod);

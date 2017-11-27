@@ -41,6 +41,29 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
+            Parent.Controls.RemoveByKey("LogOptions");
+            Parent.Controls.RemoveByKey("LogList");
+            Parent.Controls.RemoveByKey("ViewPaymentMethods");
+            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
+            Parent.Controls.RemoveByKey("DeletePaymentMethod");
+            Parent.Controls.RemoveByKey("AddPaymentMethod");
+            Parent.Controls.RemoveByKey("AddMaterialType");
+            Parent.Controls.RemoveByKey("DeleteMaterialType");
+            Parent.Controls.RemoveByKey("ModifyMaterialType");
+            Parent.Controls.RemoveByKey("ViewMaterialTypes");
+            Parent.Controls.RemoveByKey("AddMaterial");
+            Parent.Controls.RemoveByKey("ModifyMaterial");
+            Parent.Controls.RemoveByKey("DeleteMaterial");
+            Parent.Controls.RemoveByKey("MaterialsList");
+            Parent.Controls.RemoveByKey("AddProductType");
+            Parent.Controls.RemoveByKey("DeleteProductType");
+            Parent.Controls.RemoveByKey("ModifyProductType");
+            Parent.Controls.RemoveByKey("ViewProductTypes");
+            Parent.Controls.RemoveByKey("AddProduct");
+            Parent.Controls.RemoveByKey("DeleteProduct");
+            Parent.Controls.RemoveByKey("ModifyProduct");
+            Parent.Controls.RemoveByKey("ViewProducts");
+
         }
 
     }

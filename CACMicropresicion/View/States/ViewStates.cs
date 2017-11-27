@@ -37,7 +37,7 @@ namespace CACMicropresicion.View.States
         private void setColumnsSize()
         {
             this.dgViewStates.Columns[0].Width = 100;
-            this.dgViewStates.Columns[1].Width = 250;
+            this.dgViewStates.Columns[1].Width = 350;
         }
 
         private void setFontConf()

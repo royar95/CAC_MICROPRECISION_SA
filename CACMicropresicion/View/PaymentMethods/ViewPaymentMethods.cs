@@ -36,7 +36,7 @@ namespace CACMicropresicion.View.PaymentMethods
 
         private void setColumnsSize()
         {
-            this.dgViewPayments.Columns[0].Width = 350;
+            this.dgViewPayments.Columns[0].Width = 100;
             this.dgViewPayments.Columns[1].Width = 350;
         }
 
