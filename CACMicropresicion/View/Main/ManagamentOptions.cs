@@ -168,6 +168,11 @@ namespace CACMicropresicion.View.Main
                         MessageBox.Show(res["msg"]);
                         return;
                     }
+                    if (res["code"] == Result.Processed)
+                    {
+                        clientsList.loadDataGrid(res["content"]);
+                        Parent.Controls.Add(clientsList);
+                    }
                     break;
 
                 case "States":
