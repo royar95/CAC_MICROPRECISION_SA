@@ -38,13 +38,13 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgViewMaterialTypes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgViewMaterialTypes.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dgViewMaterialTypes.BackgroundColor = System.Drawing.Color.White;
             this.dgViewMaterialTypes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgViewMaterialTypes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -52,8 +52,8 @@
             this.dgViewMaterialTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgViewMaterialTypes.DoubleBuffered = true;
             this.dgViewMaterialTypes.EnableHeadersVisualStyles = false;
-            this.dgViewMaterialTypes.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dgViewMaterialTypes.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dgViewMaterialTypes.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
+            this.dgViewMaterialTypes.HeaderForeColor = System.Drawing.Color.Black;
             this.dgViewMaterialTypes.Location = new System.Drawing.Point(3, 3);
             this.dgViewMaterialTypes.Name = "dgViewMaterialTypes";
             this.dgViewMaterialTypes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

@@ -27,35 +27,6 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.Add(managament);
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-            removeAllControls();
-            ManagamentOptions managament = new ManagamentOptions();
-            Parent.Controls.Add(managament);
-        }
-
-        private void bunifuFlatButton2_Click(object sender, EventArgs e)
-        {
-            removeAllControls();
-            ManagamentOptions managament = new ManagamentOptions();
-            Parent.Controls.Add(managament);
-        }
-
-        private void bunifuFlatButton3_Click(object sender, EventArgs e)
-        {
-            removeAllControls();
-            ManagamentOptions managament = new ManagamentOptions();
-            Parent.Controls.Add(managament);
-        }
-
-        private void bunifuFlatButton4_Click(object sender, EventArgs e)
-        {
-            removeAllControls();
-            ManagamentOptions managament = new ManagamentOptions();
-            managament.Mantenimiento = "PaymentMethods";
-            Parent.Controls.Add(managament);
-        }
-
         private void btnStatus_Click(object sender, EventArgs e)
         {
             removeAllControls();
@@ -64,11 +35,11 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.Add(managament);
         }
 
-        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        private void btnPaymentMethods_Click(object sender, EventArgs e)
         {
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
-            managament.Mantenimiento = "MaterialTypes";
+            managament.Mantenimiento = "PaymentMethods";
             Parent.Controls.Add(managament);
         }
 
@@ -90,9 +61,21 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("LogOptions");
             Parent.Controls.RemoveByKey("LogList");
             Parent.Controls.RemoveByKey("ViewPaymentMethods");
-            Parent.Controls.RemoveByKey("UpdatePaymentMethod");
+            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
             Parent.Controls.RemoveByKey("DeletePaymentMethod");
             Parent.Controls.RemoveByKey("AddPaymentMethod");
+            Parent.Controls.RemoveByKey("AddMaterialType");
+            Parent.Controls.RemoveByKey("DeleteMaterialType");
+            Parent.Controls.RemoveByKey("ModifyMaterialType");
+            Parent.Controls.RemoveByKey("ViewMaterialTypes");
+        }
+
+        private void btnMaterialTypes_Click(object sender, EventArgs e)
+        {
+            removeAllControls();
+            ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "MaterialTypes";
+            Parent.Controls.Add(managament);
         }
 
     }

@@ -62,11 +62,6 @@ namespace CACMicropresicion.View.MaterialTypes
 
         }
 
-        private void modDropClientId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fillPaymentInputs();
-        }
-
         private void modBtnSaveMaterialType_Click(object sender, EventArgs e)
         {
             this.controller = new MaterialTypeController();
@@ -74,17 +69,16 @@ namespace CACMicropresicion.View.MaterialTypes
 
             TipoMaterial modifiedMaterialType = new TipoMaterial()
             {
+                IdTipoMaterial = registeredMaterialType.IdTipoMaterial,
                 Descripcion = txtDescripcion.Text.TrimStart().TrimEnd(),
                 FechaAgrega = registeredMaterialType.FechaAgrega,
                 FechaElimina = registeredMaterialType.FechaElimina,
                 UsuarioAgrega = registeredMaterialType.UsuarioAgrega,
-                Eliminado = registeredMaterialType.Eliminado
+                Eliminado = registeredMaterialType.Eliminado,
+                IdEstado = registeredMaterialType.IdEstado
             };
 
-              data["user"] = Session.getInstance().session["identification"];
-            //data["user"] = "probando";
-            //quite el otro porque a yo estoy trabajando con mi version  y no esta enlazado el login
-            //entonces nada mas descomentelo y elimine ese de arriba.
+            data["user"] = Session.getInstance().session["identification"];
             controller.data = data;
 
             Dictionary<Object, dynamic> result = controller.modifyMaterialType(registeredMaterialType, modifiedMaterialType);
@@ -95,6 +89,12 @@ namespace CACMicropresicion.View.MaterialTypes
             }
 
             MessageBox.Show(result["msg"]);
+        }
+
+        private void modDropMaterialType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            fillPaymentInputs();
+
         }
     }
 }

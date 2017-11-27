@@ -134,7 +134,7 @@ namespace CACMicropresicion.Controller
                 return result(Result.Failed, Result.Empty, null);
             }
 
-            if (registeredMaterial.Descripcion.Equals(registeredMaterial.Descripcion))
+            if (registeredMaterial.Descripcion.Equals(modifiedMaterial.Descripcion))
             {
                 return result(Result.Failed, Result.Same, null);
             }

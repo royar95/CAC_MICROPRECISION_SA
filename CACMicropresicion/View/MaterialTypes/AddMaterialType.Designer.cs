@@ -40,7 +40,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(78, 134);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(69, 96);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 27;
@@ -51,7 +51,7 @@
             this.lblNewPaymentMethod.AutoSize = true;
             this.lblNewPaymentMethod.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewPaymentMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNewPaymentMethod.Location = new System.Drawing.Point(57, 31);
+            this.lblNewPaymentMethod.Location = new System.Drawing.Point(67, 28);
             this.lblNewPaymentMethod.Name = "lblNewPaymentMethod";
             this.lblNewPaymentMethod.Size = new System.Drawing.Size(410, 40);
             this.lblNewPaymentMethod.TabIndex = 26;
@@ -67,10 +67,10 @@
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescription.isPassword = false;
-            this.txtDescription.Location = new System.Drawing.Point(83, 209);
+            this.txtDescription.Location = new System.Drawing.Point(74, 125);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(370, 44);
+            this.txtDescription.Size = new System.Drawing.Size(291, 34);
             this.txtDescription.TabIndex = 28;
             this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -96,7 +96,7 @@
             this.btnAddMaterialType.IconVisible = false;
             this.btnAddMaterialType.IconZoom = 90D;
             this.btnAddMaterialType.IsTab = false;
-            this.btnAddMaterialType.Location = new System.Drawing.Point(224, 348);
+            this.btnAddMaterialType.Location = new System.Drawing.Point(74, 195);
             this.btnAddMaterialType.Name = "btnAddMaterialType";
             this.btnAddMaterialType.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnAddMaterialType.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -119,7 +119,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.lblNewPaymentMethod);
             this.Name = "AddMaterialType";
-            this.Size = new System.Drawing.Size(673, 474);
+            this.Size = new System.Drawing.Size(673, 311);
             this.ResumeLayout(false);
             this.PerformLayout();
 

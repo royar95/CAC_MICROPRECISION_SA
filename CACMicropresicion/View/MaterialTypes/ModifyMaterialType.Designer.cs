@@ -45,7 +45,7 @@
             this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescripcion.isPassword = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(119, 264);
+            this.txtDescripcion.Location = new System.Drawing.Point(78, 192);
             this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(370, 44);
@@ -74,7 +74,7 @@
             this.modBtnSaveMaterialType.IconVisible = false;
             this.modBtnSaveMaterialType.IconZoom = 90D;
             this.modBtnSaveMaterialType.IsTab = false;
-            this.modBtnSaveMaterialType.Location = new System.Drawing.Point(109, 413);
+            this.modBtnSaveMaterialType.Location = new System.Drawing.Point(78, 279);
             this.modBtnSaveMaterialType.Name = "modBtnSaveMaterialType";
             this.modBtnSaveMaterialType.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.modBtnSaveMaterialType.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -93,17 +93,18 @@
             this.modDropMaterialType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modDropMaterialType.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modDropMaterialType.FormattingEnabled = true;
-            this.modDropMaterialType.Location = new System.Drawing.Point(119, 118);
+            this.modDropMaterialType.Location = new System.Drawing.Point(78, 106);
             this.modDropMaterialType.Name = "modDropMaterialType";
             this.modDropMaterialType.Size = new System.Drawing.Size(225, 25);
             this.modDropMaterialType.TabIndex = 56;
+            this.modDropMaterialType.SelectedIndexChanged += new System.EventHandler(this.modDropMaterialType_SelectedIndexChanged);
             // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(114, 224);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(73, 163);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 55;
@@ -115,7 +116,7 @@
             this.lblEditClient.BackColor = System.Drawing.Color.Transparent;
             this.lblEditClient.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEditClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblEditClient.Location = new System.Drawing.Point(112, 42);
+            this.lblEditClient.Location = new System.Drawing.Point(71, 36);
             this.lblEditClient.Name = "lblEditClient";
             this.lblEditClient.Size = new System.Drawing.Size(293, 40);
             this.lblEditClient.TabIndex = 54;
@@ -131,7 +132,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.lblEditClient);
             this.Name = "ModifyMaterialType";
-            this.Size = new System.Drawing.Size(654, 541);
+            this.Size = new System.Drawing.Size(654, 409);
             this.ResumeLayout(false);
             this.PerformLayout();
 

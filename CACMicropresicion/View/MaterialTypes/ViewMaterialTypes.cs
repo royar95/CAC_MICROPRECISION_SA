@@ -27,7 +27,7 @@ namespace CACMicropresicion.View.MaterialTypes
 
         private void setColumnsSize()
         {
-            this.dgViewMaterialTypes.Columns[0].Width = 350;
+            this.dgViewMaterialTypes.Columns[0].Width = 100;
             this.dgViewMaterialTypes.Columns[1].Width = 350;
         }
 
