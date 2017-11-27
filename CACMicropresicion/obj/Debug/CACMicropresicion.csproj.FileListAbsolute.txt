@@ -239,3 +239,47 @@ C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.DeletePaymentMethod.resources
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ModifyPaymentMethod.resources
 C:\Users\Cesar\Documents\Visual Studio 2017\Projects\CACMicropresicionCollective\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ViewPaymentMethods.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.Properties.Resources.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Cients.AddClient.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Cients.ClientsList.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Cients.DeleteClient.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Cients.ModifyClient.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Login.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.AuditoryControl.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.CategoriesControl.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.DataControl.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.MainView.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ManagamentOptions.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ProcessesControl.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.SecurityControl.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.AddPaymentMethod.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.DeletePaymentMethod.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ModifyPaymentMethod.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ViewPaymentMethods.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register1.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register2.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.AddState.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.DeleteState.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.ModifyState.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.ViewStates.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddContactInfo.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddUser.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.DeleteUser.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ModifyUser.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ViewUsers.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.exe
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.dll
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.xml
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.AddProvider.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Cients.DeleteProvider.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.EditProvider.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.Providers.resources
+C:\Users\josedavid\Desktop\git CAC\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Providers.ViewProviders.resources

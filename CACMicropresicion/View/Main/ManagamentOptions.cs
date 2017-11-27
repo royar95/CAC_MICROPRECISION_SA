@@ -13,6 +13,7 @@ using CACMicropresicion.View.Cients;
 using CACMicropresicion.View.States;
 using CACMicropresicion.Globals;
 using CACMicropresicion.View.PaymentMethods;
+using CACMicropresicion.View.Providers;
 
 namespace CACMicropresicion.View.Main
 {
@@ -53,6 +54,12 @@ namespace CACMicropresicion.View.Main
                     AddPaymentMethod deletePayment = new AddPaymentMethod();
                     Parent.Controls.Add(deletePayment);
                     break;
+
+                case "Providers":
+                    AddProvider addP = new AddProvider();
+                    Parent.Controls.Add(addP);
+                    break;
+
             }
 
         }
@@ -81,6 +88,11 @@ namespace CACMicropresicion.View.Main
                     ModifyState modifyPaymentMethod = new ModifyState();
                     Parent.Controls.Add(modifyPaymentMethod);
                     break;
+
+                case "Providers":
+                    EditProvider edP = new EditProvider();
+                    Parent.Controls.Add(edP);
+                    break;
             }
         }
 
@@ -107,6 +119,11 @@ namespace CACMicropresicion.View.Main
                 case "PaymentMethods":
                     DeletePaymentMethod deletePayment = new DeletePaymentMethod();
                     Parent.Controls.Add(deletePayment);
+                    break;
+
+                case "Providers":
+                    DeleteProvider delP = new DeleteProvider();
+                    Parent.Controls.Add(delP);
                     break;
             }
         }
@@ -140,9 +157,31 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+
                 case "Clients":
                     ClientsList clientsList = new ClientsList();
                     Parent.Controls.Add(clientsList);
+                    break;
+
+                case "Providers":
+                    ViewProviders viewProviders = new ViewProviders();
+                    ProviderController providerCtrl = new ProviderController();
+
+                    viewProviders.Height = Parent.Height;
+                    viewProviders.Width = Parent.Width;
+
+                    this.result = providerCtrl.getAllProviders();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        viewProviders.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewProviders);
+                    }
                     break;
 
                 case "States":
@@ -177,18 +216,23 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("AddUser");
             Parent.Controls.RemoveByKey("AddClient");
             Parent.Controls.RemoveByKey("AddState");
+            Parent.Controls.RemoveByKey("AddProvider");
             Parent.Controls.RemoveByKey("ModifyUser");
             Parent.Controls.RemoveByKey("ModifyClient");
             Parent.Controls.RemoveByKey("ModifyState");
+            Parent.Controls.RemoveByKey("ModifyProvider");
             Parent.Controls.RemoveByKey("DeleteUser");
             Parent.Controls.RemoveByKey("DeleteClient");
             Parent.Controls.RemoveByKey("DeleteState");
+            Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
+            Parent.Controls.RemoveByKey("ViewProviders");
             Parent.Controls.RemoveByKey("DeletePaymentMethod");
             Parent.Controls.RemoveByKey("AddPaymentMethod");
             Parent.Controls.RemoveByKey("ModifyPaymentMethod");
+            Parent.Controls.RemoveByKey("EditProvider");
             Parent.Controls.RemoveByKey("ViewPaymentMethod");
 
         }

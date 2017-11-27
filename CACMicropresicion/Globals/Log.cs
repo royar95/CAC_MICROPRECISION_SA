@@ -19,6 +19,7 @@ namespace CACMicropresicion.Globals
         public static string InfoUser = "InfoUsuario";
         public static string State = "Estado";
         public static string PaymentMethods = "TipoPago";
+        public static string Provider = "Proveedor";
 
     }
 }

@@ -31,6 +31,7 @@ namespace CACMicropresicion.View.Main
         {
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "Providers";
             Parent.Controls.Add(managament);
         }
 
@@ -67,17 +68,21 @@ namespace CACMicropresicion.View.Main
         {
             Parent.Controls.RemoveByKey("ManagamentOptions");
             Parent.Controls.RemoveByKey("AddUser");
+            Parent.Controls.RemoveByKey("AddProvider");
             Parent.Controls.RemoveByKey("AddClient");
             Parent.Controls.RemoveByKey("AddState");
             Parent.Controls.RemoveByKey("ModifyUser");
             Parent.Controls.RemoveByKey("ModifyClient");
             Parent.Controls.RemoveByKey("ModifyState");
             Parent.Controls.RemoveByKey("DeleteUser");
+            Parent.Controls.RemoveByKey("DeleteProvider");
+            Parent.Controls.RemoveByKey("EditProvider");
             Parent.Controls.RemoveByKey("DeleteClient");
             Parent.Controls.RemoveByKey("DeleteState");
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
+            Parent.Controls.RemoveByKey("ViewProviders");
         }
 
     }
