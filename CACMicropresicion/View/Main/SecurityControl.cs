@@ -55,6 +55,15 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ModifyMaterial");
             Parent.Controls.RemoveByKey("DeleteMaterial");
             Parent.Controls.RemoveByKey("MaterialsList");
+            Parent.Controls.RemoveByKey("AddProductType");
+            Parent.Controls.RemoveByKey("DeleteProductType");
+            Parent.Controls.RemoveByKey("ModifyProductType");
+            Parent.Controls.RemoveByKey("ViewProductTypes");
+            Parent.Controls.RemoveByKey("AddProduct");
+            Parent.Controls.RemoveByKey("DeleteProduct");
+            Parent.Controls.RemoveByKey("ModifyProduct");
+            Parent.Controls.RemoveByKey("ViewProducts");
+
         }
 
     }

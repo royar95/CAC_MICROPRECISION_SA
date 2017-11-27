@@ -15,6 +15,8 @@ using CACMicropresicion.Globals;
 using CACMicropresicion.View.PaymentMethods;
 using CACMicropresicion.View.MaterialTypes;
 using CACMicropresicion.View.Materials;
+using CACMicropresicion.View.Products;
+using CACMicropresicion.View.ProductTypes;
 
 namespace CACMicropresicion.View.Main
 {
@@ -64,6 +66,15 @@ namespace CACMicropresicion.View.Main
                     AddMaterial addMaterial = new AddMaterial();
                     Parent.Controls.Add(addMaterial);
                     break;
+                case "ProductTypes":
+                    AddProductType addProductType = new AddProductType();
+                    Parent.Controls.Add(addProductType);
+                    break;
+
+                case "Products":
+                    AddProduct addProduct = new AddProduct();
+                    Parent.Controls.Add(addProduct);
+                    break;
             }
 
         }
@@ -101,6 +112,15 @@ namespace CACMicropresicion.View.Main
                     ModifyMaterial modifyMaterial = new ModifyMaterial();
                     Parent.Controls.Add(modifyMaterial);
                     break;
+                case "ProductTypes":
+                    ModifyProductType modifyProductType = new ModifyProductType();
+                    Parent.Controls.Add(modifyProductType);
+                    break;
+
+                case "Products":
+                    ModifyProduct modifyProduct = new ModifyProduct();
+                    Parent.Controls.Add(modifyProduct);
+                    break;
             }
         }
 
@@ -136,6 +156,15 @@ namespace CACMicropresicion.View.Main
                 case "Materials":
                     DeleteMaterial deleteMaterial = new DeleteMaterial();
                     Parent.Controls.Add(deleteMaterial);
+                    break;
+                case "ProductTypes":
+                    DeleteProductType deleteProductType = new DeleteProductType();
+                    Parent.Controls.Add(deleteProductType);
+                    break;
+
+                case "Products":
+                    DeleteProduct deleteProduct = new DeleteProduct();
+                    Parent.Controls.Add(deleteProduct);
                     break;
             }
         }
@@ -279,6 +308,51 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+                case "ProductTypes":
+                    ViewProductTypes viewProductTypes = new ViewProductTypes();
+                    ProductTypeController contr2 = new ProductTypeController();
+
+                    viewProductTypes.Height = Parent.Height;
+                    viewProductTypes.Width = Parent.Width;
+
+                    this.result = contr2.getAllProductTypes();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+
+                        viewProductTypes.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewProductTypes);
+                    }
+
+                    break;
+
+                case "Products":
+                    ViewProducts viewProducts = new ViewProducts();
+                    ProductController contr3 = new ProductController();
+
+                    viewProducts.Height = Parent.Height;
+                    viewProducts.Width = Parent.Width;
+
+                    this.result = contr3.getAllProducts();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+
+                        viewProducts.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewProducts);
+                    }
+
+                    break;
 
             }
 
@@ -313,6 +387,14 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ModifyMaterial");
             Parent.Controls.RemoveByKey("DeleteMaterial");
             Parent.Controls.RemoveByKey("MaterialsList");
+            Parent.Controls.RemoveByKey("AddProductType");
+            Parent.Controls.RemoveByKey("DeleteProductType");
+            Parent.Controls.RemoveByKey("ModifyProductType");
+            Parent.Controls.RemoveByKey("ViewProductTypes");
+            Parent.Controls.RemoveByKey("AddProduct");
+            Parent.Controls.RemoveByKey("DeleteProduct");
+            Parent.Controls.RemoveByKey("ModifyProduct");
+            Parent.Controls.RemoveByKey("ViewProducts");
 
         }
 

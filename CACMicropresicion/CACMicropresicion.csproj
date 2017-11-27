@@ -84,6 +84,8 @@
     <Compile Include="Controller\MaterialController.cs" />
     <Compile Include="Controller\MaterialTypeController.cs" />
     <Compile Include="Controller\PaymentMethodController.cs" />
+    <Compile Include="Controller\ProductController.cs" />
+    <Compile Include="Controller\ProductTypeController.cs" />
     <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
     <Compile Include="Globals\ContactInfoType.cs" />
@@ -322,6 +324,54 @@
     <Compile Include="View\PaymentMethods\ViewPaymentMethods.Designer.cs">
       <DependentUpon>ViewPaymentMethods.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Products\AddProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Products\AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products\DeleteProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Products\DeleteProduct.Designer.cs">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products\ModifyProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Products\ModifyProduct.Designer.cs">
+      <DependentUpon>ModifyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products\ViewProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Products\ViewProducts.Designer.cs">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductTypes\AddProductType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ProductTypes\AddProductType.Designer.cs">
+      <DependentUpon>AddProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductTypes\DeleteProductType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ProductTypes\DeleteProductType.Designer.cs">
+      <DependentUpon>DeleteProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductTypes\ModifyProductType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ProductTypes\ModifyProductType.Designer.cs">
+      <DependentUpon>ModifyProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductTypes\ViewProductTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\ProductTypes\ViewProductTypes.Designer.cs">
+      <DependentUpon>ViewProductTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Register1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -475,6 +525,30 @@
     <EmbeddedResource Include="View\PaymentMethods\ViewPaymentMethods.resx">
       <DependentUpon>ViewPaymentMethods.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\DeleteProduct.resx">
+      <DependentUpon>DeleteProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\ModifyProduct.resx">
+      <DependentUpon>ModifyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products\ViewProducts.resx">
+      <DependentUpon>ViewProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProductTypes\AddProductType.resx">
+      <DependentUpon>AddProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProductTypes\DeleteProductType.resx">
+      <DependentUpon>DeleteProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProductTypes\ModifyProductType.resx">
+      <DependentUpon>ModifyProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProductTypes\ViewProductTypes.resx">
+      <DependentUpon>ViewProductTypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Register1.resx">
       <DependentUpon>Register1.cs</DependentUpon>
     </EmbeddedResource>
@@ -547,7 +621,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\Categories\" />
-    <Folder Include="View\Products\" />
     <Folder Include="View\Providers\" />
     <Folder Include="View\Purchases\" />
     <Folder Include="View\Sales\" />

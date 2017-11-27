@@ -54,7 +54,7 @@
             this.dgViewMaterialTypes.EnableHeadersVisualStyles = false;
             this.dgViewMaterialTypes.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
             this.dgViewMaterialTypes.HeaderForeColor = System.Drawing.Color.Black;
-            this.dgViewMaterialTypes.Location = new System.Drawing.Point(3, 3);
+            this.dgViewMaterialTypes.Location = new System.Drawing.Point(0, 0);
             this.dgViewMaterialTypes.Name = "dgViewMaterialTypes";
             this.dgViewMaterialTypes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgViewMaterialTypes.Size = new System.Drawing.Size(707, 525);

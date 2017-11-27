@@ -184,6 +184,7 @@
             this.btnProducts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProducts.Textcolor = System.Drawing.Color.White;
             this.btnProducts.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProducts.Click += new System.EventHandler(this.btnProducts_Click);
             // 
             // btnPaymentMethods
             // 
@@ -331,6 +332,7 @@
             this.btnProductTypes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnProductTypes.Textcolor = System.Drawing.Color.White;
             this.btnProductTypes.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductTypes.Click += new System.EventHandler(this.btnProductTypes_Click);
             // 
             // DataControl
             // 

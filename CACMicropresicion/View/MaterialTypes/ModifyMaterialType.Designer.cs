@@ -28,29 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDescripcion = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.modBtnSaveMaterialType = new Bunifu.Framework.UI.BunifuFlatButton();
             this.modDropMaterialType = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblEditClient = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.txtDescription = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.SuspendLayout();
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.BorderColorFocused = System.Drawing.Color.Blue;
-            this.txtDescripcion.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescripcion.BorderColorMouseHover = System.Drawing.Color.Blue;
-            this.txtDescripcion.BorderThickness = 3;
-            this.txtDescripcion.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescripcion.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtDescripcion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDescripcion.isPassword = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(78, 192);
-            this.txtDescripcion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(370, 44);
-            this.txtDescripcion.TabIndex = 58;
-            this.txtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // modBtnSaveMaterialType
             // 
@@ -122,11 +105,28 @@
             this.lblEditClient.TabIndex = 54;
             this.lblEditClient.Text = "Editar Tipo de Material";
             // 
+            // txtDescription
+            // 
+            this.txtDescription.BorderColorFocused = System.Drawing.Color.Blue;
+            this.txtDescription.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescription.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.txtDescription.BorderThickness = 3;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDescription.isPassword = false;
+            this.txtDescription.Location = new System.Drawing.Point(78, 192);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(229, 34);
+            this.txtDescription.TabIndex = 58;
+            this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // ModifyMaterialType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.txtDescripcion);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.modBtnSaveMaterialType);
             this.Controls.Add(this.modDropMaterialType);
             this.Controls.Add(this.bunifuCustomLabel1);
@@ -140,10 +140,10 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtDescripcion;
         private Bunifu.Framework.UI.BunifuFlatButton modBtnSaveMaterialType;
         private System.Windows.Forms.ComboBox modDropMaterialType;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblEditClient;
+        private Bunifu.Framework.UI.BunifuMetroTextbox txtDescription;
     }
 }

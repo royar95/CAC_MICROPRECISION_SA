@@ -70,7 +70,7 @@
             this.txtDescription.Location = new System.Drawing.Point(74, 125);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(291, 34);
+            this.txtDescription.Size = new System.Drawing.Size(229, 34);
             this.txtDescription.TabIndex = 28;
             this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 

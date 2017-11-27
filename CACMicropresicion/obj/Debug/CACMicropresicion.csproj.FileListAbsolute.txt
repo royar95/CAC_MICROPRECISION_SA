@@ -163,7 +163,6 @@ C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicr
 C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
 C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
 C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CACMicropresicion\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.AddContactInfo.resources
-C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.exe
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.exe
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\CACMicropresicion.pdb
@@ -189,6 +188,8 @@ C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.ProcessesControl.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.SecurityControl.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Materials.AddMaterial.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Materials.DeleteMaterial.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Materials.MaterialsList.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Materials.ModifyMaterial.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.MaterialTypes.AddMaterialType.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.MaterialTypes.DeleteMaterialType.resources
@@ -198,6 +199,14 @@ C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.DeletePaymentMethod.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ModifyPaymentMethod.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ViewPaymentMethods.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.AddProduct.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.DeleteProduct.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.ModifyProduct.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Products.ViewProducts.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.ProductTypes.AddProductType.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.ProductTypes.DeleteProductType.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.ProductTypes.ModifyProductType.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.ProductTypes.ViewProductTypes.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register1.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Register2.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.States.AddState.resources
@@ -210,6 +219,5 @@ C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ModifyUser.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Users.ViewUsers.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csproj.GenerateResource.Cache
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.exe
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
-C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Materials.DeleteMaterial.resources
-C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Materials.MaterialsList.resources

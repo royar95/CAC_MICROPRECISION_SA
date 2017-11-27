@@ -58,7 +58,7 @@ namespace CACMicropresicion.View.MaterialTypes
         private void fillPaymentInputs()
         {
             this.registeredMaterialType = (TipoMaterial)this.modDropMaterialType.SelectedItem;
-            txtDescripcion.Text = this.registeredMaterialType.Descripcion;
+            txtDescription.Text = this.registeredMaterialType.Descripcion;
 
         }
 
@@ -70,7 +70,7 @@ namespace CACMicropresicion.View.MaterialTypes
             TipoMaterial modifiedMaterialType = new TipoMaterial()
             {
                 IdTipoMaterial = registeredMaterialType.IdTipoMaterial,
-                Descripcion = txtDescripcion.Text.TrimStart().TrimEnd(),
+                Descripcion = txtDescription.Text.TrimStart().TrimEnd(),
                 FechaAgrega = registeredMaterialType.FechaAgrega,
                 FechaElimina = registeredMaterialType.FechaElimina,
                 UsuarioAgrega = registeredMaterialType.UsuarioAgrega,
