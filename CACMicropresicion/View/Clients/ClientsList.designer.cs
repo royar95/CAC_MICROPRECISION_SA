@@ -38,7 +38,6 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridViewClients.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridViewClients.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewClients.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewClients.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewClients.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -51,7 +50,6 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridViewClients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewClients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewClients.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewClients.DoubleBuffered = true;
             this.dataGridViewClients.EnableHeadersVisualStyles = false;
             this.dataGridViewClients.HeaderBgColor = System.Drawing.Color.LightSteelBlue;

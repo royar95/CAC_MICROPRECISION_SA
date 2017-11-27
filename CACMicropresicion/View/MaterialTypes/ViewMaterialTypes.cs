@@ -49,5 +49,10 @@ namespace CACMicropresicion.View.MaterialTypes
             setColumnsSize();
             setFontConf();
         }
+
+        private void dgViewMaterialTypes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -147,6 +147,7 @@
             this.btnMaterials.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMaterials.Textcolor = System.Drawing.Color.White;
             this.btnMaterials.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaterials.Click += new System.EventHandler(this.btnMaterials_Click);
             // 
             // btnProducts
             // 

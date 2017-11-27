@@ -81,6 +81,7 @@
     <Compile Include="Controller\ClientsController.cs" />
     <Compile Include="Controller\LogController.cs" />
     <Compile Include="Controller\LoginCtrl.cs" />
+    <Compile Include="Controller\MaterialController.cs" />
     <Compile Include="Controller\MaterialTypeController.cs" />
     <Compile Include="Controller\PaymentMethodController.cs" />
     <Compile Include="Controller\StateController.cs" />
@@ -249,6 +250,30 @@
     <Compile Include="View\Main\SecurityControl.Designer.cs">
       <DependentUpon>SecurityControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Materials\AddMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Materials\AddMaterial.Designer.cs">
+      <DependentUpon>AddMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Materials\DeleteMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Materials\DeleteMaterial.Designer.cs">
+      <DependentUpon>DeleteMaterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Materials\MaterialsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Materials\MaterialsList.Designer.cs">
+      <DependentUpon>MaterialsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Materials\ModifyMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Materials\ModifyMaterial.Designer.cs">
+      <DependentUpon>ModifyMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\MaterialTypes\AddMaterialType.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -413,6 +438,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Main\SecurityControl.resx">
       <DependentUpon>SecurityControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Materials\AddMaterial.resx">
+      <DependentUpon>AddMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Materials\DeleteMaterial.resx">
+      <DependentUpon>DeleteMaterial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Materials\MaterialsList.resx">
+      <DependentUpon>MaterialsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Materials\ModifyMaterial.resx">
+      <DependentUpon>ModifyMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\MaterialTypes\AddMaterialType.resx">
       <DependentUpon>AddMaterialType.cs</DependentUpon>

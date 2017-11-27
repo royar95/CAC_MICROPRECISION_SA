@@ -43,6 +43,22 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.Add(managament);
         }
 
+        private void btnMaterialTypes_Click(object sender, EventArgs e)
+        {
+            removeAllControls();
+            ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "MaterialTypes";
+            Parent.Controls.Add(managament);
+        }
+
+        private void btnMaterials_Click(object sender, EventArgs e)
+        {
+            removeAllControls();
+            ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "Materials";
+            Parent.Controls.Add(managament);
+        }
+
         private void removeAllControls()
         {
             Parent.Controls.RemoveByKey("ManagamentOptions");
@@ -68,14 +84,10 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("DeleteMaterialType");
             Parent.Controls.RemoveByKey("ModifyMaterialType");
             Parent.Controls.RemoveByKey("ViewMaterialTypes");
-        }
-
-        private void btnMaterialTypes_Click(object sender, EventArgs e)
-        {
-            removeAllControls();
-            ManagamentOptions managament = new ManagamentOptions();
-            managament.Mantenimiento = "MaterialTypes";
-            Parent.Controls.Add(managament);
+            Parent.Controls.RemoveByKey("AddMaterial");
+            Parent.Controls.RemoveByKey("ModifyMaterial");
+            Parent.Controls.RemoveByKey("DeleteMaterial");
+            Parent.Controls.RemoveByKey("MaterialsList");
         }
 
     }

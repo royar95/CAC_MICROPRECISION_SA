@@ -14,6 +14,7 @@ using CACMicropresicion.View.States;
 using CACMicropresicion.Globals;
 using CACMicropresicion.View.PaymentMethods;
 using CACMicropresicion.View.MaterialTypes;
+using CACMicropresicion.View.Materials;
 
 namespace CACMicropresicion.View.Main
 {
@@ -59,6 +60,10 @@ namespace CACMicropresicion.View.Main
                     AddMaterialType addMaterialType = new AddMaterialType();
                     Parent.Controls.Add(addMaterialType);
                     break;
+                case "Materials":
+                    AddMaterial addMaterial = new AddMaterial();
+                    Parent.Controls.Add(addMaterial);
+                    break;
             }
 
         }
@@ -92,6 +97,10 @@ namespace CACMicropresicion.View.Main
                     ModifyMaterialType modifyMaterialType = new ModifyMaterialType();
                     Parent.Controls.Add(modifyMaterialType);
                     break;
+                case "Materials":
+                    ModifyMaterial modifyMaterial = new ModifyMaterial();
+                    Parent.Controls.Add(modifyMaterial);
+                    break;
             }
         }
 
@@ -123,6 +132,10 @@ namespace CACMicropresicion.View.Main
                 case "MaterialTypes":
                     DeleteMaterialType deleteMaterialType = new DeleteMaterialType();
                     Parent.Controls.Add(deleteMaterialType);
+                    break;
+                case "Materials":
+                    DeleteMaterial deleteMaterial = new DeleteMaterial();
+                    Parent.Controls.Add(deleteMaterial);
                     break;
             }
         }
@@ -243,6 +256,30 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+
+                case "Materials":
+
+                    MaterialsList listMaterials = new MaterialsList();
+                    MaterialController ctrl = new MaterialController();
+
+                    listMaterials.Height = Parent.Height;
+                    listMaterials.Width = Parent.Width;
+
+                    this.result = ctrl.getMaterialsToPopulate();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        listMaterials.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(listMaterials);
+                    }
+
+                    break;
+
             }
 
         }
@@ -272,6 +309,10 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("DeleteMaterialType");
             Parent.Controls.RemoveByKey("ModifyMaterialType");
             Parent.Controls.RemoveByKey("ViewMaterialTypes");
+            Parent.Controls.RemoveByKey("AddMaterial");
+            Parent.Controls.RemoveByKey("ModifyMaterial");
+            Parent.Controls.RemoveByKey("DeleteMaterial");
+            Parent.Controls.RemoveByKey("MaterialsList");
 
         }
 

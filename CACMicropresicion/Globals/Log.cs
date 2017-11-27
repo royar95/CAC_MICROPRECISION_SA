@@ -20,6 +20,7 @@ namespace CACMicropresicion.Globals
         public static string State = "Estado";
         public static string PaymentMethods = "TipoPago";
         public static string MaterialType = "TipoMaterial";
+        public static string Material = "Material";
 
     }
 }

@@ -68,6 +68,7 @@
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUsers.Textcolor = System.Drawing.Color.White;
             this.btnUsers.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnLog
             // 
