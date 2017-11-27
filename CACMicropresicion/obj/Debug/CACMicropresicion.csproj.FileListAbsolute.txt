@@ -205,3 +205,8 @@ C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ModifyPaymentMethod.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.PaymentMethods.ViewPaymentMethods.resources
 C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.Main.LogOptions.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.csprojResolveAssemblyReference.cache
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.MaterialTypes.AddMaterialType.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.MaterialTypes.DeleteMaterialType.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.MaterialTypes.ModifyMaterialType.resources
+C:\Users\ADC-ROY\source\repos\CAC_MICROPRECISION_SA\CACMicropresicion\obj\Debug\CACMicropresicion.View.MaterialTypes.ViewMaterialTypes.resources

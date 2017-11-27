@@ -64,6 +64,14 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.Add(managament);
         }
 
+        private void bunifuFlatButton6_Click(object sender, EventArgs e)
+        {
+            removeAllControls();
+            ManagamentOptions managament = new ManagamentOptions();
+            managament.Mantenimiento = "MaterialTypes";
+            Parent.Controls.Add(managament);
+        }
+
         private void removeAllControls()
         {
             Parent.Controls.RemoveByKey("ManagamentOptions");
@@ -81,6 +89,10 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("ViewStates");
             Parent.Controls.RemoveByKey("LogOptions");
             Parent.Controls.RemoveByKey("LogList");
+            Parent.Controls.RemoveByKey("ViewPaymentMethods");
+            Parent.Controls.RemoveByKey("UpdatePaymentMethod");
+            Parent.Controls.RemoveByKey("DeletePaymentMethod");
+            Parent.Controls.RemoveByKey("AddPaymentMethod");
         }
 
     }

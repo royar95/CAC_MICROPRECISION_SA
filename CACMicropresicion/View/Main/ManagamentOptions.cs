@@ -13,6 +13,7 @@ using CACMicropresicion.View.Cients;
 using CACMicropresicion.View.States;
 using CACMicropresicion.Globals;
 using CACMicropresicion.View.PaymentMethods;
+using CACMicropresicion.View.MaterialTypes;
 
 namespace CACMicropresicion.View.Main
 {
@@ -53,6 +54,11 @@ namespace CACMicropresicion.View.Main
                     AddPaymentMethod deletePayment = new AddPaymentMethod();
                     Parent.Controls.Add(deletePayment);
                     break;
+
+                case "MaterialTypes":
+                    AddMaterialType addMaterialType = new AddMaterialType();
+                    Parent.Controls.Add(addMaterialType);
+                    break;
             }
 
         }
@@ -77,9 +83,14 @@ namespace CACMicropresicion.View.Main
                     Parent.Controls.Add(modifyState);
                     break;
 
-                case "PaymentMethods":
+                case "ModifyPaymentMethod":
                     ModifyPaymentMethod modifyPaymentMethod = new ModifyPaymentMethod();
                     Parent.Controls.Add(modifyPaymentMethod);
+                    break;
+
+                case "MaterialTypes":
+                    ModifyMaterialType modifyMaterialType = new ModifyMaterialType();
+                    Parent.Controls.Add(modifyMaterialType);
                     break;
             }
         }
@@ -107,6 +118,11 @@ namespace CACMicropresicion.View.Main
                 case "PaymentMethods":
                     DeletePaymentMethod deletePayment = new DeletePaymentMethod();
                     Parent.Controls.Add(deletePayment);
+                    break;
+
+                case "MaterialTypes":
+                    DeleteMaterialType deleteMaterialType = new DeleteMaterialType();
+                    Parent.Controls.Add(deleteMaterialType);
                     break;
             }
         }
@@ -199,6 +215,29 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+
+                case "MaterialTypes":
+
+                    ViewMaterialTypes viewMaterials = new ViewMaterialTypes();
+                    MaterialTypeController contr = new MaterialTypeController();
+
+                    viewMaterials.Height = Parent.Height;
+                    viewMaterials.Width = Parent.Width;
+
+                    this.result = contr.getAllMaterialTypes();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        viewMaterials.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewMaterials);
+                    }
+
+                    break;
             }
 
         }
@@ -221,7 +260,11 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("DeletePaymentMethod");
             Parent.Controls.RemoveByKey("AddPaymentMethod");
             Parent.Controls.RemoveByKey("ModifyPaymentMethod");
-            Parent.Controls.RemoveByKey("ViewPaymentMethods");
+            Parent.Controls.RemoveByKey("ViewPaymentMethod");
+            Parent.Controls.RemoveByKey("AddMaterialType");
+            Parent.Controls.RemoveByKey("ModifyMaterialType");
+            Parent.Controls.RemoveByKey("DeleteMaterialType");
+            Parent.Controls.RemoveByKey("ViewMaterialType");
 
         }
 

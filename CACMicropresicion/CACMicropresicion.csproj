@@ -81,6 +81,7 @@
     <Compile Include="Controller\ClientsController.cs" />
     <Compile Include="Controller\LogController.cs" />
     <Compile Include="Controller\LoginCtrl.cs" />
+    <Compile Include="Controller\MaterialTypeController.cs" />
     <Compile Include="Controller\PaymentMethodController.cs" />
     <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
@@ -248,6 +249,30 @@
     <Compile Include="View\Main\SecurityControl.Designer.cs">
       <DependentUpon>SecurityControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\MaterialTypes\AddMaterialType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MaterialTypes\AddMaterialType.Designer.cs">
+      <DependentUpon>AddMaterialType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MaterialTypes\DeleteMaterialType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MaterialTypes\DeleteMaterialType.Designer.cs">
+      <DependentUpon>DeleteMaterialType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MaterialTypes\ModifyMaterialType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MaterialTypes\ModifyMaterialType.Designer.cs">
+      <DependentUpon>ModifyMaterialType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MaterialTypes\ViewMaterialTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\MaterialTypes\ViewMaterialTypes.Designer.cs">
+      <DependentUpon>ViewMaterialTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\PaymentMethods\AddPaymentMethod.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -389,6 +414,18 @@
     <EmbeddedResource Include="View\Main\SecurityControl.resx">
       <DependentUpon>SecurityControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\MaterialTypes\AddMaterialType.resx">
+      <DependentUpon>AddMaterialType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MaterialTypes\DeleteMaterialType.resx">
+      <DependentUpon>DeleteMaterialType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MaterialTypes\ModifyMaterialType.resx">
+      <DependentUpon>ModifyMaterialType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MaterialTypes\ViewMaterialTypes.resx">
+      <DependentUpon>ViewMaterialTypes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\PaymentMethods\AddPaymentMethod.resx">
       <DependentUpon>AddPaymentMethod.cs</DependentUpon>
     </EmbeddedResource>
@@ -460,18 +497,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\Model1.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Model\Model1.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Model1.edmx</DependentUpon>
-      <LastGenOutput>Model1.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
@@ -489,6 +514,18 @@
     <Folder Include="View\Providers\" />
     <Folder Include="View\Purchases\" />
     <Folder Include="View\Sales\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
