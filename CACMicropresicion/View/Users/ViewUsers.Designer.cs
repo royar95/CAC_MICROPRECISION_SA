@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUsers));
             this.dgViewUsers = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.btnIdSearch = new Bunifu.Framework.UI.BunifuTextbox();
+            this.txtSearch = new Bunifu.Framework.UI.BunifuTextbox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewUsers)).BeginInit();
             this.SuspendLayout();
@@ -67,19 +67,19 @@
             this.dgViewUsers.TabIndex = 0;
             this.dgViewUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewUsers_CellDoubleClick);
             // 
-            // btnIdSearch
+            // txtSearch
             // 
-            this.btnIdSearch.BackColor = System.Drawing.Color.White;
-            this.btnIdSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIdSearch.BackgroundImage")));
-            this.btnIdSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnIdSearch.ForeColor = System.Drawing.Color.Black;
-            this.btnIdSearch.Icon = ((System.Drawing.Image)(resources.GetObject("btnIdSearch.Icon")));
-            this.btnIdSearch.Location = new System.Drawing.Point(110, 22);
-            this.btnIdSearch.Name = "btnIdSearch";
-            this.btnIdSearch.Size = new System.Drawing.Size(197, 25);
-            this.btnIdSearch.TabIndex = 5;
-            this.btnIdSearch.text = "";
-            this.btnIdSearch.OnTextChange += new System.EventHandler(this.btnIdSearch_OnTextChange);
+            this.txtSearch.BackColor = System.Drawing.Color.White;
+            this.txtSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtSearch.BackgroundImage")));
+            this.txtSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtSearch.ForeColor = System.Drawing.Color.Black;
+            this.txtSearch.Icon = ((System.Drawing.Image)(resources.GetObject("txtSearch.Icon")));
+            this.txtSearch.Location = new System.Drawing.Point(110, 22);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(197, 25);
+            this.txtSearch.TabIndex = 5;
+            this.txtSearch.text = "";
+            this.txtSearch.OnTextChange += new System.EventHandler(this.btnIdSearch_OnTextChange);
             // 
             // bunifuCustomLabel1
             // 
@@ -97,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.btnIdSearch);
+            this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dgViewUsers);
             this.Name = "ViewUsers";
             this.Size = new System.Drawing.Size(853, 526);
@@ -110,7 +110,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgViewUsers;
-        private Bunifu.Framework.UI.BunifuTextbox btnIdSearch;
+        private Bunifu.Framework.UI.BunifuTextbox txtSearch;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }

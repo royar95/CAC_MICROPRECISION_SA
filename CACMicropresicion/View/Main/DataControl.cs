@@ -21,6 +21,7 @@ namespace CACMicropresicion.View.Main
 
         private void btnClients_Click(object sender, EventArgs e)
         {
+            btnClients.BackColor = Color.Red;
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
             managament.Mantenimiento = "Clients";

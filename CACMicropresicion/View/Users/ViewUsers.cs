@@ -68,7 +68,7 @@ namespace CACMicropresicion.View.Users
         private void btnIdSearch_OnTextChange(object sender, EventArgs e)
         {
 
-            String searchValue = btnIdSearch.text.TrimStart().TrimEnd();
+            String searchValue = txtSearch.text.TrimStart().TrimEnd();
             int valueLength = searchValue.Length;
 
             foreach (DataGridViewRow row in dgViewUsers.Rows)
@@ -84,6 +84,7 @@ namespace CACMicropresicion.View.Users
                     }
 
                     string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
+
                     if (!cellValue.Equals(searchValue))
                     {
                         row.Visible = false;

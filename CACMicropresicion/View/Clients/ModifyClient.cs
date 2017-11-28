@@ -43,19 +43,17 @@ namespace CACMicropresicion.View.Cients
 
         public void loadCombos() {
             controller = new ClientsController();
-            Dictionary<Object, dynamic> resultClients = this.controller.getDataToFillClientsCombo();
             Dictionary<Object, dynamic> resultStatus = this.controller.getAllStatus();
 
-            if (resultClients["code"] == Result.Failed || resultStatus["code"] == Result.Failed)
+            if (resultStatus["code"] == Result.Failed)
             {
-                MessageBox.Show(resultClients["msg"]);
+                MessageBox.Show(resultStatus["msg"]);
                 return;
             }
 
-            if (resultClients["code"] == Result.Processed && resultStatus["code"] == Result.Processed)
+            if (resultStatus["code"] == Result.Processed)
             {
                 loadStatusComboBox(resultStatus["content"]);
-                loadUsersComboBox(resultClients["content"]);
             }
 
         }
@@ -69,29 +67,14 @@ namespace CACMicropresicion.View.Cients
             this.modDropClientStatus.DisplayMember = "Descripcion";
 
         }
-
-        public void loadUsersComboBox(Object data)
-        {
-
-            this.modDropClientId.DataSource = data;
-            this.modDropClientId.ValueMember = "IdCliente";
-            this.modDropClientId.DisplayMember = "Descripcion";
-
-        }
         
 
-        private void fillUserInputs()
+        public void fillUserInputs(Cliente client)
         {
-            this.registeredClient = (Cliente)this.modDropClientId.SelectedItem;
+            this.registeredClient = client;
             txtDescription.Text = this.registeredClient.Descripcion;
-            //Indica el estado del cliente
             modDropClientStatus.SelectedValue = this.registeredClient.IdEstado;
 
-        }
-
-        private void modDropClientId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fillUserInputs();
         }
 
         private void modBtnSaveClientChanges_Click(object sender, EventArgs e)
@@ -118,10 +101,34 @@ namespace CACMicropresicion.View.Cients
 
             if (result["code"] == Result.Processed)
             {
-                this.loadCombos();
+                this.loadDataGridView();
             }
 
             MessageBox.Show(result["msg"]);
+        }
+
+        private void loadDataGridView() {
+
+            ClientsList clientsList = new ClientsList();
+            ClientsController cont = new ClientsController();
+
+            clientsList.Height = Parent.Height;
+            clientsList.Width = Parent.Width;
+
+            Dictionary<Object, dynamic> result = cont.getAllClients();
+            if (result["code"] == Result.Failed)
+            {
+                MessageBox.Show(result["msg"]);
+                return;
+            }
+            if (result["code"] == Result.Processed)
+            {
+                clientsList.loadDataGrid(result["content"]);
+                Parent.Controls.Add(clientsList);
+            }
+
+            Parent.Controls.RemoveByKey("ModifyClient");
+
         }
     }
 }

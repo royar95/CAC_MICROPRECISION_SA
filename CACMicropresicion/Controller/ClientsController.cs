@@ -122,7 +122,27 @@ namespace CACMicropresicion.Controller
             }
 
         }
-        
+
+        public Dictionary<Object, dynamic> getClientById(int id)
+        {
+
+            try
+            {
+
+                Cliente client = (from c in db.Cliente
+                                where c.IdCliente == id
+                                where c.Eliminado == 0
+                                select c).FirstOrDefault();
+
+                return result(Result.Processed, null, client);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }        
 
         public Dictionary<Object, dynamic> getDataToFillClientsCombo()
         {
@@ -195,8 +215,7 @@ namespace CACMicropresicion.Controller
                             {
                                 identification = c.IdCliente,
                                 description = c.Descripcion,
-                                status = s.Descripcion,
-                                deleted = (c.Eliminado == 1) ? "Si" : "No"
+                                status = s.Descripcion
                             };
 
                 var users = query.ToList();
