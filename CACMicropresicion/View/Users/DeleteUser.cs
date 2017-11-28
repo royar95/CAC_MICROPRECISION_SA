@@ -27,8 +27,7 @@ namespace CACMicropresicion.View.Users
             this.loadCombos();
         }
 
-        public void loadCombos()
-        {
+        public void loadCombos() {
 
             userControl = new UserCtrl();
             Dictionary<Object, dynamic> resultUsers = this.userControl.getDataToFillUsersCombo();

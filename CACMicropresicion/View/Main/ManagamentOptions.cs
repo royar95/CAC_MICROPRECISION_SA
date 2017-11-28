@@ -13,6 +13,10 @@ using CACMicropresicion.View.Cients;
 using CACMicropresicion.View.States;
 using CACMicropresicion.Globals;
 using CACMicropresicion.View.PaymentMethods;
+using CACMicropresicion.View.MaterialTypes;
+using CACMicropresicion.View.Materials;
+using CACMicropresicion.View.Products;
+using CACMicropresicion.View.ProductTypes;
 using CACMicropresicion.View.Providers;
 
 namespace CACMicropresicion.View.Main
@@ -55,6 +59,23 @@ namespace CACMicropresicion.View.Main
                     Parent.Controls.Add(deletePayment);
                     break;
 
+                case "MaterialTypes":
+                    AddMaterialType addMaterialType = new AddMaterialType();
+                    Parent.Controls.Add(addMaterialType);
+                    break;
+                case "Materials":
+                    AddMaterial addMaterial = new AddMaterial();
+                    Parent.Controls.Add(addMaterial);
+                    break;
+                case "ProductTypes":
+                    AddProductType addProductType = new AddProductType();
+                    Parent.Controls.Add(addProductType);
+                    break;
+
+                case "Products":
+                    AddProduct addProduct = new AddProduct();
+                    Parent.Controls.Add(addProduct);
+                    break;
                 case "Providers":
                     AddProvider addP = new AddProvider();
                     Parent.Controls.Add(addP);
@@ -84,15 +105,34 @@ namespace CACMicropresicion.View.Main
                     Parent.Controls.Add(modifyState);
                     break;
 
-                case "ModifyPaymentMethod":
-                    ModifyState modifyPaymentMethod = new ModifyState();
+                case "PaymentMethods":
+                    ModifyPaymentMethod modifyPaymentMethod = new ModifyPaymentMethod();
                     Parent.Controls.Add(modifyPaymentMethod);
+                    break;
+
+                case "MaterialTypes":
+                    ModifyMaterialType modifyMaterialType = new ModifyMaterialType();
+                    Parent.Controls.Add(modifyMaterialType);
+                    break;
+                case "Materials":
+                    ModifyMaterial modifyMaterial = new ModifyMaterial();
+                    Parent.Controls.Add(modifyMaterial);
+                    break;
+                case "ProductTypes":
+                    ModifyProductType modifyProductType = new ModifyProductType();
+                    Parent.Controls.Add(modifyProductType);
+                    break;
+
+                case "Products":
+                    ModifyProduct modifyProduct = new ModifyProduct();
+                    Parent.Controls.Add(modifyProduct);
                     break;
 
                 case "Providers":
                     EditProvider edP = new EditProvider();
                     Parent.Controls.Add(edP);
                     break;
+
             }
         }
 
@@ -119,6 +159,24 @@ namespace CACMicropresicion.View.Main
                 case "PaymentMethods":
                     DeletePaymentMethod deletePayment = new DeletePaymentMethod();
                     Parent.Controls.Add(deletePayment);
+                    break;
+
+                case "MaterialTypes":
+                    DeleteMaterialType deleteMaterialType = new DeleteMaterialType();
+                    Parent.Controls.Add(deleteMaterialType);
+                    break;
+                case "Materials":
+                    DeleteMaterial deleteMaterial = new DeleteMaterial();
+                    Parent.Controls.Add(deleteMaterial);
+                    break;
+                case "ProductTypes":
+                    DeleteProductType deleteProductType = new DeleteProductType();
+                    Parent.Controls.Add(deleteProductType);
+                    break;
+
+                case "Products":
+                    DeleteProduct deleteProduct = new DeleteProduct();
+                    Parent.Controls.Add(deleteProduct);
                     break;
 
                 case "Providers":
@@ -160,27 +218,19 @@ namespace CACMicropresicion.View.Main
 
                 case "Clients":
                     ClientsList clientsList = new ClientsList();
-                    Parent.Controls.Add(clientsList);
-                    break;
-
-                case "Providers":
-                    ViewProviders viewProviders = new ViewProviders();
-                    ProviderController providerCtrl = new ProviderController();
-
-                    viewProviders.Height = Parent.Height;
-                    viewProviders.Width = Parent.Width;
-
-                    this.result = providerCtrl.getAllProviders();
-                    if (this.result["code"] == Result.Failed)
+                    ClientsController cont = new ClientsController();
+                    clientsList.Height = Parent.Height;
+                    clientsList.Width = Parent.Width;
+                    Dictionary<Object, dynamic> res = cont.getAllClients();
+                    if (res["code"] == Result.Failed)
                     {
-                        MessageBox.Show(this.result["msg"]);
+                        MessageBox.Show(res["msg"]);
                         return;
                     }
-
-                    if (this.result["code"] == Result.Processed)
+                    if (res["code"] == Result.Processed)
                     {
-                        viewProviders.loadDataGrid(this.result["content"]);
-                        Parent.Controls.Add(viewProviders);
+                        clientsList.loadDataGrid(res["content"]);
+                        Parent.Controls.Add(clientsList);
                     }
                     break;
 
@@ -206,6 +256,142 @@ namespace CACMicropresicion.View.Main
                     }
 
                     break;
+
+                case "PaymentMethods":
+
+                    ViewPaymentMethods viewPayment = new ViewPaymentMethods();
+                    PaymentMethodController cnt = new PaymentMethodController();
+
+                    viewPayment.Height = Parent.Height;
+                    viewPayment.Width = Parent.Width;
+
+                    this.result = cnt.getAllPaymentMethods();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        viewPayment.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewPayment);
+                    }
+
+                    break;
+
+                case "MaterialTypes":
+
+                    ViewMaterialTypes viewMaterials = new ViewMaterialTypes();
+                    MaterialTypeController contr = new MaterialTypeController();
+
+                    viewMaterials.Height = Parent.Height;
+                    viewMaterials.Width = Parent.Width;
+
+                    this.result = contr.getAllMaterialTypes();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        viewMaterials.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewMaterials);
+                    }
+
+                    break;
+
+                case "Materials":
+
+                    MaterialsList listMaterials = new MaterialsList();
+                    MaterialController ctrl = new MaterialController();
+
+                    listMaterials.Height = Parent.Height;
+                    listMaterials.Width = Parent.Width;
+
+                    this.result = ctrl.getMaterialsToPopulate();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        listMaterials.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(listMaterials);
+                    }
+
+                    break;
+                case "ProductTypes":
+                    ViewProductTypes viewProductTypes = new ViewProductTypes();
+                    ProductTypeController contr2 = new ProductTypeController();
+
+                    viewProductTypes.Height = Parent.Height;
+                    viewProductTypes.Width = Parent.Width;
+
+                    this.result = contr2.getAllProductTypes();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+
+                        viewProductTypes.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewProductTypes);
+                    }
+
+                    break;
+
+                case "Products":
+                    ViewProducts viewProducts = new ViewProducts();
+                    ProductController contr3 = new ProductController();
+
+                    viewProducts.Height = Parent.Height;
+                    viewProducts.Width = Parent.Width;
+
+                    this.result = contr3.getAllProducts();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+
+                        viewProducts.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewProducts);
+                    }
+
+                    break;
+
+                case "Providers":
+                    ViewProviders viewProviders = new ViewProviders();
+                    ProviderController providerCtrl = new ProviderController();
+
+                    viewProviders.Height = Parent.Height;
+                    viewProviders.Width = Parent.Width;
+
+                    this.result = providerCtrl.getAllProviders();
+                    if (this.result["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(this.result["msg"]);
+                        return;
+                    }
+
+                    if (this.result["code"] == Result.Processed)
+                    {
+                        viewProviders.loadDataGrid(this.result["content"]);
+                        Parent.Controls.Add(viewProviders);
+                    }
+                    break;
+
             }
 
         }
@@ -216,24 +402,41 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("AddUser");
             Parent.Controls.RemoveByKey("AddClient");
             Parent.Controls.RemoveByKey("AddState");
-            Parent.Controls.RemoveByKey("AddProvider");
             Parent.Controls.RemoveByKey("ModifyUser");
             Parent.Controls.RemoveByKey("ModifyClient");
             Parent.Controls.RemoveByKey("ModifyState");
-            Parent.Controls.RemoveByKey("ModifyProvider");
             Parent.Controls.RemoveByKey("DeleteUser");
             Parent.Controls.RemoveByKey("DeleteClient");
             Parent.Controls.RemoveByKey("DeleteState");
-            Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewUsers");
             Parent.Controls.RemoveByKey("ClientsList");
             Parent.Controls.RemoveByKey("ViewStates");
-            Parent.Controls.RemoveByKey("ViewProviders");
+            Parent.Controls.RemoveByKey("LogOptions");
+            Parent.Controls.RemoveByKey("LogList");
+            Parent.Controls.RemoveByKey("ViewPaymentMethods");
+            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
             Parent.Controls.RemoveByKey("DeletePaymentMethod");
             Parent.Controls.RemoveByKey("AddPaymentMethod");
-            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
+            Parent.Controls.RemoveByKey("AddMaterialType");
+            Parent.Controls.RemoveByKey("DeleteMaterialType");
+            Parent.Controls.RemoveByKey("ModifyMaterialType");
+            Parent.Controls.RemoveByKey("ViewMaterialTypes");
+            Parent.Controls.RemoveByKey("AddMaterial");
+            Parent.Controls.RemoveByKey("ModifyMaterial");
+            Parent.Controls.RemoveByKey("DeleteMaterial");
+            Parent.Controls.RemoveByKey("MaterialsList");
+            Parent.Controls.RemoveByKey("AddProductType");
+            Parent.Controls.RemoveByKey("DeleteProductType");
+            Parent.Controls.RemoveByKey("ModifyProductType");
+            Parent.Controls.RemoveByKey("ViewProductTypes");
+            Parent.Controls.RemoveByKey("AddProduct");
+            Parent.Controls.RemoveByKey("DeleteProduct");
+            Parent.Controls.RemoveByKey("ModifyProduct");
+            Parent.Controls.RemoveByKey("ViewProducts");
+            Parent.Controls.RemoveByKey("AddProvider");
             Parent.Controls.RemoveByKey("EditProvider");
-            Parent.Controls.RemoveByKey("ViewPaymentMethod");
+            Parent.Controls.RemoveByKey("DeleteProvider");
+            Parent.Controls.RemoveByKey("ViewProviders");
 
         }
 
