@@ -22,9 +22,13 @@ namespace CACMicropresicion.View.Users
         }
 
         public void loadDataGrid (Object list) {
+
             this.dgViewUsers.DataSource = list;
             CurrencyManager cm = (CurrencyManager)BindingContext[dgViewUsers.DataSource];
             cm.SuspendBinding();
+
+            dgViewUsers.RowHeadersVisible = false;
+            dgViewUsers.ColumnHeadersVisible = false;
 
             changeHeadersText();
             setColumnsSize();
