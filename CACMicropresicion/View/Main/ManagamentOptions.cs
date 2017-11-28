@@ -76,6 +76,7 @@ namespace CACMicropresicion.View.Main
                     AddProduct addProduct = new AddProduct();
                     Parent.Controls.Add(addProduct);
                     break;
+
                 case "Providers":
                     AddProvider addP = new AddProvider();
                     Parent.Controls.Add(addP);
