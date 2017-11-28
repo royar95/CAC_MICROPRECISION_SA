@@ -17,7 +17,6 @@ using CACMicropresicion.View.MaterialTypes;
 using CACMicropresicion.View.Materials;
 using CACMicropresicion.View.Products;
 using CACMicropresicion.View.ProductTypes;
-using CACMicropresicion.View.Providers;
 
 namespace CACMicropresicion.View.Main
 {
@@ -76,11 +75,6 @@ namespace CACMicropresicion.View.Main
                     Parent.Controls.Add(addProduct);
                     break;
 
-                case "Providers":
-                    AddProvider addP = new AddProvider();
-                    Parent.Controls.Add(addP);
-                    break;
-
             }
 
         }
@@ -128,11 +122,6 @@ namespace CACMicropresicion.View.Main
                     Parent.Controls.Add(modifyProduct);
                     break;
 
-                case "Providers":
-                    EditProvider edP = new EditProvider();
-                    Parent.Controls.Add(edP);
-                    break;
-
             }
         }
 
@@ -177,11 +166,6 @@ namespace CACMicropresicion.View.Main
                 case "Products":
                     DeleteProduct deleteProduct = new DeleteProduct();
                     Parent.Controls.Add(deleteProduct);
-                    break;
-
-                case "Providers":
-                    DeleteProvider delP = new DeleteProvider();
-                    Parent.Controls.Add(delP);
                     break;
             }
         }
@@ -369,27 +353,6 @@ namespace CACMicropresicion.View.Main
                         Parent.Controls.Add(viewProducts);
                     }
 
-                    break;
-
-                case "Providers":
-                    ViewProviders viewProviders = new ViewProviders();
-                    ProviderController providerCtrl = new ProviderController();
-
-                    viewProviders.Height = Parent.Height;
-                    viewProviders.Width = Parent.Width;
-
-                    this.result = providerCtrl.getAllProviders();
-                    if (this.result["code"] == Result.Failed)
-                    {
-                        MessageBox.Show(this.result["msg"]);
-                        return;
-                    }
-
-                    if (this.result["code"] == Result.Processed)
-                    {
-                        viewProviders.loadDataGrid(this.result["content"]);
-                        Parent.Controls.Add(viewProviders);
-                    }
                     break;
 
             }

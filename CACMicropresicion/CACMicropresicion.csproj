@@ -77,11 +77,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CAC_MICROPRECISION_SADataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CAC_MICROPRECISION_SADataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Controller\BaseController.cs" />
     <Compile Include="Controller\ClientsController.cs" />
     <Compile Include="Controller\LogController.cs" />
@@ -378,36 +373,6 @@
     <Compile Include="View\ProductTypes\ViewProductTypes.Designer.cs">
       <DependentUpon>ViewProductTypes.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\Providers\AddProvider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Providers\AddProvider.designer.cs">
-      <DependentUpon>AddProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\DeleteProvider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Providers\DeleteProvider.designer.cs">
-      <DependentUpon>DeleteProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\EditProvider.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Providers\EditProvider.designer.cs">
-      <DependentUpon>EditProvider.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\Providers.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\Providers\Providers.designer.cs">
-      <DependentUpon>Providers.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\Providers\ViewProviders.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="View\Providers\ViewProviders.designer.cs">
-      <DependentUpon>ViewProviders.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\Register1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -585,21 +550,6 @@
     <EmbeddedResource Include="View\ProductTypes\ViewProductTypes.resx">
       <DependentUpon>ViewProductTypes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\AddProvider.resx">
-      <DependentUpon>AddProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\DeleteProvider.resx">
-      <DependentUpon>DeleteProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\EditProvider.resx">
-      <DependentUpon>EditProvider.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\Providers.resx">
-      <DependentUpon>Providers.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View\Providers\ViewProviders.resx">
-      <DependentUpon>ViewProviders.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\Register1.resx">
       <DependentUpon>Register1.cs</DependentUpon>
     </EmbeddedResource>
@@ -637,17 +587,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CAC_MICROPRECISION_SADataSet.xsc">
-      <DependentUpon>CAC_MICROPRECISION_SADataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CAC_MICROPRECISION_SADataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CAC_MICROPRECISION_SADataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CAC_MICROPRECISION_SADataSet.xss">
-      <DependentUpon>CAC_MICROPRECISION_SADataSet.xsd</DependentUpon>
-    </None>
     <None Include="Model\Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </None>
