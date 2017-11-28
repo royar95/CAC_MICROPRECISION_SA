@@ -69,13 +69,22 @@ namespace CACMicropresicion.View.Users
         {
 
             String searchValue = btnIdSearch.text.TrimStart().TrimEnd();
+            int valueLength = searchValue.Length;
 
             foreach (DataGridViewRow row in dgViewUsers.Rows)
             {
                 row.Visible = true;
+
                 if (!searchValue.Equals(String.Empty))
                 {
-                    if (!row.Cells[1].Value.ToString().Equals(searchValue))
+                    if (valueLength > row.Cells[1].Value.ToString().Length)
+                    {
+                        row.Visible = false;
+                        continue;
+                    }
+
+                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
+                    if (!cellValue.Equals(searchValue))
                     {
                         row.Visible = false;
                     }
