@@ -23,6 +23,9 @@ namespace CACMicropresicion.View.Users
 
         public void loadDataGrid (Object list) {
             this.dgViewUsers.DataSource = list;
+            CurrencyManager cm = (CurrencyManager)BindingContext[dgViewUsers.DataSource];
+            cm.SuspendBinding();
+
             changeHeadersText();
             setColumnsSize();
             setFontConf();
@@ -53,6 +56,25 @@ namespace CACMicropresicion.View.Users
                 column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 column.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
+        }
+
+        private void btnIdSearch_OnTextChange(object sender, EventArgs e)
+        {
+
+            String searchValue = btnIdSearch.text.TrimStart().TrimEnd();
+
+            foreach (DataGridViewRow row in dgViewUsers.Rows)
+            {
+                row.Visible = true;
+                if (!searchValue.Equals(""))
+                {
+                    if (!row.Cells[0].Value.ToString().Equals(searchValue))
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+
         }
 
     }

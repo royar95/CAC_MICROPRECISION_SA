@@ -30,7 +30,10 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewUsers));
             this.dgViewUsers = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.btnIdSearch = new Bunifu.Framework.UI.BunifuTextbox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dgViewUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,26 +60,56 @@
             this.dgViewUsers.EnableHeadersVisualStyles = false;
             this.dgViewUsers.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
             this.dgViewUsers.HeaderForeColor = System.Drawing.Color.Black;
-            this.dgViewUsers.Location = new System.Drawing.Point(0, 0);
+            this.dgViewUsers.Location = new System.Drawing.Point(0, 68);
             this.dgViewUsers.Name = "dgViewUsers";
             this.dgViewUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgViewUsers.Size = new System.Drawing.Size(853, 478);
+            this.dgViewUsers.Size = new System.Drawing.Size(853, 458);
             this.dgViewUsers.TabIndex = 0;
+            // 
+            // btnIdSearch
+            // 
+            this.btnIdSearch.BackColor = System.Drawing.Color.White;
+            this.btnIdSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnIdSearch.BackgroundImage")));
+            this.btnIdSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnIdSearch.ForeColor = System.Drawing.Color.Black;
+            this.btnIdSearch.Icon = ((System.Drawing.Image)(resources.GetObject("btnIdSearch.Icon")));
+            this.btnIdSearch.Location = new System.Drawing.Point(110, 22);
+            this.btnIdSearch.Name = "btnIdSearch";
+            this.btnIdSearch.Size = new System.Drawing.Size(197, 25);
+            this.btnIdSearch.TabIndex = 5;
+            this.btnIdSearch.text = "";
+            this.btnIdSearch.OnTextChange += new System.EventHandler(this.btnIdSearch_OnTextChange);
+            // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(36, 22);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(72, 25);
+            this.bunifuCustomLabel1.TabIndex = 34;
+            this.bunifuCustomLabel1.Text = "Cédula:";
             // 
             // ViewUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuCustomLabel1);
+            this.Controls.Add(this.btnIdSearch);
             this.Controls.Add(this.dgViewUsers);
             this.Name = "ViewUsers";
-            this.Size = new System.Drawing.Size(853, 478);
+            this.Size = new System.Drawing.Size(853, 526);
             ((System.ComponentModel.ISupportInitialize)(this.dgViewUsers)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgViewUsers;
+        private Bunifu.Framework.UI.BunifuTextbox btnIdSearch;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
     }
 }

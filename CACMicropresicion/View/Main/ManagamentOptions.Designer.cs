@@ -184,7 +184,7 @@
             this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnAdd);
             this.Name = "ManagamentOptions";
-            this.Size = new System.Drawing.Size(541, 47);
+            this.Size = new System.Drawing.Size(550, 47);
             this.ResumeLayout(false);
 
         }
