@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CACMicropresicion.Controller;
+using CACMicropresicion.Globals;
 using CACMicropresicion.Model;
 
 namespace CACMicropresicion.View.Users
 {
     public partial class ViewUsers : UserControl
     {
+
+        private UserCtrl controller;
 
         public ViewUsers()
         {
@@ -28,7 +32,6 @@ namespace CACMicropresicion.View.Users
             cm.SuspendBinding();
 
             dgViewUsers.RowHeadersVisible = false;
-            dgViewUsers.ColumnHeadersVisible = false;
 
             changeHeadersText();
             setColumnsSize();
@@ -36,21 +39,21 @@ namespace CACMicropresicion.View.Users
         }
 
         private void changeHeadersText () {
-            this.dgViewUsers.Columns[0].HeaderText = "Cédula";
-            this.dgViewUsers.Columns[1].HeaderText = "Nombre";
-            this.dgViewUsers.Columns[2].HeaderText = "Nombre de Usuario";
-            this.dgViewUsers.Columns[3].HeaderText = "Tipo";
-            this.dgViewUsers.Columns[4].HeaderText = "Estado";
-            this.dgViewUsers.Columns[5].HeaderText = "Eliminado";
+            this.dgViewUsers.Columns[0].HeaderText = "Id";
+            this.dgViewUsers.Columns[1].HeaderText = "Cédula";
+            this.dgViewUsers.Columns[2].HeaderText = "Nombre";
+            this.dgViewUsers.Columns[3].HeaderText = "Nombre de Usuario";
+            this.dgViewUsers.Columns[4].HeaderText = "Tipo";
+            this.dgViewUsers.Columns[5].HeaderText = "Estado";
         }
 
         private void setColumnsSize () {
-            this.dgViewUsers.Columns[0].Width = 170;
-            this.dgViewUsers.Columns[1].Width = 250;
-            this.dgViewUsers.Columns[2].Width = 180;
-            this.dgViewUsers.Columns[3].Width = 170;
-            this.dgViewUsers.Columns[4].Width = 140;
-            this.dgViewUsers.Columns[5].Width = 140;
+            this.dgViewUsers.Columns[0].Width = 100;
+            this.dgViewUsers.Columns[1].Width = 120;
+            this.dgViewUsers.Columns[2].Width = 250;
+            this.dgViewUsers.Columns[3].Width = 220;
+            this.dgViewUsers.Columns[4].Width = 120;
+            this.dgViewUsers.Columns[5].Width = 100;
         }
 
         private void setFontConf() { 
@@ -70,15 +73,45 @@ namespace CACMicropresicion.View.Users
             foreach (DataGridViewRow row in dgViewUsers.Rows)
             {
                 row.Visible = true;
-                if (!searchValue.Equals(""))
+                if (!searchValue.Equals(String.Empty))
                 {
-                    if (!row.Cells[0].Value.ToString().Equals(searchValue))
+                    if (!row.Cells[1].Value.ToString().Equals(searchValue))
                     {
                         row.Visible = false;
                     }
                 }
             }
 
+        }
+
+        private void dgViewUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.controller = new UserCtrl();
+            int rowIndex = e.RowIndex;
+            int IdUser = -1;
+
+            DataGridViewRow rowToModify = dgViewUsers.Rows[rowIndex];
+            IdUser = Int32.Parse(rowToModify.Cells[0].Value.ToString());
+
+            Dictionary<Object, dynamic> result = controller.getUserById(IdUser);
+
+            if (result["code"] == Result.Failed) {
+                MessageBox.Show(result["msg"]);
+            }
+
+            if (result["code"] == Result.Processed) {
+                Usuario userToModify = result["content"];
+                showsUserModifyControl(userToModify);
+            }
+
+        }
+
+        private void showsUserModifyControl(Usuario userToModify) {
+
+            ModifyUser control = new ModifyUser();
+            control.fillUserInputs(userToModify);
+            Parent.Controls.Add(control);
+            Parent.Controls.RemoveByKey("ViewUsers");
         }
 
     }

@@ -43,16 +43,7 @@ namespace CACMicropresicion.View.Users
             {
                 loadTypesComboBox();
                 loadStatusComboBox(resultStatus["content"]);
-                loadUsersComboBox(resultUsers["content"]);
             }
-
-        }
-
-        public void loadUsersComboBox(Object data) {
-
-            this.modDropUserId.DataSource = data;
-            this.modDropUserId.ValueMember = "IdUsuario";
-            this.modDropUserId.DisplayMember = "Cedula";
 
         }
 
@@ -103,20 +94,42 @@ namespace CACMicropresicion.View.Users
             Dictionary<Object, dynamic> result = userControl.modifyUser(registeredUser, modifiedUser);
 
             if (result["code"] == Result.Processed) {
-                this.loadCombos();
+                loadDataGridView();
             }
 
             MessageBox.Show(result["msg"]);
         }
 
-        private void modDropUserId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fillUserInputs();
+        private void loadDataGridView () {
+
+            ViewUsers viewUser = new ViewUsers();
+            UserCtrl userCtrl = new UserCtrl();
+
+            viewUser.Height = Parent.Height;
+            viewUser.Width = Parent.Width;
+
+            Dictionary<Object, dynamic> result = userCtrl.getAllUsers();
+
+            if (result["code"] == Result.Failed)
+            {
+                MessageBox.Show(result["msg"]);
+                return;
+            }
+
+            if (result["code"] == Result.Processed)
+            {
+                viewUser.loadDataGrid(result["content"]);
+                Parent.Controls.Add(viewUser);
+            }
+
+            Parent.Controls.RemoveByKey("ModifyUser");
+
         }
 
-        private void fillUserInputs() {
+        public void fillUserInputs(Usuario user) {
 
-            this.registeredUser = (Usuario)this.modDropUserId.SelectedItem;
+            this.registeredUser = user;
+            modTxtIdentification.Text = this.registeredUser.Cedula;
             modtxtName.Text = this.registeredUser.NombreCompleto;
             modtxtLastname1.Text = this.registeredUser.PrimerApellido;
             modtxtLastname2.Text = this.registeredUser.SegundoApellido;

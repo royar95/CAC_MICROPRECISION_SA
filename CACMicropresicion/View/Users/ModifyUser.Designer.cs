@@ -43,9 +43,9 @@
             this.lblNewUser = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.modDropUserId = new System.Windows.Forms.ComboBox();
             this.modDropUserType = new System.Windows.Forms.ComboBox();
             this.modDropUserStatus = new System.Windows.Forms.ComboBox();
+            this.modTxtIdentification = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.SuspendLayout();
             // 
             // modBtnSaveUserChanges
@@ -257,17 +257,6 @@
             this.bunifuCustomLabel7.TabIndex = 31;
             this.bunifuCustomLabel7.Text = "Estado";
             // 
-            // modDropUserId
-            // 
-            this.modDropUserId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.modDropUserId.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modDropUserId.FormattingEnabled = true;
-            this.modDropUserId.Location = new System.Drawing.Point(72, 123);
-            this.modDropUserId.Name = "modDropUserId";
-            this.modDropUserId.Size = new System.Drawing.Size(225, 25);
-            this.modDropUserId.TabIndex = 32;
-            this.modDropUserId.SelectedIndexChanged += new System.EventHandler(this.modDropUserId_SelectedIndexChanged);
-            // 
             // modDropUserType
             // 
             this.modDropUserType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -288,14 +277,32 @@
             this.modDropUserStatus.Size = new System.Drawing.Size(225, 25);
             this.modDropUserStatus.TabIndex = 36;
             // 
+            // modTxtIdentification
+            // 
+            this.modTxtIdentification.BorderColorFocused = System.Drawing.Color.Blue;
+            this.modTxtIdentification.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.modTxtIdentification.BorderColorMouseHover = System.Drawing.Color.Blue;
+            this.modTxtIdentification.BorderThickness = 3;
+            this.modTxtIdentification.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.modTxtIdentification.Enabled = false;
+            this.modTxtIdentification.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
+            this.modTxtIdentification.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.modTxtIdentification.isPassword = false;
+            this.modTxtIdentification.Location = new System.Drawing.Point(72, 123);
+            this.modTxtIdentification.Margin = new System.Windows.Forms.Padding(4);
+            this.modTxtIdentification.Name = "modTxtIdentification";
+            this.modTxtIdentification.Size = new System.Drawing.Size(229, 34);
+            this.modTxtIdentification.TabIndex = 37;
+            this.modTxtIdentification.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // ModifyUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.Controls.Add(this.modTxtIdentification);
             this.Controls.Add(this.modDropUserStatus);
             this.Controls.Add(this.modDropUserType);
-            this.Controls.Add(this.modDropUserId);
             this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.modBtnSaveUserChanges);
@@ -334,8 +341,8 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblNewUser;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
-        private System.Windows.Forms.ComboBox modDropUserId;
         private System.Windows.Forms.ComboBox modDropUserType;
         private System.Windows.Forms.ComboBox modDropUserStatus;
+        private Bunifu.Framework.UI.BunifuMetroTextbox modTxtIdentification;
     }
 }

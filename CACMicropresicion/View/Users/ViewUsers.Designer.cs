@@ -65,6 +65,7 @@
             this.dgViewUsers.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgViewUsers.Size = new System.Drawing.Size(853, 458);
             this.dgViewUsers.TabIndex = 0;
+            this.dgViewUsers.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewUsers_CellDoubleClick);
             // 
             // btnIdSearch
             // 

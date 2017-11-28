@@ -50,16 +50,36 @@ namespace CACMicropresicion.Controller
                             where u.Eliminado == 0
                             select new
                             {
+                                id = u.IdUsuario,
                                 identification = u.Cedula,
                                 name = (u.NombreCompleto + " " + u.PrimerApellido + " " + u.SegundoApellido),
                                 username = u.NombreUsuario,
                                 type = (u.Tipo == 1) ? "Administrador" : "Operario",
                                 status = s.Descripcion,
-                                deleted = (u.Eliminado == 1) ? "Si" : "No"
                             };
 
                 var users = query.ToList();
                 return result(Result.Processed, null, users);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }
+
+        public Dictionary<Object, dynamic> getUserById(int id) {
+
+            try
+            {
+
+                Usuario user = (from u in db.Usuario
+                                where u.IdUsuario == id
+                                where u.Eliminado == 0
+                                select u).FirstOrDefault();
+
+                return result(Result.Processed, null, user);
 
             }
             catch (Exception ex)

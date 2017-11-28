@@ -31,9 +31,8 @@ namespace CACMicropresicion.View.Main
             InitializeComponent();
             this.Location = new Point(235, 50);
         }
-
+        
         public string Mantenimiento { get; set; }
-
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -195,7 +194,6 @@ namespace CACMicropresicion.View.Main
             switch (this.Mantenimiento)
             {
                 case "Users":
-
                     ViewUsers viewUser = new ViewUsers();
                     UserCtrl userCtrl = new UserCtrl();
 
@@ -214,23 +212,24 @@ namespace CACMicropresicion.View.Main
                         viewUser.loadDataGrid(this.result["content"]);
                         Parent.Controls.Add(viewUser);
                     }
-
                     break;
 
                 case "Clients":
                     ClientsList clientsList = new ClientsList();
                     ClientsController cont = new ClientsController();
+
                     clientsList.Height = Parent.Height;
                     clientsList.Width = Parent.Width;
-                    Dictionary<Object, dynamic> res = cont.getAllClients();
-                    if (res["code"] == Result.Failed)
+
+                    this.result = cont.getAllClients();
+                    if (this.result["code"] == Result.Failed)
                     {
-                        MessageBox.Show(res["msg"]);
+                        MessageBox.Show(this.result["msg"]);
                         return;
                     }
-                    if (res["code"] == Result.Processed)
+                    if (this.result["code"] == Result.Processed)
                     {
-                        clientsList.loadDataGrid(res["content"]);
+                        clientsList.loadDataGrid(this.result["content"]);
                         Parent.Controls.Add(clientsList);
                     }
                     break;
