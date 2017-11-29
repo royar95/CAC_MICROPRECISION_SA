@@ -400,6 +400,7 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("EditProvider");
             Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewProviders");
+            Parent.Controls.RemoveByKey("NewSale");
 
         }
 

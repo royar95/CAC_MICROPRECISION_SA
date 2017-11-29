@@ -21,13 +21,6 @@ namespace CACMicropresicion.View.Main
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-
-            Random randomGen = new Random();
-            KnownColor[] names = (KnownColor[])Enum.GetValues(typeof(KnownColor));
-            KnownColor randomColorName = names[randomGen.Next(names.Length)];
-            Color randomColor = Color.FromKnownColor(randomColorName);
-            btnClients.BackColor = randomColor;
-
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
             managament.Mantenimiento = "Clients";
@@ -93,6 +86,7 @@ namespace CACMicropresicion.View.Main
         private void removeAllControls()
         {
             Parent.Controls.RemoveByKey("ManagamentOptions");
+            Parent.Controls.RemoveByKey("InOutOptions");
             Parent.Controls.RemoveByKey("AddUser");
             Parent.Controls.RemoveByKey("AddClient");
             Parent.Controls.RemoveByKey("AddState");
@@ -131,6 +125,7 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("EditProvider");
             Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewProviders");
+            Parent.Controls.RemoveByKey("NewSale");
         }
 
     }

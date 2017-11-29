@@ -87,6 +87,7 @@
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\ProductTypeController.cs" />
     <Compile Include="Controller\ProviderController.cs" />
+    <Compile Include="Controller\SalesController.cs" />
     <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
     <Compile Include="Globals\ContactInfoType.cs" />
@@ -222,6 +223,12 @@
     </Compile>
     <Compile Include="View\Main\DataControl.Designer.cs">
       <DependentUpon>DataControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Main\InOutOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Main\InOutOptions.Designer.cs">
+      <DependentUpon>InOutOptions.cs</DependentUpon>
     </Compile>
     <Compile Include="View\Main\LogOptions.cs">
       <SubType>UserControl</SubType>
@@ -385,6 +392,12 @@
     <Compile Include="View\Register2.Designer.cs">
       <DependentUpon>Register2.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Sales\NewSale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Sales\NewSale.Designer.cs">
+      <DependentUpon>NewSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\States\AddState.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -475,6 +488,9 @@
     <EmbeddedResource Include="View\Main\DataControl.resx">
       <DependentUpon>DataControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Main\InOutOptions.resx">
+      <DependentUpon>InOutOptions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Main\LogOptions.resx">
       <DependentUpon>LogOptions.cs</DependentUpon>
     </EmbeddedResource>
@@ -556,6 +572,9 @@
     <EmbeddedResource Include="View\Register2.resx">
       <DependentUpon>Register2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Sales\NewSale.resx">
+      <DependentUpon>NewSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\States\AddState.resx">
       <DependentUpon>AddState.cs</DependentUpon>
     </EmbeddedResource>
@@ -623,7 +642,6 @@
   <ItemGroup>
     <Folder Include="View\Categories\" />
     <Folder Include="View\Purchases\" />
-    <Folder Include="View\Sales\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\Model1.Context.tt">

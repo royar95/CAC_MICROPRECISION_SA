@@ -29,6 +29,7 @@ namespace CACMicropresicion.View.Main
 
         private void removeAllControls() {
             Parent.Controls.RemoveByKey("ManagamentOptions");
+            Parent.Controls.RemoveByKey("InOutOptions");
             Parent.Controls.RemoveByKey("AddUser");
             Parent.Controls.RemoveByKey("AddClient");
             Parent.Controls.RemoveByKey("AddState");
@@ -67,6 +68,7 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("EditProvider");
             Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewProviders");
+            Parent.Controls.RemoveByKey("NewSale");
 
         }
 
