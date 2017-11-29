@@ -80,7 +80,7 @@ namespace CACMicropresicion.View.Materials
 
         }
 
-        public void fillUserInputs(Material material)
+        public void fillInputs(Material material)
         {
 
             this.registeredMaterial = material;

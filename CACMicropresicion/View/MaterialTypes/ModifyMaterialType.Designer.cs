@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.modBtnSaveMaterialType = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.modDropMaterialType = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblEditClient = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtDescription = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // modBtnSaveMaterialType
@@ -57,7 +58,7 @@
             this.modBtnSaveMaterialType.IconVisible = false;
             this.modBtnSaveMaterialType.IconZoom = 90D;
             this.modBtnSaveMaterialType.IsTab = false;
-            this.modBtnSaveMaterialType.Location = new System.Drawing.Point(78, 279);
+            this.modBtnSaveMaterialType.Location = new System.Drawing.Point(78, 283);
             this.modBtnSaveMaterialType.Name = "modBtnSaveMaterialType";
             this.modBtnSaveMaterialType.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.modBtnSaveMaterialType.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -71,23 +72,12 @@
             this.modBtnSaveMaterialType.TextFont = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modBtnSaveMaterialType.Click += new System.EventHandler(this.modBtnSaveMaterialType_Click);
             // 
-            // modDropMaterialType
-            // 
-            this.modDropMaterialType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.modDropMaterialType.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modDropMaterialType.FormattingEnabled = true;
-            this.modDropMaterialType.Location = new System.Drawing.Point(78, 106);
-            this.modDropMaterialType.Name = "modDropMaterialType";
-            this.modDropMaterialType.Size = new System.Drawing.Size(225, 25);
-            this.modDropMaterialType.TabIndex = 56;
-            this.modDropMaterialType.SelectedIndexChanged += new System.EventHandler(this.modDropMaterialType_SelectedIndexChanged);
-            // 
             // bunifuCustomLabel1
             // 
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(73, 163);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(73, 110);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 55;
@@ -101,9 +91,9 @@
             this.lblEditClient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lblEditClient.Location = new System.Drawing.Point(71, 36);
             this.lblEditClient.Name = "lblEditClient";
-            this.lblEditClient.Size = new System.Drawing.Size(293, 40);
+            this.lblEditClient.Size = new System.Drawing.Size(336, 40);
             this.lblEditClient.TabIndex = 54;
-            this.lblEditClient.Text = "Editar Tipo de Material";
+            this.lblEditClient.Text = "Modificar Tipo de Material";
             // 
             // txtDescription
             // 
@@ -115,24 +105,46 @@
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescription.isPassword = false;
-            this.txtDescription.Location = new System.Drawing.Point(78, 192);
+            this.txtDescription.Location = new System.Drawing.Point(78, 139);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(229, 34);
             this.txtDescription.TabIndex = 58;
             this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(73, 194);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(66, 25);
+            this.bunifuCustomLabel7.TabIndex = 60;
+            this.bunifuCustomLabel7.Text = "Estado";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(78, 222);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(225, 25);
+            this.cmbStatus.TabIndex = 59;
+            // 
             // ModifyMaterialType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.bunifuCustomLabel7);
+            this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.modBtnSaveMaterialType);
-            this.Controls.Add(this.modDropMaterialType);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.lblEditClient);
             this.Name = "ModifyMaterialType";
-            this.Size = new System.Drawing.Size(654, 409);
+            this.Size = new System.Drawing.Size(654, 395);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -141,9 +153,10 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuFlatButton modBtnSaveMaterialType;
-        private System.Windows.Forms.ComboBox modDropMaterialType;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblEditClient;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtDescription;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
+        private System.Windows.Forms.ComboBox cmbStatus;
     }
 }

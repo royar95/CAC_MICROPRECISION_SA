@@ -22,7 +22,7 @@ namespace CACMicropresicion.View.Cients
         public ModifyClient()
         {
             InitializeComponent();
-             this.Location = new Point(235, 97);
+            this.Location = new Point(235, 97);
             loadCombos();
         }
 

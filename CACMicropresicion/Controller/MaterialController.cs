@@ -176,9 +176,9 @@ namespace CACMicropresicion.Controller
                             orderby material.Descripcion
                             select new
                             {
-                                id = material.IdMaterial,
-                                materialDesc = material.Descripcion,
-                                statusDesc = status.Descripcion
+                                Código = material.IdMaterial,
+                                Descripción = material.Descripcion,
+                                Estado = status.Descripcion
                             };
 
                 var users = query.ToList();

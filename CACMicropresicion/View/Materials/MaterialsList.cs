@@ -35,16 +35,8 @@ namespace CACMicropresicion.View.Materials
             dgMaterials.RowHeadersVisible = false;
             dgMaterials.Columns[0].Visible = false;
 
-            changeHeadersText();
             setColumnsSize();
             setFontConf();
-        }
-
-        private void changeHeadersText()
-        {
-            this.dgMaterials.Columns[0].HeaderText = "Id";
-            this.dgMaterials.Columns[1].HeaderText = "Descripción";
-            this.dgMaterials.Columns[2].HeaderText = "Estado";
         }
 
         private void setColumnsSize()
@@ -119,7 +111,7 @@ namespace CACMicropresicion.View.Materials
         {
 
             ModifyMaterial control = new ModifyMaterial();
-            control.fillUserInputs(materialToModify);
+            control.fillInputs(materialToModify);
             Parent.Controls.Add(control);
             Parent.Controls.RemoveByKey("MaterialsList");
         }

@@ -50,12 +50,12 @@ namespace CACMicropresicion.Controller
                             where u.Eliminado == 0
                             select new
                             {
-                                id = u.IdUsuario,
-                                identification = u.Cedula,
-                                name = (u.NombreCompleto + " " + u.PrimerApellido + " " + u.SegundoApellido),
-                                username = u.NombreUsuario,
-                                type = (u.Tipo == 1) ? "Administrador" : "Operario",
-                                status = s.Descripcion,
+                                Código = u.IdUsuario,
+                                Cédula = u.Cedula,
+                                Nombre = (u.NombreCompleto + " " + u.PrimerApellido + " " + u.SegundoApellido),
+                                Usuario = u.NombreUsuario,
+                                Tipo = (u.Tipo == 1) ? "Administrador" : "Operario",
+                                Estado = s.Descripcion,
                             };
 
                 var users = query.ToList();

@@ -213,9 +213,9 @@ namespace CACMicropresicion.Controller
                             where c.Eliminado == 0
                             select new
                             {
-                                identification = c.IdCliente,
-                                description = c.Descripcion,
-                                status = s.Descripcion
+                                Código = c.IdCliente,
+                                Descripción = c.Descripcion,
+                                Estado = s.Descripcion
                             };
 
                 var users = query.ToList();

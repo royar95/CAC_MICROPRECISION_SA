@@ -134,7 +134,8 @@ namespace CACMicropresicion.Controller
                 return result(Result.Failed, Result.Empty, null);
             }
 
-            if (registeredMaterial.Descripcion.Equals(modifiedMaterial.Descripcion))
+            if (registeredMaterial.Descripcion.Equals(modifiedMaterial.Descripcion) &&
+                registeredMaterial.IdEstado.Equals(modifiedMaterial.IdEstado))
             {
                 return result(Result.Failed, Result.Same, null);
             }
@@ -170,11 +171,13 @@ namespace CACMicropresicion.Controller
             {
 
                 var query = from t in db.TipoMaterial
+                            join status in db.Estado on t.IdEstado equals status.IdEstado
                             where t.Eliminado == 0
                             select new
                             {
-                                idMaterial = t.IdTipoMaterial,
-                                description = t.Descripcion
+                                Código = t.IdTipoMaterial,
+                                Descripción = t.Descripcion,
+                                Estado = status.Descripcion
                             };
 
                 var users = query.ToList();
@@ -186,6 +189,26 @@ namespace CACMicropresicion.Controller
                 return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
             }
 
+        }
+
+        public Dictionary<Object, dynamic> getMaterialTypeById(int id) {
+
+            try
+            {
+
+                TipoMaterial type = (from t in db.TipoMaterial
+                                     where t.IdTipoMaterial == id
+                                     where t.Eliminado == 0
+                                     select t).FirstOrDefault();
+
+                return result(Result.Processed, null, type);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+        
         }
 
 

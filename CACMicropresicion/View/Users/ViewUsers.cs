@@ -34,18 +34,8 @@ namespace CACMicropresicion.View.Users
             dgViewUsers.RowHeadersVisible = false;
             dgViewUsers.Columns[0].Visible = false;
 
-            changeHeadersText();
             setColumnsSize();
             setFontConf();
-        }
-
-        private void changeHeadersText () {
-            this.dgViewUsers.Columns[0].HeaderText = "Id";
-            this.dgViewUsers.Columns[1].HeaderText = "Cédula";
-            this.dgViewUsers.Columns[2].HeaderText = "Nombre";
-            this.dgViewUsers.Columns[3].HeaderText = "Nombre de Usuario";
-            this.dgViewUsers.Columns[4].HeaderText = "Tipo";
-            this.dgViewUsers.Columns[5].HeaderText = "Estado";
         }
 
         private void setColumnsSize () {

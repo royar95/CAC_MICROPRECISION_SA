@@ -7,11 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CACMicropresicion.Controller;
+using CACMicropresicion.Model;
+using CACMicropresicion.Globals;
 
 namespace CACMicropresicion.View.MaterialTypes
 {
     public partial class ViewMaterialTypes : UserControl
     {
+
+        private MaterialTypeController controller;
+
         public ViewMaterialTypes()
         {
             InitializeComponent();
@@ -19,16 +25,11 @@ namespace CACMicropresicion.View.MaterialTypes
             this.Anchor = AnchorStyles.Right | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Top;
         }
 
-        private void changeHeadersText()
-        {
-            this.dgViewMaterialTypes.Columns[0].HeaderText = "Codigo";
-            this.dgViewMaterialTypes.Columns[1].HeaderText = "Descripcion";
-        }
-
         private void setColumnsSize()
         {
-            this.dgViewMaterialTypes.Columns[0].Width = 100;
+            this.dgViewMaterialTypes.Columns[0].Width = 80;
             this.dgViewMaterialTypes.Columns[1].Width = 350;
+            this.dgViewMaterialTypes.Columns[2].Width = 180;
         }
 
         private void setFontConf()
@@ -45,7 +46,13 @@ namespace CACMicropresicion.View.MaterialTypes
         public void loadDataGrid(Object list)
         {
             this.dgViewMaterialTypes.DataSource = list;
-            changeHeadersText();
+
+            CurrencyManager cm = (CurrencyManager)BindingContext[dgViewMaterialTypes.DataSource];
+            cm.SuspendBinding();
+
+            dgViewMaterialTypes.RowHeadersVisible = false;
+            dgViewMaterialTypes.Columns[0].Visible = false;
+
             setColumnsSize();
             setFontConf();
         }
@@ -54,5 +61,65 @@ namespace CACMicropresicion.View.MaterialTypes
         {
 
         }
+
+        private void txtSearch_OnTextChange(object sender, EventArgs e)
+        {
+            String searchValue = txtSearch.text.TrimStart().TrimEnd();
+            int valueLength = searchValue.Length;
+
+            foreach (DataGridViewRow row in dgViewMaterialTypes.Rows)
+            {
+                row.Visible = true;
+
+                if (!searchValue.Equals(String.Empty))
+                {
+                    if (valueLength > row.Cells[1].Value.ToString().Length)
+                    {
+                        row.Visible = false;
+                        continue;
+                    }
+
+                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
+
+                    if (!cellValue.Equals(searchValue))
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
+        }
+
+        private void dgViewMaterialTypes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            this.controller = new MaterialTypeController();
+            int rowIndex = e.RowIndex;
+            int IdMaterialType = -1;
+
+            DataGridViewRow rowToModify = dgViewMaterialTypes.Rows[rowIndex];
+            IdMaterialType = Int32.Parse(rowToModify.Cells[0].Value.ToString());
+
+            Dictionary<Object, dynamic> result = controller.getMaterialTypeById(IdMaterialType);
+
+            if (result["code"] == Result.Failed)
+            {
+                MessageBox.Show(result["msg"]);
+            }
+
+            if (result["code"] == Result.Processed)
+            {
+                TipoMaterial materialTypeToModify = result["content"];
+                showsMateriaTypeControl(materialTypeToModify);
+            }
+        }
+
+        private void showsMateriaTypeControl(TipoMaterial materialTypeToModify)
+        {
+
+            ModifyMaterialType control = new ModifyMaterialType();
+            control.fillInputs(materialTypeToModify);
+            Parent.Controls.Add(control);
+            Parent.Controls.RemoveByKey("ViewMaterialTypes");
+        }
+
     }
 }

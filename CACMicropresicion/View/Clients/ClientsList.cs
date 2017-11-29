@@ -33,17 +33,10 @@ namespace CACMicropresicion.View.Cients
             dataGridViewClients.RowHeadersVisible = false;
             dataGridViewClients.Columns[0].Visible = false;
 
-            changeHeadersText();
             setColumnsSize();
             setFontConf();
         }
 
-        private void changeHeadersText()
-        {
-            this.dataGridViewClients.Columns[0].HeaderText = "Código";
-            this.dataGridViewClients.Columns[1].HeaderText = "Descripcion";
-            this.dataGridViewClients.Columns[2].HeaderText = "Estado";
-        }
 
         private void setColumnsSize()
         {

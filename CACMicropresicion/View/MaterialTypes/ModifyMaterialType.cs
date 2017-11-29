@@ -18,47 +18,47 @@ namespace CACMicropresicion.View.MaterialTypes
         private TipoMaterial registeredMaterialType;
         string description;
         MaterialTypeController controller;
+
         public ModifyMaterialType()
         {
             InitializeComponent();
             this.Location = new Point(235, 97);
-            loadCombos();
+            this.loadCombos();
         }
-
 
         public void loadCombos()
         {
             controller = new MaterialTypeController();
-            Dictionary<Object, dynamic> resultMaterialType = this.controller.getDataToFillMaterialsCombo();
+            Dictionary<Object, dynamic> resultStatus = this.controller.getAllStatus();
 
-
-            if (resultMaterialType["code"] == Result.Failed)
+            if (resultStatus["code"] == Result.Failed)
             {
-                MessageBox.Show(resultMaterialType["msg"]);
+                MessageBox.Show(resultStatus["msg"]);
                 return;
             }
 
-            if (resultMaterialType["code"] == Result.Processed)
+            if (resultStatus["code"] == Result.Processed)
             {
-                // loadTypesComboBox();
-                loadPaymentComboBox(resultMaterialType["content"]);
+                loadStatusComboBox(resultStatus["content"]);
             }
 
         }
 
-        public void loadPaymentComboBox(Object data)
+
+        public void loadStatusComboBox(Object data)
         {
 
-            this.modDropMaterialType.DataSource = data;
-            this.modDropMaterialType.ValueMember = "IdTipoMaterial";
-            this.modDropMaterialType.DisplayMember = "Descripcion";
+            this.cmbStatus.DataSource = data;
+            this.cmbStatus.ValueMember = "IdEstado";
+            this.cmbStatus.DisplayMember = "Descripcion";
 
         }
 
-        private void fillPaymentInputs()
+        public void fillInputs (TipoMaterial materialType)
         {
-            this.registeredMaterialType = (TipoMaterial)this.modDropMaterialType.SelectedItem;
+            this.registeredMaterialType = materialType;
             txtDescription.Text = this.registeredMaterialType.Descripcion;
+            cmbStatus.SelectedValue = this.registeredMaterialType.IdEstado;
 
         }
 
@@ -75,7 +75,7 @@ namespace CACMicropresicion.View.MaterialTypes
                 FechaElimina = registeredMaterialType.FechaElimina,
                 UsuarioAgrega = registeredMaterialType.UsuarioAgrega,
                 Eliminado = registeredMaterialType.Eliminado,
-                IdEstado = registeredMaterialType.IdEstado
+                IdEstado = (int)this.cmbStatus.SelectedValue
             };
 
             data["user"] = Session.getInstance().session["identification"];
@@ -85,16 +85,37 @@ namespace CACMicropresicion.View.MaterialTypes
 
             if (result["code"] == Result.Processed)
             {
-                this.loadCombos();
+                this.loadDataGridView();
             }
 
             MessageBox.Show(result["msg"]);
         }
 
-        private void modDropMaterialType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fillPaymentInputs();
+        private void loadDataGridView() {
 
+            ViewMaterialTypes viewMaterials = new ViewMaterialTypes();
+            MaterialTypeController contr = new MaterialTypeController();
+
+            viewMaterials.Height = Parent.Height;
+            viewMaterials.Width = Parent.Width;
+
+            Dictionary<Object, dynamic> result = contr.getAllMaterialTypes();
+            if (result["code"] == Result.Failed)
+            {
+                MessageBox.Show(result["msg"]);
+                return;
+            }
+
+            if (result["code"] == Result.Processed)
+            {
+                viewMaterials.loadDataGrid(result["content"]);
+                Parent.Controls.Add(viewMaterials);
+            }
+
+            Parent.Controls.RemoveByKey("ModifyMaterialType");
+        
         }
+
+
     }
 }
