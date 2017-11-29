@@ -32,13 +32,11 @@ namespace CACMicropresicion.View.Materials
         {
 
             this.controller = new MaterialController();
-            Dictionary<Object, dynamic> resultMaterials = this.controller.getMaterials();
             Dictionary<Object, dynamic> resultTypes = this.controller.getMaterialTypes();
             Dictionary<Object, dynamic> resultProviders = this.controller.getAllProviders();
             Dictionary<Object, dynamic> resultStatus = this.controller.getAllStatus();
 
-            if (resultMaterials["code"] == Result.Failed ||
-                resultTypes["code"] == Result.Failed || 
+            if (resultTypes["code"] == Result.Failed || 
                 resultProviders["code"] == Result.Failed || 
                 resultStatus["code"] == Result.Failed)
             {
@@ -46,23 +44,15 @@ namespace CACMicropresicion.View.Materials
                 return;
             }
 
-            if (resultMaterials["code"] == Result.Processed &&
-                resultTypes["code"] == Result.Processed && 
+            if (resultTypes["code"] == Result.Processed && 
                 resultProviders["code"] == Result.Processed &&
                 resultStatus["code"] == Result.Processed)
             {
-                loadMaterials(resultMaterials["content"]);
                 loadMaterialTypesCombo(resultTypes["content"]);
                 loadProvidersCombo(resultProviders["content"]);
                 loadStatusComboBox(resultStatus["content"]);
             }
 
-        }
-
-        public void loadMaterials(Object data) {
-            this.cmbMaterials.DataSource = data;
-            this.cmbMaterials.ValueMember = "IdMaterial";
-            this.cmbMaterials.DisplayMember = "Descripcion";
         }
 
         public void loadMaterialTypesCombo(Object data)
@@ -90,10 +80,10 @@ namespace CACMicropresicion.View.Materials
 
         }
 
-        private void fillUserInputs()
+        public void fillUserInputs(Material material)
         {
 
-            this.registeredMaterial = (Material)this.cmbMaterials.SelectedItem;
+            this.registeredMaterial = material;
             txtDescription.Text = this.registeredMaterial.Descripcion;
             cmbType.SelectedValue = this.registeredMaterial.IdTipoMaterial;
             cmbProvider.SelectedValue = this.registeredMaterial.IdProveedor;
@@ -148,6 +138,31 @@ namespace CACMicropresicion.View.Materials
             this.data["user"] = Session.getInstance().session["identification"];
         }
 
+        private void loadDataGridView() {
+
+            MaterialsList listMaterials = new MaterialsList();
+            MaterialController ctrl = new MaterialController();
+
+            listMaterials.Height = Parent.Height;
+            listMaterials.Width = Parent.Width;
+
+            Dictionary<Object, dynamic> result = ctrl.getMaterialsToPopulate();
+            if (result["code"] == Result.Failed)
+            {
+                MessageBox.Show(result["msg"]);
+                return;
+            }
+
+            if (result["code"] == Result.Processed)
+            {
+                listMaterials.loadDataGrid(result["content"]);
+                Parent.Controls.Add(listMaterials);
+            }
+
+            Parent.Controls.RemoveByKey("ModifyMaterial");
+
+        }
+
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
             this.controller = new MaterialController();
@@ -162,19 +177,12 @@ namespace CACMicropresicion.View.Materials
 
             if (result["code"] == Result.Processed)
             {
-                this.loadCombos();
+                this.loadDataGridView();
             }
 
             MessageBox.Show(result["msg"]);
 
         }
-
-        private void cmbMaterials_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            fillUserInputs();
-        }
-
-        
 
     }
 }

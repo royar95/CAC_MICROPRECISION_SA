@@ -32,6 +32,7 @@ namespace CACMicropresicion.View.Users
             cm.SuspendBinding();
 
             dgViewUsers.RowHeadersVisible = false;
+            dgViewUsers.Columns[0].Visible = false;
 
             changeHeadersText();
             setColumnsSize();

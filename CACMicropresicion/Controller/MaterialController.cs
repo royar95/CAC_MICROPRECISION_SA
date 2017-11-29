@@ -176,6 +176,7 @@ namespace CACMicropresicion.Controller
                             orderby material.Descripcion
                             select new
                             {
+                                id = material.IdMaterial,
                                 materialDesc = material.Descripcion,
                                 statusDesc = status.Descripcion
                             };
@@ -251,6 +252,27 @@ namespace CACMicropresicion.Controller
             }
 
         }
+
+        public Dictionary<Object, dynamic> getMaterialById(int id)
+        {
+
+            try
+            {
+
+                Material material = (from m in db.Material
+                                  where m.IdMaterial == id
+                                  where m.Eliminado == 0
+                                  select m).FirstOrDefault();
+
+                return result(Result.Processed, null, material);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }  
 
     }
 }

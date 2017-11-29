@@ -21,7 +21,13 @@ namespace CACMicropresicion.View.Main
 
         private void btnClients_Click(object sender, EventArgs e)
         {
-            btnClients.BackColor = Color.Red;
+
+            Random randomGen = new Random();
+            KnownColor[] names = (KnownColor[])Enum.GetValues(typeof(KnownColor));
+            KnownColor randomColorName = names[randomGen.Next(names.Length)];
+            Color randomColor = Color.FromKnownColor(randomColorName);
+            btnClients.BackColor = randomColor;
+
             removeAllControls();
             ManagamentOptions managament = new ManagamentOptions();
             managament.Mantenimiento = "Clients";

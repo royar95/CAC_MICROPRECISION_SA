@@ -31,6 +31,7 @@ namespace CACMicropresicion.View.Cients
             cm.SuspendBinding();
 
             dataGridViewClients.RowHeadersVisible = false;
+            dataGridViewClients.Columns[0].Visible = false;
 
             changeHeadersText();
             setColumnsSize();
@@ -46,8 +47,8 @@ namespace CACMicropresicion.View.Cients
 
         private void setColumnsSize()
         {
-            this.dataGridViewClients.Columns[0].Width = 170;
-            this.dataGridViewClients.Columns[1].Width = 250;
+            this.dataGridViewClients.Columns[0].Width = 80;
+            this.dataGridViewClients.Columns[1].Width = 350;
             this.dataGridViewClients.Columns[2].Width = 180;
         }
 
