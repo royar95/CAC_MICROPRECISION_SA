@@ -4,26 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="62d354c0e59b48ea9b3f87b3bd38f60f" Name="Diagram1">
+      <Diagram DiagramId="cbd58a1480ad46fb9c5ae60a76283a38" Name="Diagrama1">
         <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Bitacora" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Cliente" Width="1.5" PointX="3" PointY="16.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Compra" Width="1.5" PointX="5.25" PointY="41.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DetalleCompra" Width="1.5" PointX="13.5" PointY="41.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DetalleVenta" Width="1.5" PointX="13.5" PointY="37.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DireccionProveedor" Width="1.5" PointX="5.25" PointY="31" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DireccionUsuario" Width="1.5" PointX="8.25" PointY="40.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Estado" Width="1.5" PointX="0.75" PointY="24.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Factura" Width="1.5" PointX="10.5" PointY="31.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.InfoProveedor" Width="1.5" PointX="8.25" PointY="31.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.InfoUsuario" Width="1.5" PointX="8.25" PointY="46.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Material" Width="1.5" PointX="8.25" PointY="35.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Producto" Width="1.5" PointX="11.25" PointY="38.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Proveedor" Width="1.5" PointX="3" PointY="41.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoMaterial" Width="1.5" PointX="3" PointY="45.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoPago" Width="1.5" PointX="3" PointY="48.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoProducto" Width="1.5" PointX="3" PointY="52.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Usuario" Width="1.5" PointX="3" PointY="56" IsExpanded="true" />
-        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Venta" Width="1.5" PointX="5.25" PointY="36" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Cliente" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Compra" Width="1.5" PointX="5.25" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DetalleCompra" Width="1.5" PointX="13.5" PointY="40.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DetalleVenta" Width="1.5" PointX="13.5" PointY="37" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DireccionProveedor" Width="1.5" PointX="5.25" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.DireccionUsuario" Width="1.5" PointX="8.25" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Estado" Width="1.5" PointX="0.75" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Factura" Width="1.5" PointX="10.5" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.InfoProveedor" Width="1.5" PointX="8.25" PointY="30.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.InfoUsuario" Width="1.5" PointX="8.25" PointY="45.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Material" Width="1.5" PointX="8.25" PointY="35" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Producto" Width="1.5" PointX="11.25" PointY="37.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Proveedor" Width="1.5" PointX="3" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoMaterial" Width="1.5" PointX="3" PointY="44.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoPago" Width="1.5" PointX="3" PointY="48" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.TipoProducto" Width="1.5" PointX="3" PointY="51.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Usuario" Width="1.5" PointX="3" PointY="55.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAC_MICROPRECISION_SAModel.Venta" Width="1.5" PointX="5.25" PointY="35.375" IsExpanded="true" />
         <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_29" ManuallyRouted="false" />
         <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_30" ManuallyRouted="false" />
         <AssociationConnector Association="CAC_MICROPRECISION_SAModel.R_14" ManuallyRouted="false" />

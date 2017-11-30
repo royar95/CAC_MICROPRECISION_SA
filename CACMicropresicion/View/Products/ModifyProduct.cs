@@ -97,8 +97,6 @@ namespace CACMicropresicion.View.Products
                 Descripcion = txtDescription.Text.TrimStart().TrimEnd(),
                 Precio = Convert.ToDecimal(txtPrice.Text),
                 CantidadInventariable = Convert.ToInt32(txtStock.Text),
-                Descuento = registeredProduct.Descuento,
-                Impuesto = registeredProduct.Impuesto,
                 FechaAgrega = registeredProduct.FechaAgrega,
                 FechaElimina = registeredProduct.FechaElimina,
                 UsuarioAgrega = registeredProduct.UsuarioAgrega,

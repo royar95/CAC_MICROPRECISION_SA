@@ -51,8 +51,6 @@ namespace CACMicropresicion.Controller
                 IdTipoProducto = data["productType"],
                 Descripcion = data["description"],
                 Precio = data["price"],
-                Impuesto = 0,
-                Descuento = 0,
                 CantidadInventariable = data["stock"],
                 FechaAgrega = DateTime.Now,
                 FechaElimina = null,

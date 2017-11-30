@@ -86,7 +86,6 @@
     <Compile Include="Controller\PaymentMethodController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\ProductTypeController.cs" />
-    <Compile Include="Controller\ProviderController.cs" />
     <Compile Include="Controller\PurchaseController.cs" />
     <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
