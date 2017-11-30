@@ -1,6 +1,6 @@
 ﻿namespace CACMicropresicion.View.Sales
 {
-    partial class NewSale
+    partial class NewPurchase
     {
         /// <summary> 
         /// Variable del diseñador requerida.
@@ -32,22 +32,25 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSale));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPurchase));
             this.lblNewUser = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cmbPaymentTypes = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtTotal = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.cmbSaleDate = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.cmbPurchaseDate = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dgMaterialsList = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dgSaleSummary = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dgPurchaseSummary = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.modBtnSaveUserChanges = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtSearch = new Bunifu.Framework.UI.BunifuTextbox();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgMaterialsList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSaleSummary)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPurchaseSummary)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNewUser
@@ -100,7 +103,6 @@
             this.txtTotal.BorderColorMouseHover = System.Drawing.Color.Blue;
             this.txtTotal.BorderThickness = 3;
             this.txtTotal.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
             this.txtTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTotal.isPassword = false;
@@ -122,25 +124,25 @@
             this.bunifuCustomLabel3.TabIndex = 39;
             this.bunifuCustomLabel3.Text = "Fecha de compra";
             // 
-            // cmbSaleDate
+            // cmbPurchaseDate
             // 
-            this.cmbSaleDate.BackColor = System.Drawing.Color.SeaGreen;
-            this.cmbSaleDate.BorderRadius = 0;
-            this.cmbSaleDate.ForeColor = System.Drawing.Color.White;
-            this.cmbSaleDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cmbSaleDate.FormatCustom = null;
-            this.cmbSaleDate.Location = new System.Drawing.Point(201, 153);
-            this.cmbSaleDate.Name = "cmbSaleDate";
-            this.cmbSaleDate.Size = new System.Drawing.Size(193, 26);
-            this.cmbSaleDate.TabIndex = 40;
-            this.cmbSaleDate.Value = new System.DateTime(2017, 11, 26, 18, 59, 14, 608);
+            this.cmbPurchaseDate.BackColor = System.Drawing.Color.SeaGreen;
+            this.cmbPurchaseDate.BorderRadius = 0;
+            this.cmbPurchaseDate.ForeColor = System.Drawing.Color.White;
+            this.cmbPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cmbPurchaseDate.FormatCustom = null;
+            this.cmbPurchaseDate.Location = new System.Drawing.Point(201, 153);
+            this.cmbPurchaseDate.Name = "cmbPurchaseDate";
+            this.cmbPurchaseDate.Size = new System.Drawing.Size(193, 26);
+            this.cmbPurchaseDate.TabIndex = 40;
+            this.cmbPurchaseDate.Value = new System.DateTime(2017, 11, 26, 18, 59, 14, 608);
             // 
             // dgMaterialsList
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgMaterialsList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgMaterialsList.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgMaterialsList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgMaterialsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgMaterialsList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -158,16 +160,17 @@
             this.dgMaterialsList.Location = new System.Drawing.Point(494, 125);
             this.dgMaterialsList.Name = "dgMaterialsList";
             this.dgMaterialsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgMaterialsList.Size = new System.Drawing.Size(510, 130);
+            this.dgMaterialsList.Size = new System.Drawing.Size(510, 135);
             this.dgMaterialsList.TabIndex = 41;
+            this.dgMaterialsList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMaterialsList_CellDoubleClick);
             // 
-            // dgSaleSummary
+            // dgPurchaseSummary
             // 
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgSaleSummary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgSaleSummary.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgSaleSummary.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgSaleSummary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgPurchaseSummary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgPurchaseSummary.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgPurchaseSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgPurchaseSummary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.LightSteelBlue;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,17 +178,22 @@
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgSaleSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgSaleSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgSaleSummary.DoubleBuffered = true;
-            this.dgSaleSummary.EnableHeadersVisualStyles = false;
-            this.dgSaleSummary.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
-            this.dgSaleSummary.HeaderForeColor = System.Drawing.Color.Black;
-            this.dgSaleSummary.Location = new System.Drawing.Point(50, 314);
-            this.dgSaleSummary.Name = "dgSaleSummary";
-            this.dgSaleSummary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgSaleSummary.Size = new System.Drawing.Size(956, 144);
-            this.dgSaleSummary.TabIndex = 42;
+            this.dgPurchaseSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgPurchaseSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPurchaseSummary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.code,
+            this.Description,
+            this.Quantity});
+            this.dgPurchaseSummary.DoubleBuffered = true;
+            this.dgPurchaseSummary.EnableHeadersVisualStyles = false;
+            this.dgPurchaseSummary.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
+            this.dgPurchaseSummary.HeaderForeColor = System.Drawing.Color.Black;
+            this.dgPurchaseSummary.Location = new System.Drawing.Point(50, 314);
+            this.dgPurchaseSummary.Name = "dgPurchaseSummary";
+            this.dgPurchaseSummary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgPurchaseSummary.Size = new System.Drawing.Size(549, 144);
+            this.dgPurchaseSummary.TabIndex = 42;
+            this.dgPurchaseSummary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgPurchaseSummary_KeyDown);
             // 
             // bunifuCustomLabel4
             // 
@@ -243,6 +251,7 @@
             this.modBtnSaveUserChanges.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.modBtnSaveUserChanges.Textcolor = System.Drawing.Color.White;
             this.modBtnSaveUserChanges.TextFont = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modBtnSaveUserChanges.Click += new System.EventHandler(this.modBtnSaveUserChanges_Click);
             // 
             // txtSearch
             // 
@@ -256,8 +265,28 @@
             this.txtSearch.Size = new System.Drawing.Size(197, 25);
             this.txtSearch.TabIndex = 50;
             this.txtSearch.text = "";
+            this.txtSearch.OnTextChange += new System.EventHandler(this.txtSearch_OnTextChange);
             // 
-            // NewSale
+            // code
+            // 
+            this.code.HeaderText = "Código";
+            this.code.Name = "code";
+            this.code.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripción";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 395;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Cantidad";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 150;
+            // 
+            // NewPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -267,19 +296,19 @@
             this.Controls.Add(this.modBtnSaveUserChanges);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuCustomLabel4);
-            this.Controls.Add(this.dgSaleSummary);
+            this.Controls.Add(this.dgPurchaseSummary);
             this.Controls.Add(this.dgMaterialsList);
-            this.Controls.Add(this.cmbSaleDate);
+            this.Controls.Add(this.cmbPurchaseDate);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.cmbPaymentTypes);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.lblNewUser);
-            this.Name = "NewSale";
+            this.Name = "NewPurchase";
             this.Size = new System.Drawing.Size(1055, 566);
             ((System.ComponentModel.ISupportInitialize)(this.dgMaterialsList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgSaleSummary)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPurchaseSummary)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -293,12 +322,15 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtTotal;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
-        private Bunifu.Framework.UI.BunifuDatepicker cmbSaleDate;
+        private Bunifu.Framework.UI.BunifuDatepicker cmbPurchaseDate;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgMaterialsList;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgSaleSummary;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgPurchaseSummary;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuFlatButton modBtnSaveUserChanges;
         private Bunifu.Framework.UI.BunifuTextbox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
     }
 }

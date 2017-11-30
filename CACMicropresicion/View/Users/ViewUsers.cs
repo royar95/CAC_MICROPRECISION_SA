@@ -58,31 +58,9 @@ namespace CACMicropresicion.View.Users
 
         private void btnIdSearch_OnTextChange(object sender, EventArgs e)
         {
-
+            this.controller = new UserCtrl();
             String searchValue = txtSearch.text.TrimStart().TrimEnd();
-            int valueLength = searchValue.Length;
-
-            foreach (DataGridViewRow row in dgViewUsers.Rows)
-            {
-                row.Visible = true;
-
-                if (!searchValue.Equals(String.Empty))
-                {
-                    if (valueLength > row.Cells[1].Value.ToString().Length)
-                    {
-                        row.Visible = false;
-                        continue;
-                    }
-
-                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
-
-                    if (!cellValue.Equals(searchValue))
-                    {
-                        row.Visible = false;
-                    }
-                }
-            }
-
+            this.controller.searchRows(this.dgViewUsers, searchValue);
         }
 
         private void dgViewUsers_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

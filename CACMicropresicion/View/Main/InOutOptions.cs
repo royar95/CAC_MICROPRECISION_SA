@@ -16,7 +16,7 @@ namespace CACMicropresicion.View.Main
     public partial class InOutOptions : UserControl
     {
 
-        private SalesController controller;
+        private PurchaseController controller;
 
         public InOutOptions()
         {
@@ -30,13 +30,13 @@ namespace CACMicropresicion.View.Main
         {
             removeAllManagamentControls();
 
-            this.controller = new SalesController();
+            this.controller = new PurchaseController();
 
             switch (this.Operation) {
                 case "Purchases":
 
                     Dictionary<Object, dynamic> resultMaterials, resultPaymentTypes;
-                    NewSale control = new NewSale();
+                    NewPurchase control = new NewPurchase();
 
                     resultMaterials = controller.getAllMaterials();
                     resultPaymentTypes = controller.getAllPaymentTypes();
@@ -96,7 +96,7 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("EditProvider");
             Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewProviders");
-            Parent.Controls.RemoveByKey("NewSale");
+            Parent.Controls.RemoveByKey("NewPurchase");
 
         }
 

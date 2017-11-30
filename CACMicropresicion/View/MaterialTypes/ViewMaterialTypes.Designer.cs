@@ -62,7 +62,6 @@
             this.dgViewMaterialTypes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgViewMaterialTypes.Size = new System.Drawing.Size(707, 454);
             this.dgViewMaterialTypes.TabIndex = 0;
-            this.dgViewMaterialTypes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewMaterialTypes_CellContentClick);
             this.dgViewMaterialTypes.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgViewMaterialTypes_CellDoubleClick);
             // 
             // bunifuCustomLabel1

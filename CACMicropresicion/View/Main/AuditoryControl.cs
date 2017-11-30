@@ -74,7 +74,7 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("EditProvider");
             Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewProviders");
-            Parent.Controls.RemoveByKey("NewSale");
+            Parent.Controls.RemoveByKey("NewPurchase");
         }
 
         private void btnUsers_Click(object sender, EventArgs e)

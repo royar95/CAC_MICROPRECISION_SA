@@ -90,29 +90,9 @@ namespace CACMicropresicion.View.Cients
 
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
+            this.controller = new ClientsController();
             String searchValue = txtSearch.text.TrimStart().TrimEnd();
-            int valueLength = searchValue.Length;
-
-            foreach (DataGridViewRow row in dataGridViewClients.Rows)
-            {
-                row.Visible = true;
-
-                if (!searchValue.Equals(String.Empty))
-                {
-                    if (valueLength > row.Cells[1].Value.ToString().Length)
-                    {
-                        row.Visible = false;
-                        continue;
-                    }
-
-                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
-
-                    if (!cellValue.Equals(searchValue))
-                    {
-                        row.Visible = false;
-                    }
-                }
-            }
+            this.controller.searchRows(this.dataGridViewClients, searchValue);
         }
 
 

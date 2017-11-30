@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using CACMicropresicion.Model;
 using CACMicropresicion.Globals;
 
@@ -44,6 +45,34 @@ namespace CACMicropresicion.Controller
             catch (Exception ex)
             {
                 return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }
+
+        public void searchRows(Bunifu.Framework.UI.BunifuCustomDataGrid dg, string searchValue) {
+
+            dg.CurrentCell = null;
+            int valueLength = searchValue.Length;
+
+            foreach (DataGridViewRow row in dg.Rows)
+            {
+                row.Visible = true;
+
+                if (!searchValue.Equals(String.Empty))
+                {
+                    if (valueLength > row.Cells[1].Value.ToString().Length)
+                    {
+                        row.Visible = false;
+                        continue;
+                    }
+
+                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
+
+                    if (!cellValue.Equals(searchValue))
+                    {
+                        row.Visible = false;
+                    }
+                }
             }
 
         }

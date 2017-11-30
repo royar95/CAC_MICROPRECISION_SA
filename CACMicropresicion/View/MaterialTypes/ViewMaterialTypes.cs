@@ -57,36 +57,11 @@ namespace CACMicropresicion.View.MaterialTypes
             setFontConf();
         }
 
-        private void dgViewMaterialTypes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
+            this.controller = new MaterialTypeController();
             String searchValue = txtSearch.text.TrimStart().TrimEnd();
-            int valueLength = searchValue.Length;
-
-            foreach (DataGridViewRow row in dgViewMaterialTypes.Rows)
-            {
-                row.Visible = true;
-
-                if (!searchValue.Equals(String.Empty))
-                {
-                    if (valueLength > row.Cells[1].Value.ToString().Length)
-                    {
-                        row.Visible = false;
-                        continue;
-                    }
-
-                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
-
-                    if (!cellValue.Equals(searchValue))
-                    {
-                        row.Visible = false;
-                    }
-                }
-            }
+            this.controller.searchRows(this.dgViewMaterialTypes, searchValue);
         }
 
         private void dgViewMaterialTypes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

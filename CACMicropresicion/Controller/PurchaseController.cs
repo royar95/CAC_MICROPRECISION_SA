@@ -8,10 +8,10 @@ using CACMicropresicion.Model;
 
 namespace CACMicropresicion.Controller
 {
-    class SalesController : BaseController
+    class PurchaseController : BaseController
     {
 
-        public SalesController() {
+        public PurchaseController() {
         }
 
         #region DataToPopulate
