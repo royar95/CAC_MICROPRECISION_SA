@@ -43,7 +43,7 @@ namespace CACMicropresicion.View.Cients
 
         public void loadCombos() {
             controller = new ClientsController();
-            Dictionary<Object, dynamic> resultStatus = this.controller.getAllStatus();
+            Dictionary<Object, dynamic> resultStatus = this.controller.getAllRegisterStatus();
 
             if (resultStatus["code"] == Result.Failed)
             {

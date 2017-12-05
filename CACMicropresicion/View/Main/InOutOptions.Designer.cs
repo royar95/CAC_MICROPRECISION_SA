@@ -101,6 +101,7 @@
             this.btnList.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnList.Textcolor = System.Drawing.Color.White;
             this.btnList.TextFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // InOutOptions
             // 

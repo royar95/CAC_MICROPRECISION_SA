@@ -44,7 +44,7 @@ namespace CACMicropresicion.View
             {
                 Usuario user = result["content"];
                 Session session = Session.getInstance();
-                session.setSessionParams(user.IdUsuario.ToString(), user.Cedula, user.NombreUsuario, (user.NombreCompleto + " " + user.PrimerApellido + " " + user.SegundoApellido), user.Contrasena);
+                session.setSessionParams(user.IdUsuario, user.Cedula, user.NombreUsuario, (user.NombreCompleto + " " + user.PrimerApellido + " " + user.SegundoApellido), user.Contrasena);
                 new MainView().Show();
                 this.Hide();
             }

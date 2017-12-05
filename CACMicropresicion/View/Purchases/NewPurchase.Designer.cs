@@ -1,4 +1,4 @@
-﻿namespace CACMicropresicion.View.Sales
+﻿namespace CACMicropresicion.View.Purchases
 {
     partial class NewPurchase
     {
@@ -42,13 +42,13 @@
             this.cmbPurchaseDate = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dgMaterialsList = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.dgPurchaseSummary = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.modBtnSaveUserChanges = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtSearch = new Bunifu.Framework.UI.BunifuTextbox();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgMaterialsList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgPurchaseSummary)).BeginInit();
             this.SuspendLayout();
@@ -139,6 +139,8 @@
             // 
             // dgMaterialsList
             // 
+            this.dgMaterialsList.AllowUserToAddRows = false;
+            this.dgMaterialsList.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgMaterialsList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgMaterialsList.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -166,6 +168,7 @@
             // 
             // dgPurchaseSummary
             // 
+            this.dgPurchaseSummary.AllowUserToAddRows = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dgPurchaseSummary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgPurchaseSummary.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -194,6 +197,25 @@
             this.dgPurchaseSummary.Size = new System.Drawing.Size(549, 144);
             this.dgPurchaseSummary.TabIndex = 42;
             this.dgPurchaseSummary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgPurchaseSummary_KeyDown);
+            // 
+            // code
+            // 
+            this.code.HeaderText = "Código";
+            this.code.Name = "code";
+            this.code.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripción";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 395;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Cantidad";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 150;
             // 
             // bunifuCustomLabel4
             // 
@@ -266,25 +288,6 @@
             this.txtSearch.TabIndex = 50;
             this.txtSearch.text = "";
             this.txtSearch.OnTextChange += new System.EventHandler(this.txtSearch_OnTextChange);
-            // 
-            // code
-            // 
-            this.code.HeaderText = "Código";
-            this.code.Name = "code";
-            this.code.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Descripción";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 395;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Cantidad";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 150;
             // 
             // NewPurchase
             // 

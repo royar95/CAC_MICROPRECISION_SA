@@ -1,15 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CACMicropresicion.Controller;
 using CACMicropresicion.Globals;
-using CACMicropresicion.View.Sales;
+using CACMicropresicion.View.Purchases;
 
 namespace CACMicropresicion.View.Main
 {
@@ -51,6 +46,19 @@ namespace CACMicropresicion.View.Main
                     control.populatePaymentTypes(resultPaymentTypes["content"]);
                     Parent.Controls.Add(control);
 
+                    break;
+            }
+        }
+
+        private void btnList_Click(object sender, EventArgs e)
+        {
+            this.removeAllManagamentControls();
+            this.controller = new PurchaseController();
+
+            switch (this.Operation) {
+                case "Purchases":
+                    ViewPurchases control = new ViewPurchases();
+                    Parent.Controls.Add(control);
                     break;
             }
         }
@@ -97,6 +105,8 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("DeleteProvider");
             Parent.Controls.RemoveByKey("ViewProviders");
             Parent.Controls.RemoveByKey("NewPurchase");
+            Parent.Controls.RemoveByKey("ViewPurchases");
+            Parent.Controls.RemoveByKey("ModifyPurchase");
 
         }
 

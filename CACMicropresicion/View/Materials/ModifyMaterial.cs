@@ -34,7 +34,7 @@ namespace CACMicropresicion.View.Materials
             this.controller = new MaterialController();
             Dictionary<Object, dynamic> resultTypes = this.controller.getMaterialTypes();
             Dictionary<Object, dynamic> resultProviders = this.controller.getAllProviders();
-            Dictionary<Object, dynamic> resultStatus = this.controller.getAllStatus();
+            Dictionary<Object, dynamic> resultStatus = this.controller.getAllRegisterStatus();
 
             if (resultTypes["code"] == Result.Failed || 
                 resultProviders["code"] == Result.Failed || 

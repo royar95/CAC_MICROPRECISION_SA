@@ -16,7 +16,6 @@ namespace CACMicropresicion.View.MaterialTypes
     public partial class ModifyMaterialType : UserControl
     {
         private TipoMaterial registeredMaterialType;
-        string description;
         MaterialTypeController controller;
 
         public ModifyMaterialType()
@@ -29,7 +28,7 @@ namespace CACMicropresicion.View.MaterialTypes
         public void loadCombos()
         {
             controller = new MaterialTypeController();
-            Dictionary<Object, dynamic> resultStatus = this.controller.getAllStatus();
+            Dictionary<Object, dynamic> resultStatus = this.controller.getAllRegisterStatus();
 
             if (resultStatus["code"] == Result.Failed)
             {

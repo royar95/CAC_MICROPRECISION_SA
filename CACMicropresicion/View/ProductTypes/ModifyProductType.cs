@@ -17,7 +17,6 @@ namespace CACMicropresicion.View.ProductTypes
     {
 
         private TipoProducto registeredProductType;
-        string description;
         ProductTypeController controller;
         public ModifyProductType()
         {

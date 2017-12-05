@@ -21,7 +21,7 @@ namespace CACMicropresicion.Controller
         public Dictionary<Object, dynamic> result(int ResutCode, string ResultMessage, Object ResultContent)
         {
 
-            Dictionary<Object, dynamic> result = new Dictionary<object,dynamic>();
+            Dictionary<Object, dynamic> result = new Dictionary<object, dynamic>();
             result["code"] = ResutCode;
             result["msg"] = ResultMessage;
             result["content"] = ResultContent;
@@ -29,12 +29,34 @@ namespace CACMicropresicion.Controller
 
         }
 
-        public Dictionary<Object, dynamic> getAllStatus () {
+        public Dictionary<Object, dynamic> getAllRegisterStatus() {
 
             try
             {
 
                 var query = from e in db.Estado
+                            where e.Tipo == 1
+                            where e.Eliminado == 0
+                            orderby e.IdEstado
+                            select e;
+
+                return result(Result.Processed, null, query.ToList());
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }
+
+        public Dictionary<Object, dynamic> getAllProcessStatus() {
+
+            try
+            {
+
+                var query = from e in db.Estado
+                            where e.Tipo == 2
                             where e.Eliminado == 0
                             orderby e.IdEstado
                             select e;

@@ -66,8 +66,8 @@ namespace CACMicropresicion.View.Main
             LogController controller = new LogController();
             LogList control = new LogList();
 
-            this.data["startDate"] = startDateLog.Value;
-            this.data["endDate"] = endDateLog.Value;
+            this.data["startDate"] = startDateLog.Value.Date.AddHours(00).AddMinutes(00).AddSeconds(00);
+            this.data["endDate"] = endDateLog.Value.Date.AddHours(23).AddMinutes(59).AddSeconds(59);
             this.data["userId"] = userIdLog.SelectedValue;
 
             controller.data = this.data;

@@ -379,6 +379,18 @@
     <Compile Include="View\ProductTypes\ViewProductTypes.Designer.cs">
       <DependentUpon>ViewProductTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Purchases\ModifyPurchase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Purchases\ModifyPurchase.Designer.cs">
+      <DependentUpon>ModifyPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Purchases\ViewPurchases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Purchases\ViewPurchases.Designer.cs">
+      <DependentUpon>ViewPurchases.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Register1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -564,6 +576,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductTypes\ViewProductTypes.resx">
       <DependentUpon>ViewProductTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Purchases\ModifyPurchase.resx">
+      <DependentUpon>ModifyPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Purchases\ViewPurchases.resx">
+      <DependentUpon>ViewPurchases.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Register1.resx">
       <DependentUpon>Register1.cs</DependentUpon>

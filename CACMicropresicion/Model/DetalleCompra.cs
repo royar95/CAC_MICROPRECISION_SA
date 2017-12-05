@@ -22,5 +22,12 @@ namespace CACMicropresicion.Model
     
         public virtual Compra Compra { get; set; }
         public virtual Material Material { get; set; }
+
+        public string toString ()
+        {
+            return "Id Detalle Compra: " + IdDetalleCompra.ToString() + ", Renglón: " + Renglon.ToString() + 
+                ", Cantidad: " + Cantidad.ToString() + ", Id Material: " + IdMaterial.ToString() + ", Id Compra: " + IdCompra;
+        }
+
     }
 }

@@ -16,7 +16,6 @@ namespace CACMicropresicion.View.PaymentMethods
     public partial class ModifyPaymentMethod : UserControl
     {
         private TipoPago registeredPaymentMethod;
-        string description;
         PaymentMethodController controller;
 
         public ModifyPaymentMethod()

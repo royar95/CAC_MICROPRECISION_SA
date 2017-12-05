@@ -29,7 +29,7 @@ namespace CACMicropresicion.View.States
         {
             controller = new StateController();
 
-            Dictionary<Object, dynamic> resultStatus = this.controller.getAllStatus();
+            Dictionary<Object, dynamic> resultStatus = this.controller.getAllRegisterStatus();
 
             if (resultStatus["code"] == Result.Failed)
             {

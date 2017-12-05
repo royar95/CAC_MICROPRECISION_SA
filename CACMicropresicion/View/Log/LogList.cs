@@ -30,8 +30,8 @@ namespace CACMicropresicion.View.Log
         private void changeHeadersText()
         {
             this.dbLogs.Columns[0].HeaderText = "Fecha";
-            this.dbLogs.Columns[1].HeaderText = "Acción";
-            this.dbLogs.Columns[2].HeaderText = "Tabla";
+            this.dbLogs.Columns[1].HeaderText = "Tabla";
+            this.dbLogs.Columns[2].HeaderText = "Acción";
             this.dbLogs.Columns[3].HeaderText = "Contenido Nuevo";
             this.dbLogs.Columns[4].HeaderText = "Contenido Antiguo";
             this.dbLogs.Columns[5].HeaderText = "Usuario";

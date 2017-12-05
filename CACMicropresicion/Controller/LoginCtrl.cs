@@ -12,7 +12,6 @@ namespace CACMicropresicion.Controller
     {
 
         public Dictionary<string, dynamic> data { get; set; }
-        private CAC_MICROPRECISION_SAEntities db;
 
         public LoginCtrl() {
             this.db = new CAC_MICROPRECISION_SAEntities();

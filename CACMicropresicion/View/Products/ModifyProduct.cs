@@ -16,9 +16,6 @@ namespace CACMicropresicion.View.Products
     public partial class ModifyProduct : UserControl
     {
         private Producto registeredProduct;
-        string description;
-        string price;
-        string stock;
         ProductController controller;
         ProductTypeController conType;
 

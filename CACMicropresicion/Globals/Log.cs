@@ -24,6 +24,8 @@ namespace CACMicropresicion.Globals
         public static string ProductType = "TipoProducto";
         public static string Product = "Producto";
         public static string Provider = "Proveedor";
+        public static string Purchase = "Compra";
+        public static string PurchaseDetail = "DetalleCompra";
 
     }
 }

@@ -33,5 +33,13 @@ namespace CACMicropresicion.Model
         public virtual TipoPago TipoPago { get; set; }
         public virtual Usuario Usuario { get; set; }
         public virtual Estado Estado { get; set; }
+
+        public string toString() {
+            return "Id Compra: " + IdCompra.ToString() + ", Id Usuario: " + IdUsuario.ToString() + ", Fecha Agrega: " +
+                FechaAgrega + ", Fecha Elimina: " + FechaElimina + ", Eliminado: " + Eliminado + ", Id Estado: " + 
+                IdEstado + ", Total Compra: " + TotalCompra + ", Id Pago: " + IdTipoPago + ", Fecha Compra: " +
+                FechaCompra;
+        }
+ 
     }
 }

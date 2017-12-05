@@ -23,7 +23,7 @@ namespace CACMicropresicion.Globals
             return instance;
         }
 
-        public void setSessionParams(string id, string identification, string userName, string name, string pass) { 
+        public void setSessionParams(int id, string identification, string userName, string name, string pass) { 
             session = new Dictionary<object,dynamic>();
             session["id"] = id;
             session["identification"] = identification;

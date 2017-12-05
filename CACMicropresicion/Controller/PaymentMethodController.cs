@@ -11,7 +11,6 @@ namespace CACMicropresicion.Controller
     class PaymentMethodController : BaseController
     {
         public Dictionary<string, dynamic> data { get; set; }
-        private CAC_MICROPRECISION_SAEntities db = new CAC_MICROPRECISION_SAEntities();
 
         public PaymentMethodController() { }
 

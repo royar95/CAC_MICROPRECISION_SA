@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using CACMicropresicion.Globals;
+using CACMicropresicion.Controller;
 using CACMicropresicion.Model;
 
-namespace CACMicropresicion.View.Sales
+namespace CACMicropresicion.View.Purchases
 {
     public partial class NewPurchase : UserControl
     {
 
+        private PurchaseController controller;
         private Dictionary<Object, dynamic> data;
-        private TipoPago paymentMethod;
+        private int paymentMethod;
         private DateTime purchaseDate;
-        private decimal total;
+        private string total;
         private Object items;
 
         public NewPurchase()
@@ -142,16 +140,34 @@ namespace CACMicropresicion.View.Sales
 
             this.data = new Dictionary<object, dynamic>();
 
-            this.paymentMethod = (TipoPago)this.cmbPaymentTypes.SelectedItem;
+            this.paymentMethod = ((TipoPago)this.cmbPaymentTypes.SelectedItem).IdTipoPago;
             this.purchaseDate = cmbPurchaseDate.Value;
-            this.total = Decimal.Parse(txtTotal.Text.TrimStart().TrimEnd());
-            this.items = this.dgPurchaseSummary.DataSource;
+            this.total = txtTotal.Text.TrimStart().TrimEnd();
+            this.items = this.dgPurchaseSummary.Rows;
+            int userId = Session.getInstance().session["id"];
+            string identification = Session.getInstance().session["identification"];
+            int status = Status.Registered;
+
+            this.data["paymentMethod"] = this.paymentMethod;
+            this.data["date"] = this.purchaseDate;
+            this.data["total"] = this.total;
+            this.data["userId"] = userId;
+            this.data["user"] = identification;
+            this.data["status"] = status;
+            this.data["purchaseDetail"] = this.items;
 
         }
 
         private void modBtnSaveUserChanges_Click(object sender, EventArgs e)
         {
+            this.controller = new PurchaseController();
+
             this.catchData();
+            this.controller.data = this.data;
+
+            Dictionary<Object, dynamic> result = this.controller.insertNewPurchase();
+            MessageBox.Show(result["msg"]);
+
         }
 
     }

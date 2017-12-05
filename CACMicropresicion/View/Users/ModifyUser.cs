@@ -31,7 +31,7 @@ namespace CACMicropresicion.View.Users
 
             userControl = new UserCtrl();
             Dictionary<Object, dynamic> resultUsers = this.userControl.getDataToFillUsersCombo();
-            Dictionary<Object, dynamic> resultStatus = this.userControl.getAllStatus();
+            Dictionary<Object, dynamic> resultStatus = this.userControl.getAllRegisterStatus();
 
             if (resultUsers["code"] == Result.Failed || resultStatus["code"] == Result.Failed)
             {
