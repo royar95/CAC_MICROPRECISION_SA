@@ -54,7 +54,7 @@ namespace CACMicropresicion.Controller
 
             try
             {
-
+                
                 var query = from e in db.Estado
                             where e.Tipo == 2
                             where e.Eliminado == 0
@@ -70,6 +70,7 @@ namespace CACMicropresicion.Controller
             }
 
         }
+
 
 
     }

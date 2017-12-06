@@ -29,6 +29,7 @@ namespace CACMicropresicion.Controller
 
 
                 var query = from sales in db.Venta
+                                where sales.IdEstado == Status.Paid || sales.IdEstado == Status.WaitingForPayment
                                 where sales.FechaVenta >= startDate
                                 where sales.FechaVenta <= endDate
                                 orderby sales.FechaVenta

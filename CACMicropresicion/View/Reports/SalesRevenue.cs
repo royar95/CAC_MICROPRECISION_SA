@@ -55,12 +55,12 @@ namespace CACMicropresicion.View.Reports
 
         private void setColumnsSize()
         {
-            this.dgSalesRevenue.Columns[0].Width = 200;
-            this.dgSalesRevenue.Columns[1].Width = 200;
-            this.dgSalesRevenue.Columns[2].Width = 200;
-            this.dgSalesRevenue.Columns[3].Width = 200;
-            this.dgSalesRevenue.Columns[4].Width = 200;
-            this.dgSalesRevenue.Columns[5].Width = 200;
+            this.dgSalesRevenue.Columns[0].Width = 240;
+            this.dgSalesRevenue.Columns[1].Width = 240;
+            this.dgSalesRevenue.Columns[2].Width = 240;
+            this.dgSalesRevenue.Columns[3].Width = 240;
+            this.dgSalesRevenue.Columns[4].Width = 240;
+            this.dgSalesRevenue.Columns[5].Width = 240;
         }
 
         private void setFontConf()

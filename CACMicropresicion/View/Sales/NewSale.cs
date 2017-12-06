@@ -175,6 +175,18 @@ namespace CACMicropresicion.View.Sales
 
         }
 
+        private void dgSaleSummary_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.Delete)
+            {
+                if (this.dgSaleSummary.CurrentRow.Cells[1].Value != null)
+                {
+                    this.dgSaleSummary.Rows.Remove(this.dgSaleSummary.CurrentRow);
+                    this.sumAllProductPrices();
+                }
+            }
+        }
+
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
             String searchValue = txtSearch.text.TrimStart().TrimEnd();

@@ -85,10 +85,12 @@ namespace CACMicropresicion.View.Main
 
             switch (this.Operation) {
                 case "Purchases":
-                    ViewPurchases control = new ViewPurchases();
-                    Parent.Controls.Add(control);
+                    ViewPurchases viewPurchaseControl = new ViewPurchases();
+                    Parent.Controls.Add(viewPurchaseControl);
                     break;
                 case "Sales":
+                    ViewSales viewSalesControl = new ViewSales();
+                    Parent.Controls.Add(viewSalesControl);
                     break;
             }
         }
@@ -143,6 +145,8 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("CostsOptions");
             Parent.Controls.RemoveByKey("CostOfGoodsSold");
             Parent.Controls.RemoveByKey("NewSale");
+            Parent.Controls.RemoveByKey("ViewSales");
+            Parent.Controls.RemoveByKey("ModifySale");
 
         }
 

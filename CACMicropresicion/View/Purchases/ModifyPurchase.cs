@@ -155,7 +155,6 @@ namespace CACMicropresicion.View.Purchases
         }
 
         private void disableAllComponents() {
-            this.saveChanges.Enabled = true;
             this.cmbPurchaseDate.Enabled = false;
             this.txtTotal.Enabled = false;
             this.dgPurchaseSummary.ReadOnly = true;
