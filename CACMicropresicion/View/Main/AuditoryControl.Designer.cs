@@ -29,46 +29,47 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuditoryControl));
-            this.btnUsers = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSales = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLog = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPurchases = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
             // 
-            // btnUsers
+            // btnSales
             // 
-            this.btnUsers.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnUsers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.btnSales.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnSales.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUsers.BackColor = System.Drawing.Color.Teal;
-            this.btnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnUsers.BorderRadius = 0;
-            this.btnUsers.ButtonText = "Reportes";
-            this.btnUsers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnUsers.DisabledColor = System.Drawing.Color.Gray;
-            this.btnUsers.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnUsers.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnUsers.Iconimage")));
-            this.btnUsers.Iconimage_right = null;
-            this.btnUsers.Iconimage_right_Selected = null;
-            this.btnUsers.Iconimage_Selected = null;
-            this.btnUsers.IconMarginLeft = 0;
-            this.btnUsers.IconMarginRight = 0;
-            this.btnUsers.IconRightVisible = true;
-            this.btnUsers.IconRightZoom = 0D;
-            this.btnUsers.IconVisible = false;
-            this.btnUsers.IconZoom = 90D;
-            this.btnUsers.IsTab = false;
-            this.btnUsers.Location = new System.Drawing.Point(0, 45);
-            this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Normalcolor = System.Drawing.Color.Teal;
-            this.btnUsers.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnUsers.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnUsers.selected = false;
-            this.btnUsers.Size = new System.Drawing.Size(237, 48);
-            this.btnUsers.TabIndex = 2;
-            this.btnUsers.Text = "Reportes";
-            this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnUsers.Textcolor = System.Drawing.Color.White;
-            this.btnUsers.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
+            this.btnSales.BackColor = System.Drawing.Color.Teal;
+            this.btnSales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSales.BorderRadius = 0;
+            this.btnSales.ButtonText = "Ingresos por ventas";
+            this.btnSales.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSales.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSales.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSales.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSales.Iconimage")));
+            this.btnSales.Iconimage_right = null;
+            this.btnSales.Iconimage_right_Selected = null;
+            this.btnSales.Iconimage_Selected = null;
+            this.btnSales.IconMarginLeft = 0;
+            this.btnSales.IconMarginRight = 0;
+            this.btnSales.IconRightVisible = true;
+            this.btnSales.IconRightZoom = 0D;
+            this.btnSales.IconVisible = false;
+            this.btnSales.IconZoom = 90D;
+            this.btnSales.IsTab = false;
+            this.btnSales.Location = new System.Drawing.Point(0, 45);
+            this.btnSales.Name = "btnSales";
+            this.btnSales.Normalcolor = System.Drawing.Color.Teal;
+            this.btnSales.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnSales.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnSales.selected = false;
+            this.btnSales.Size = new System.Drawing.Size(237, 48);
+            this.btnSales.TabIndex = 2;
+            this.btnSales.Text = "Ingresos por ventas";
+            this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSales.Textcolor = System.Drawing.Color.White;
+            this.btnSales.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnLog
             // 
@@ -107,13 +108,51 @@
             this.btnLog.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
+            // btnPurchases
+            // 
+            this.btnPurchases.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPurchases.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPurchases.BackColor = System.Drawing.Color.Teal;
+            this.btnPurchases.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnPurchases.BorderRadius = 0;
+            this.btnPurchases.ButtonText = "Gastos por compras";
+            this.btnPurchases.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPurchases.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPurchases.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPurchases.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPurchases.Iconimage")));
+            this.btnPurchases.Iconimage_right = null;
+            this.btnPurchases.Iconimage_right_Selected = null;
+            this.btnPurchases.Iconimage_Selected = null;
+            this.btnPurchases.IconMarginLeft = 0;
+            this.btnPurchases.IconMarginRight = 0;
+            this.btnPurchases.IconRightVisible = true;
+            this.btnPurchases.IconRightZoom = 0D;
+            this.btnPurchases.IconVisible = false;
+            this.btnPurchases.IconZoom = 90D;
+            this.btnPurchases.IsTab = false;
+            this.btnPurchases.Location = new System.Drawing.Point(0, 90);
+            this.btnPurchases.Name = "btnPurchases";
+            this.btnPurchases.Normalcolor = System.Drawing.Color.Teal;
+            this.btnPurchases.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnPurchases.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPurchases.selected = false;
+            this.btnPurchases.Size = new System.Drawing.Size(237, 48);
+            this.btnPurchases.TabIndex = 4;
+            this.btnPurchases.Text = "Gastos por compras";
+            this.btnPurchases.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPurchases.Textcolor = System.Drawing.Color.White;
+            this.btnPurchases.TextFont = new System.Drawing.Font("Segoe UI Light", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPurchases.Click += new System.EventHandler(this.btnPurchases_Click);
+            // 
             // AuditoryControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
+            this.Controls.Add(this.btnPurchases);
             this.Controls.Add(this.btnLog);
-            this.Controls.Add(this.btnUsers);
+            this.Controls.Add(this.btnSales);
             this.Name = "AuditoryControl";
             this.Size = new System.Drawing.Size(237, 441);
             this.ResumeLayout(false);
@@ -122,7 +161,8 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton btnUsers;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSales;
         private Bunifu.Framework.UI.BunifuFlatButton btnLog;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPurchases;
     }
 }

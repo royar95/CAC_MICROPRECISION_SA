@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CACMicropresicion.Controller;
 using CACMicropresicion.Globals;
 using CACMicropresicion.View.Log;
+using CACMicropresicion.View.Reports;
 
 namespace CACMicropresicion.View.Main
 {
@@ -30,6 +31,20 @@ namespace CACMicropresicion.View.Main
             control.loadCombos();
             Parent.Controls.Add(control);
 
+        }
+
+        private void btnSales_Click(object sender, EventArgs e)
+        {
+            removeAllControls();
+            SalesOptions control = new SalesOptions();
+            Parent.Controls.Add(control);
+        }
+
+        private void btnPurchases_Click(object sender, EventArgs e)
+        {
+            removeAllControls();
+            CostsOptions control = new CostsOptions();
+            Parent.Controls.Add(control);
         }
 
         private void removeAllControls()
@@ -77,10 +92,11 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("NewPurchase");
             Parent.Controls.RemoveByKey("ViewPurchases");
             Parent.Controls.RemoveByKey("ModifyPurchase");
-        }
-
-        private void btnUsers_Click(object sender, EventArgs e)
-        {
+            Parent.Controls.RemoveByKey("SalesRevenue");
+            Parent.Controls.RemoveByKey("ReportOptions");
+            Parent.Controls.RemoveByKey("SalesOptions");
+            Parent.Controls.RemoveByKey("CostsOptions");
+            Parent.Controls.RemoveByKey("CostOfGoodsSold");
 
         }
 

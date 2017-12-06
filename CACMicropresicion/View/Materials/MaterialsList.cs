@@ -59,9 +59,21 @@ namespace CACMicropresicion.View.Materials
 
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
-            this.controller = new MaterialController();
             String searchValue = txtSearch.text.TrimStart().TrimEnd();
-            this.controller.searchRows(this.dgMaterials, searchValue);
+            this.dgMaterials.CurrentCell = null;
+
+            foreach (DataGridViewRow row in dgMaterials.Rows)
+            {
+                row.Visible = true;
+
+                if (!searchValue.Equals(String.Empty))
+                {
+                    if (!row.Cells[1].Value.ToString().Contains(searchValue))
+                    {
+                        row.Visible = false;
+                    }
+                }
+            }
         }
 
         private void dgMaterials_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

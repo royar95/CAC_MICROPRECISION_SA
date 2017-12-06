@@ -57,6 +57,11 @@
     <Reference Include="EntityFramework.SqlServer">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -79,6 +84,7 @@
   <ItemGroup>
     <Compile Include="Controller\BaseController.cs" />
     <Compile Include="Controller\ClientsController.cs" />
+    <Compile Include="Controller\CostsController.cs" />
     <Compile Include="Controller\LogController.cs" />
     <Compile Include="Controller\LoginCtrl.cs" />
     <Compile Include="Controller\MaterialController.cs" />
@@ -87,6 +93,7 @@
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\ProductTypeController.cs" />
     <Compile Include="Controller\PurchaseController.cs" />
+    <Compile Include="Controller\SalesRevenueController.cs" />
     <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
     <Compile Include="Globals\ContactInfoType.cs" />
@@ -409,6 +416,30 @@
     <Compile Include="View\Purchases\NewPurchase.Designer.cs">
       <DependentUpon>NewPurchase.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Reports\CostOfGoodsSold.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Reports\CostOfGoodsSold.Designer.cs">
+      <DependentUpon>CostOfGoodsSold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\CostsOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Reports\CostsOptions.Designer.cs">
+      <DependentUpon>CostsOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\SalesOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Reports\SalesOptions.Designer.cs">
+      <DependentUpon>SalesOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Reports\SalesRevenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Reports\SalesRevenue.Designer.cs">
+      <DependentUpon>SalesRevenue.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\States\AddState.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -591,6 +622,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\Purchases\NewPurchase.resx">
       <DependentUpon>NewPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\CostOfGoodsSold.resx">
+      <DependentUpon>CostOfGoodsSold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\CostsOptions.resx">
+      <DependentUpon>CostsOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\SalesOptions.resx">
+      <DependentUpon>SalesOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Reports\SalesRevenue.resx">
+      <DependentUpon>SalesRevenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\States\AddState.resx">
       <DependentUpon>AddState.cs</DependentUpon>

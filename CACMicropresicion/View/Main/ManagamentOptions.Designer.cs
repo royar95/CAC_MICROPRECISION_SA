@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManagamentOptions));
             this.btnAdd = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnModify = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDelete = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnList = new Bunifu.Framework.UI.BunifuFlatButton();
             this.SuspendLayout();
@@ -70,41 +69,6 @@
             this.btnAdd.TextFont = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // btnModify
-            // 
-            this.btnModify.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnModify.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnModify.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnModify.BorderRadius = 0;
-            this.btnModify.ButtonText = "Modificar";
-            this.btnModify.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnModify.DisabledColor = System.Drawing.Color.Gray;
-            this.btnModify.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnModify.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnModify.Iconimage")));
-            this.btnModify.Iconimage_right = null;
-            this.btnModify.Iconimage_right_Selected = null;
-            this.btnModify.Iconimage_Selected = null;
-            this.btnModify.IconMarginLeft = 0;
-            this.btnModify.IconMarginRight = 0;
-            this.btnModify.IconRightVisible = true;
-            this.btnModify.IconRightZoom = 0D;
-            this.btnModify.IconVisible = false;
-            this.btnModify.IconZoom = 90D;
-            this.btnModify.IsTab = false;
-            this.btnModify.Location = new System.Drawing.Point(135, 0);
-            this.btnModify.Name = "btnModify";
-            this.btnModify.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnModify.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnModify.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnModify.selected = false;
-            this.btnModify.Size = new System.Drawing.Size(146, 51);
-            this.btnModify.TabIndex = 1;
-            this.btnModify.Text = "Modificar";
-            this.btnModify.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnModify.Textcolor = System.Drawing.Color.White;
-            this.btnModify.TextFont = new System.Drawing.Font("Segoe UI", 11F);
-            this.btnModify.Click += new System.EventHandler(this.btnModify_Click);
-            // 
             // btnDelete
             // 
             this.btnDelete.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
@@ -126,7 +90,7 @@
             this.btnDelete.IconVisible = false;
             this.btnDelete.IconZoom = 90D;
             this.btnDelete.IsTab = false;
-            this.btnDelete.Location = new System.Drawing.Point(269, 0);
+            this.btnDelete.Location = new System.Drawing.Point(143, 0);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnDelete.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -161,7 +125,7 @@
             this.btnList.IconVisible = false;
             this.btnList.IconZoom = 90D;
             this.btnList.IsTab = false;
-            this.btnList.Location = new System.Drawing.Point(404, 0);
+            this.btnList.Location = new System.Drawing.Point(278, 0);
             this.btnList.Name = "btnList";
             this.btnList.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnList.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -181,10 +145,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnList);
             this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnModify);
             this.Controls.Add(this.btnAdd);
             this.Name = "ManagamentOptions";
-            this.Size = new System.Drawing.Size(550, 47);
+            this.Size = new System.Drawing.Size(423, 47);
             this.ResumeLayout(false);
 
         }
@@ -192,7 +155,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuFlatButton btnAdd;
-        private Bunifu.Framework.UI.BunifuFlatButton btnModify;
         private Bunifu.Framework.UI.BunifuFlatButton btnDelete;
         private Bunifu.Framework.UI.BunifuFlatButton btnList;
 

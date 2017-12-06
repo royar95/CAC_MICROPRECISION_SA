@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CACMicropresicion.Globals;
 using CACMicropresicion.Controller;
@@ -22,6 +17,8 @@ namespace CACMicropresicion.View.Users
         {
             InitializeComponent();
             this.Location = new Point(235, 97);
+            this.addBtnContactInfo.Visible = false;
+            this.addBtnAddress.Visible = false;
         }
 
         private void addbtnSaveUser_Click(object sender, EventArgs e)

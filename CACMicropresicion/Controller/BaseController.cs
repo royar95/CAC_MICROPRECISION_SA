@@ -71,33 +71,6 @@ namespace CACMicropresicion.Controller
 
         }
 
-        public void searchRows(Bunifu.Framework.UI.BunifuCustomDataGrid dg, string searchValue) {
-
-            dg.CurrentCell = null;
-            int valueLength = searchValue.Length;
-
-            foreach (DataGridViewRow row in dg.Rows)
-            {
-                row.Visible = true;
-
-                if (!searchValue.Equals(String.Empty))
-                {
-                    if (valueLength > row.Cells[1].Value.ToString().Length)
-                    {
-                        row.Visible = false;
-                        continue;
-                    }
-
-                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
-
-                    if (!cellValue.Equals(searchValue))
-                    {
-                        row.Visible = false;
-                    }
-                }
-            }
-
-        }
 
     }
 }

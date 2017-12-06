@@ -71,6 +71,12 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("NewPurchase");
             Parent.Controls.RemoveByKey("ViewPurchases");
             Parent.Controls.RemoveByKey("ModifyPurchase");
+            Parent.Controls.RemoveByKey("SalesRevenue");
+            Parent.Controls.RemoveByKey("ReportOptions");
+            Parent.Controls.RemoveByKey("SalesOptions");
+            Parent.Controls.RemoveByKey("CostsOptions");
+            Parent.Controls.RemoveByKey("CostOfGoodsSold");
+
         }
 
     }
