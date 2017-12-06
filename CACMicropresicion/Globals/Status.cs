@@ -13,11 +13,11 @@ namespace CACMicropresicion.Globals
         public static int Inactive = 15;
         public static int Deleted = 20;
 
-        public static int Registered = 25;
-        public static int Proforma = 30;
-        public static int WaitingForPayment = 35;
-        public static int Paid = 40;
-        public static int Canceled = 45;
+        public const int Registered = 25;
+        public const int Proforma = 30;
+        public const int WaitingForPayment = 35;
+        public const int Paid = 40;
+        public const int Canceled = 45;
 
     }
 }

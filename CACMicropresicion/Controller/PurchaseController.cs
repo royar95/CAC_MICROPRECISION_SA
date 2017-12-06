@@ -116,7 +116,10 @@ namespace CACMicropresicion.Controller
                                                     select new {
                                                         d.IdMaterial,
                                                         m.Descripcion,
-                                                        d.Cantidad
+                                                        d.Cantidad,
+                                                        d.IdDetalleCompra,
+                                                        d.Renglon,
+                                                        d.IdCompra
                                                     }
                                                     ).ToList();
 
@@ -240,6 +243,133 @@ namespace CACMicropresicion.Controller
                 ContenidoNuevo = newContent,
                 UsuarioAgrega = data["user"]
             };
+
+        }
+
+        private bool hasChanges(
+
+            DataGridViewRowCollection oldPurchaseDetail, 
+            DataGridViewRowCollection newPurchaseDetail,
+            Compra newPurchaseHeader,
+            Compra oldPurchaseHeader) {
+
+            bool detailsHasChanges = false;
+            bool headerHasChanges = false;
+
+            if (newPurchaseDetail.Count != oldPurchaseDetail.Count)
+            {
+                detailsHasChanges = true;
+            }
+            else
+            {
+                for (int i = 0; i < newPurchaseDetail.Count; i++)
+                {
+                    if (!newPurchaseDetail[i].Cells[0].Value.Equals(oldPurchaseDetail[i].Cells[0].Value))
+                    {
+                        detailsHasChanges = true;
+                    }
+                    else
+                    {
+                        if (!newPurchaseDetail[i].Cells[2].Value.Equals(oldPurchaseDetail[i].Cells[2].Value))
+                        {
+                            detailsHasChanges = true;
+                        }
+                    }
+                }
+            }
+
+            if (!newPurchaseHeader.IdTipoPago.Equals(oldPurchaseHeader.IdTipoPago) ||
+                !newPurchaseHeader.FechaCompra.Equals(oldPurchaseHeader.FechaCompra) ||
+                !newPurchaseHeader.TotalCompra.Equals(oldPurchaseHeader.TotalCompra) ||
+                !newPurchaseHeader.IdEstado.Equals(oldPurchaseHeader.IdEstado))
+            {
+                headerHasChanges = true;
+            }
+
+            return headerHasChanges == true || detailsHasChanges == true;
+
+        }
+
+        public Dictionary<Object, dynamic> modifyPurchase() {
+
+            try
+            {
+
+                DataGridViewRowCollection oldPurchaseDetail = this.data["oldDetail"];
+                DataGridViewRowCollection newPurchaseDetail = this.data["newDetail"];
+                Compra newPurchaseHeader = this.data["newHeader"];
+                Compra oldPurchaseHeader = this.data["oldHeader"];
+
+                //Validaciones
+                if (newPurchaseDetail.Count == 0) {
+                    return result(Result.Failed, Result.NoItemsPurchase, null);
+                }
+
+                foreach (DataGridViewRow item in newPurchaseDetail)
+                {
+                    if (item.Cells[2].Value == null)
+                    {
+                        return result(Result.Failed, Result.NoQuantity, null);
+                    }
+                }
+
+                if (newPurchaseHeader.TotalCompra.Equals(String.Empty))
+                {
+                    return result(Result.Failed, Result.Empty, null);
+                }
+
+                if (newPurchaseHeader.TotalCompra <= 0)
+                {
+                    return result(Result.Failed, Result.CeroOrLess, null);
+                }
+
+                if (!hasChanges(oldPurchaseDetail, newPurchaseDetail, newPurchaseHeader, oldPurchaseHeader)) {
+                    return result(Result.Failed, Result.Same, null);
+                }
+
+                string oldContent = oldPurchaseHeader.toString();
+                string newContent = newPurchaseHeader.toString();
+
+                Compra modPurchase = db.Compra.Find(newPurchaseHeader.IdCompra);
+                db.Entry(modPurchase).CurrentValues.SetValues(newPurchaseHeader);
+                db.Entry(modPurchase).State = System.Data.Entity.EntityState.Modified;
+
+                Bitacora modPurchaseLog = createLog(Log.Modify, Log.Purchase, oldContent, newContent);
+                db.Bitacora.Add(modPurchaseLog);
+
+                db.DetalleCompra.RemoveRange(db.DetalleCompra.Where(d => d.IdCompra == modPurchase.IdCompra));
+
+                ICollection<DetalleCompra> newDetail = new List<DetalleCompra>();
+
+                foreach (DataGridViewRow item in newPurchaseDetail) {
+
+                    short line = 1;
+                    DetalleCompra newItem = new DetalleCompra()
+                    {
+                        Renglon = line,
+                        Cantidad = Convert.ToInt32(item.Cells[2].Value),
+                        IdMaterial = Convert.ToInt32(item.Cells[0].Value),
+                    };
+
+                    line++;
+
+                    newDetail.Add(newItem);
+
+                    Bitacora modPurchaseDetail = createLog(Log.Modify, Log.PurchaseDetail, "", newItem.toString());
+                    db.Bitacora.Add(modPurchaseDetail);
+
+                }
+
+                modPurchase.DetalleCompra = newDetail;
+
+                db.SaveChanges();
+
+                return result(Result.Processed, Result.Modified, null);
+
+            }
+            catch (Exception ex) {
+                return result(Result.Failed, "Se ha generado un error: " + ex.Message, null);
+            }
 
         }
 

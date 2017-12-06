@@ -15,6 +15,7 @@ namespace CACMicropresicion.View.Main
         public DataControl()
         {
             InitializeComponent();
+            btnStatus.Visible = false;
             this.Location = new Point(0, 50);
             this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
         }

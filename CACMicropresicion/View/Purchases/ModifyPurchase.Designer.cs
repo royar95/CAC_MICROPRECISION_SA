@@ -34,15 +34,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtSearch = new Bunifu.Framework.UI.BunifuTextbox();
-            this.modBtnSaveUserChanges = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.saveChanges = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dgPurchaseSummary = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgMaterialsList = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.cmbPurchaseDate = new Bunifu.Framework.UI.BunifuDatepicker();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtTotal = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -51,6 +47,13 @@
             this.lblNewUser = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel6 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cmbPurchaseDate = new System.Windows.Forms.DateTimePicker();
+            this.code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdDetalle = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Renglon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdCompra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgPurchaseSummary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgMaterialsList)).BeginInit();
             this.SuspendLayout();
@@ -68,40 +71,41 @@
             this.txtSearch.TabIndex = 63;
             this.txtSearch.text = "";
             // 
-            // modBtnSaveUserChanges
+            // saveChanges
             // 
-            this.modBtnSaveUserChanges.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.modBtnSaveUserChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.modBtnSaveUserChanges.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.modBtnSaveUserChanges.BorderRadius = 0;
-            this.modBtnSaveUserChanges.ButtonText = "Registrar compra";
-            this.modBtnSaveUserChanges.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.modBtnSaveUserChanges.DisabledColor = System.Drawing.Color.Gray;
-            this.modBtnSaveUserChanges.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modBtnSaveUserChanges.Iconcolor = System.Drawing.Color.Transparent;
-            this.modBtnSaveUserChanges.Iconimage = ((System.Drawing.Image)(resources.GetObject("modBtnSaveUserChanges.Iconimage")));
-            this.modBtnSaveUserChanges.Iconimage_right = null;
-            this.modBtnSaveUserChanges.Iconimage_right_Selected = null;
-            this.modBtnSaveUserChanges.Iconimage_Selected = null;
-            this.modBtnSaveUserChanges.IconMarginLeft = 0;
-            this.modBtnSaveUserChanges.IconMarginRight = 0;
-            this.modBtnSaveUserChanges.IconRightVisible = true;
-            this.modBtnSaveUserChanges.IconRightZoom = 0D;
-            this.modBtnSaveUserChanges.IconVisible = false;
-            this.modBtnSaveUserChanges.IconZoom = 90D;
-            this.modBtnSaveUserChanges.IsTab = false;
-            this.modBtnSaveUserChanges.Location = new System.Drawing.Point(45, 476);
-            this.modBtnSaveUserChanges.Name = "modBtnSaveUserChanges";
-            this.modBtnSaveUserChanges.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.modBtnSaveUserChanges.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.modBtnSaveUserChanges.OnHoverTextColor = System.Drawing.Color.White;
-            this.modBtnSaveUserChanges.selected = false;
-            this.modBtnSaveUserChanges.Size = new System.Drawing.Size(229, 48);
-            this.modBtnSaveUserChanges.TabIndex = 62;
-            this.modBtnSaveUserChanges.Text = "Registrar compra";
-            this.modBtnSaveUserChanges.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.modBtnSaveUserChanges.Textcolor = System.Drawing.Color.White;
-            this.modBtnSaveUserChanges.TextFont = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveChanges.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.saveChanges.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.saveChanges.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.saveChanges.BorderRadius = 0;
+            this.saveChanges.ButtonText = "Guardar cambios";
+            this.saveChanges.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.saveChanges.DisabledColor = System.Drawing.Color.Gray;
+            this.saveChanges.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveChanges.Iconcolor = System.Drawing.Color.Transparent;
+            this.saveChanges.Iconimage = ((System.Drawing.Image)(resources.GetObject("saveChanges.Iconimage")));
+            this.saveChanges.Iconimage_right = null;
+            this.saveChanges.Iconimage_right_Selected = null;
+            this.saveChanges.Iconimage_Selected = null;
+            this.saveChanges.IconMarginLeft = 0;
+            this.saveChanges.IconMarginRight = 0;
+            this.saveChanges.IconRightVisible = true;
+            this.saveChanges.IconRightZoom = 0D;
+            this.saveChanges.IconVisible = false;
+            this.saveChanges.IconZoom = 90D;
+            this.saveChanges.IsTab = false;
+            this.saveChanges.Location = new System.Drawing.Point(45, 476);
+            this.saveChanges.Name = "saveChanges";
+            this.saveChanges.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.saveChanges.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.saveChanges.OnHoverTextColor = System.Drawing.Color.White;
+            this.saveChanges.selected = false;
+            this.saveChanges.Size = new System.Drawing.Size(229, 48);
+            this.saveChanges.TabIndex = 62;
+            this.saveChanges.Text = "Guardar cambios";
+            this.saveChanges.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.saveChanges.Textcolor = System.Drawing.Color.White;
+            this.saveChanges.TextFont = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
             // 
             // bunifuCustomLabel5
             // 
@@ -145,7 +149,10 @@
             this.dgPurchaseSummary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.code,
             this.Description,
-            this.Quantity});
+            this.Quantity,
+            this.IdDetalle,
+            this.Renglon,
+            this.IdCompra});
             this.dgPurchaseSummary.DoubleBuffered = true;
             this.dgPurchaseSummary.EnableHeadersVisualStyles = false;
             this.dgPurchaseSummary.HeaderBgColor = System.Drawing.Color.LightSteelBlue;
@@ -155,25 +162,7 @@
             this.dgPurchaseSummary.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgPurchaseSummary.Size = new System.Drawing.Size(549, 144);
             this.dgPurchaseSummary.TabIndex = 59;
-            // 
-            // code
-            // 
-            this.code.HeaderText = "Código";
-            this.code.Name = "code";
-            this.code.ReadOnly = true;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Descripción";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 395;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Cantidad";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 150;
+            this.dgPurchaseSummary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgPurchaseSummary_KeyDown);
             // 
             // dgMaterialsList
             // 
@@ -202,19 +191,7 @@
             this.dgMaterialsList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgMaterialsList.Size = new System.Drawing.Size(510, 135);
             this.dgMaterialsList.TabIndex = 58;
-            // 
-            // cmbPurchaseDate
-            // 
-            this.cmbPurchaseDate.BackColor = System.Drawing.Color.SeaGreen;
-            this.cmbPurchaseDate.BorderRadius = 0;
-            this.cmbPurchaseDate.ForeColor = System.Drawing.Color.White;
-            this.cmbPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.cmbPurchaseDate.FormatCustom = null;
-            this.cmbPurchaseDate.Location = new System.Drawing.Point(196, 151);
-            this.cmbPurchaseDate.Name = "cmbPurchaseDate";
-            this.cmbPurchaseDate.Size = new System.Drawing.Size(193, 26);
-            this.cmbPurchaseDate.TabIndex = 57;
-            this.cmbPurchaseDate.Value = new System.DateTime(2017, 11, 26, 18, 59, 14, 608);
+            this.dgMaterialsList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMaterialsList_CellDoubleClick);
             // 
             // bunifuCustomLabel3
             // 
@@ -296,6 +273,7 @@
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(193, 25);
             this.cmbStatus.TabIndex = 65;
+            this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
             // bunifuCustomLabel6
             // 
@@ -308,20 +286,69 @@
             this.bunifuCustomLabel6.TabIndex = 64;
             this.bunifuCustomLabel6.Text = "Estado";
             // 
+            // cmbPurchaseDate
+            // 
+            this.cmbPurchaseDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPurchaseDate.CalendarMonthBackground = System.Drawing.SystemColors.Control;
+            this.cmbPurchaseDate.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
+            this.cmbPurchaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.cmbPurchaseDate.Location = new System.Drawing.Point(196, 151);
+            this.cmbPurchaseDate.Name = "cmbPurchaseDate";
+            this.cmbPurchaseDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.cmbPurchaseDate.Size = new System.Drawing.Size(193, 25);
+            this.cmbPurchaseDate.TabIndex = 66;
+            // 
+            // code
+            // 
+            this.code.HeaderText = "Código";
+            this.code.Name = "code";
+            this.code.ReadOnly = true;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripción";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 395;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Cantidad";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 150;
+            // 
+            // IdDetalle
+            // 
+            this.IdDetalle.HeaderText = "Detalle";
+            this.IdDetalle.Name = "IdDetalle";
+            this.IdDetalle.Visible = false;
+            // 
+            // Renglon
+            // 
+            this.Renglon.HeaderText = "Renglon";
+            this.Renglon.Name = "Renglon";
+            this.Renglon.Visible = false;
+            // 
+            // IdCompra
+            // 
+            this.IdCompra.HeaderText = "Compra";
+            this.IdCompra.Name = "IdCompra";
+            this.IdCompra.Visible = false;
+            // 
             // ModifyPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cmbPurchaseDate);
             this.Controls.Add(this.cmbStatus);
             this.Controls.Add(this.bunifuCustomLabel6);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.modBtnSaveUserChanges);
+            this.Controls.Add(this.saveChanges);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.dgPurchaseSummary);
             this.Controls.Add(this.dgMaterialsList);
-            this.Controls.Add(this.cmbPurchaseDate);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.bunifuCustomLabel2);
@@ -340,15 +367,11 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuTextbox txtSearch;
-        private Bunifu.Framework.UI.BunifuFlatButton modBtnSaveUserChanges;
+        private Bunifu.Framework.UI.BunifuFlatButton saveChanges;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgPurchaseSummary;
-        private System.Windows.Forms.DataGridViewTextBoxColumn code;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgMaterialsList;
-        private Bunifu.Framework.UI.BunifuDatepicker cmbPurchaseDate;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtTotal;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
@@ -357,5 +380,12 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblNewUser;
         private System.Windows.Forms.ComboBox cmbStatus;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel6;
+        private System.Windows.Forms.DateTimePicker cmbPurchaseDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdDetalle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Renglon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdCompra;
     }
 }
