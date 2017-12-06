@@ -8,6 +8,8 @@ using CACMicropresicion.Model;
 using CACMicropresicion.Globals;
 using iTextSharp.text;
 using System.Data;
+using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.draw;
 
 namespace CACMicropresicion.Controller
 {
@@ -402,10 +404,60 @@ namespace CACMicropresicion.Controller
 
         #endregion
 
-        public Document createDocument() {
+        public Dictionary<Object, dynamic> getBillBySaleId(int id) {
+
+
+            try
+            {
+
+                Factura bill = (from b in db.Factura where b.IdVenta == id select b).FirstOrDefault();
+
+                if (bill == null)
+                {
+                    bill = this.createNewBill(id);
+                    db.Factura.Add(bill);
+                }
+                else
+                {
+                    bill.NumImpresion = (byte)(bill.NumImpresion + 1);
+                    db.Entry(bill).State = System.Data.Entity.EntityState.Modified;
+                }
+
+                db.SaveChanges();
+
+                return result(Result.Processed, Result.Inserted, bill);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al imprimir: " + ex.Message, null);
+            }
+
+        }
+
+        private Factura createNewBill(int id) {
+
+            string date = DateTime.Now.Year.ToString() + "-" + DateTime.Now.Month.ToString() + "-" + DateTime.Now.Day.ToString();
+
+            return new Factura()
+            {
+                Referencia = id.ToString() + "-" + date,
+                NumImpresion = (byte)1,
+                IdVenta = id,
+                IdEstado = Status.Active,
+                FechaAgrega = DateTime.Now,
+                FechaElimina = null,
+                UsuarioAgrega = "N/A",
+                Eliminado = 0
+            };
+
+        }
+
+        public void createDocument() {
 
             DataTable items = this.createDataTable();
-            return null;
+            this.exportDataToPdf(items, @"C:\Facturas_Ventas\" + Convert.ToString(this.data["name"]));
+            System.Diagnostics.Process.Start(@"C:\Facturas_Ventas\" + Convert.ToString(this.data["name"]));
 
         }
 
@@ -426,7 +478,7 @@ namespace CACMicropresicion.Controller
                     Convert.ToString(item.Cells[2].Value),
                     Convert.ToString(item.Cells[3].Value),
                     Convert.ToString(item.Cells[4].Value),
-                    Convert.ToString(Convert.ToInt32(item.Cells[3].Value) * Convert.ToDecimal(item.Cells[2].Value))
+                    Convert.ToString(Convert.ToDecimal(item.Cells[3].Value) * Convert.ToInt32(item.Cells[4].Value))
                     );
             }
 
@@ -434,9 +486,83 @@ namespace CACMicropresicion.Controller
 
         }
 
-        public void exportDataToPdf(DataTable dt, string path, string title) {
+        public void exportDataToPdf(DataTable dt, string path) {
 
-            System.IO.FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.CreateNew);
+            System.IO.FileStream fs = new System.IO.FileStream(path, System.IO.FileMode.OpenOrCreate, System.IO.FileAccess.ReadWrite, System.IO.FileShare.None);
+            Document document = new Document();
+            document.SetPageSize(iTextSharp.text.PageSize.A4);
+            PdfWriter writer = PdfWriter.GetInstance(document, fs);
+            document.Open();
+
+            BaseFont headerFont = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, BaseFont.EMBEDDED);
+            //Header
+            Font headFont = new Font(headerFont, 14, 1, BaseColor.BLACK);
+            Paragraph prgHead = new Paragraph();
+            prgHead.Alignment = Element.ALIGN_CENTER;
+            prgHead.Add(new Chunk("FACTURA DE VENTA", headFont));
+            document.Add(prgHead);
+            document.Add(new Chunk("\n", headFont));
+
+            //Add line separator
+            Paragraph pline1 = new Paragraph(new Chunk(new LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 0.0F)));
+            document.Add(pline1);
+            document.Add(new Chunk("\n", headFont));
+
+            //Header specs
+            Paragraph prhSpecs = new Paragraph();
+            Font specsFont = new Font(headerFont, 12, 1, BaseColor.BLACK);
+            prhSpecs.Alignment = Element.ALIGN_LEFT;
+            prhSpecs.Add(new Chunk("Referencia: " + Convert.ToString(this.data["reference"]), specsFont));
+            prhSpecs.Add(new Chunk("\nFecha de venta: " + Convert.ToString(this.data["saleDate"]), specsFont));
+            prhSpecs.Add(new Chunk("\nCliente: " + Convert.ToString(this.data["customer"]), specsFont));
+            prhSpecs.Add(new Chunk("\nTipo de pago: " + Convert.ToString(this.data["paymentMethod"]), specsFont));
+            prhSpecs.Add(new Chunk("\nEstado: " + Convert.ToString(this.data["status"]), specsFont));
+            document.Add(prhSpecs);
+            document.Add(new Chunk("\n", headFont));
+
+            //Add line separator
+            Paragraph pline2 = new Paragraph(new Chunk(new LineSeparator(0.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 0.0F)));
+            document.Add(pline2);
+            document.Add(new Chunk("\n", headFont));
+
+            //Write the table
+            PdfPTable table = new PdfPTable(dt.Columns.Count);
+
+            Font headerTableFontColor = new Font(headerFont, 12, 1, BaseColor.WHITE);
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+                PdfPCell cell = new PdfPCell();
+                cell.BackgroundColor = BaseColor.GRAY;
+                cell.AddElement(new Chunk(dt.Columns[i].ColumnName.ToUpper(), headerTableFontColor));
+                table.AddCell(cell);
+            }
+
+            //Write content
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                for (int j = 0; j < dt.Columns.Count; j++)
+                {
+                    table.AddCell(dt.Rows[i][j].ToString());
+                }
+            }
+
+            document.Add(table);
+            document.Add(new Chunk("\n", headFont));
+            document.Add(new Chunk("\n", headFont));
+
+            //Footer
+            Paragraph prgFooter = new Paragraph();
+            Font footerFont = new Font(headerFont, 12, 1, BaseColor.BLACK);
+            prgFooter.Alignment = Element.ALIGN_RIGHT;
+            prgFooter.Add(new Chunk("% Impuesto: " + Convert.ToString(this.data["tax"]), footerFont));
+            prgFooter.Add(new Chunk("\n% Descuento: " + Convert.ToString(this.data["discount"]), footerFont));
+            prgFooter.Add(new Chunk("\nSubtotal: " + Convert.ToString(this.data["subtotal"]), footerFont));
+            prgFooter.Add(new Chunk("\nTotal: " + Convert.ToString(this.data["total"]), footerFont));
+            document.Add(prgFooter);
+
+            document.Close();
+            writer.Close();
+            fs.Close();
 
         }
 

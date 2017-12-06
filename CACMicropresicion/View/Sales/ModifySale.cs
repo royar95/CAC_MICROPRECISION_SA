@@ -18,6 +18,7 @@ namespace CACMicropresicion.View.Sales
         private Dictionary<Object, dynamic> data;
         private SalesController controller;
         private Venta saleHeader;
+        private Factura bill;
         private DataGridViewRowCollection saleDetail;
         private decimal total, subtotal, tax, discount;
 
@@ -177,6 +178,10 @@ namespace CACMicropresicion.View.Sales
                 this.saveChanges.Enabled = false;
             }
 
+            if (this.saleHeader.IdEstado == Status.Paid || this.saleHeader.IdEstado == Status.WaitingForPayment) {
+                this.btnPrintBill.Enabled = true;
+            }
+
         }
 
         private void disableAllComponents()
@@ -192,6 +197,7 @@ namespace CACMicropresicion.View.Sales
 
         private void enableAllComponents()
         {
+            this.btnPrintBill.Enabled = false;
             this.saveChanges.Enabled = true;
             this.txtDiscount.Enabled = true;
             this.txtTax.Enabled = true;
@@ -318,10 +324,53 @@ namespace CACMicropresicion.View.Sales
 
             if (result["code"] == Result.Processed)
             {
+                if (Convert.ToInt32(this.data["statusId"]) == Status.Paid) {
+
+                    this.printBill();
+
+                }
                 this.loadDataGridView();
             }
 
             MessageBox.Show(result["msg"]);
+        }
+
+        private void printBill() {
+
+            Dictionary<Object, dynamic> resultBill = this.controller.getBillBySaleId(this.saleHeader.IdVenta);
+            if (resultBill["code"] == Result.Failed)
+            {
+                MessageBox.Show(resultBill["msg"]);
+                return;
+            }
+
+            this.bill = resultBill["content"];
+            this.createDataToPrint();
+            this.controller.data = this.data;
+            this.controller.createDocument();
+
+        }
+
+        private void createDataToPrint () {
+
+            this.data = new Dictionary<object, dynamic>();
+            this.data["name"] = this.bill.Referencia.ToString() + "-" + this.bill.NumImpresion.ToString();
+            this.data["reference"] = this.bill.Referencia.ToString();
+            this.data["saleDate"] = this.cmbSaleDate.Value.Date;
+            this.data["customer"] = ((Cliente)this.cmbCustomer.SelectedItem).Descripcion;
+            this.data["paymentMethod"] = ((TipoPago)this.cmbPaymentTypes.SelectedItem).Descripcion;
+            this.data["total"] = Convert.ToDecimal(this.txtTotal.Text);
+            this.data["subtotal"] = Convert.ToDecimal(this.txtSubtotal.Text);
+            this.data["tax"] = Convert.ToDecimal(this.txtTax.Text);
+            this.data["discount"] = Convert.ToDecimal(this.txtDiscount.Text);
+            this.data["status"] = ((Estado)this.cmbStatus.SelectedItem).Descripcion;
+            this.data["saleDetail"] = this.dgSaleSummary.Rows;
+
+        }
+
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+            this.printBill();
         }
 
         private void dgProductsList_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

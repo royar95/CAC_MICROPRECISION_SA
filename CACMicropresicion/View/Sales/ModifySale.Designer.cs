@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifySale));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbCustomer = new System.Windows.Forms.ComboBox();
             this.bunifuCustomLabel10 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel9 = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -46,6 +46,11 @@
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.dgSaleSummary = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.IdSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgProductsList = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtTotal = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -56,13 +61,9 @@
             this.bunifuCustomLabel11 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel12 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.cmbStatus = new System.Windows.Forms.ComboBox();
-            this.IdSale = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IdProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbSaleDate = new System.Windows.Forms.DateTimePicker();
             this.saveChanges = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPrintBill = new Bunifu.Framework.UI.BunifuFlatButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgSaleSummary)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgProductsList)).BeginInit();
             this.SuspendLayout();
@@ -231,19 +232,19 @@
             // dgSaleSummary
             // 
             this.dgSaleSummary.AllowUserToAddRows = false;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgSaleSummary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgSaleSummary.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgSaleSummary.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgSaleSummary.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgSaleSummary.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgSaleSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgSaleSummary.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgSaleSummary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgSaleSummary.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdSale,
@@ -263,23 +264,57 @@
             this.dgSaleSummary.CellLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgSaleSummary_CellLeave);
             this.dgSaleSummary.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgSaleSummary_KeyDown);
             // 
+            // IdSale
+            // 
+            this.IdSale.HeaderText = "Id Venta";
+            this.IdSale.Name = "IdSale";
+            this.IdSale.ReadOnly = true;
+            this.IdSale.Visible = false;
+            // 
+            // IdProduct
+            // 
+            this.IdProduct.HeaderText = "Id Producto";
+            this.IdProduct.Name = "IdProduct";
+            this.IdProduct.ReadOnly = true;
+            this.IdProduct.Visible = false;
+            // 
+            // Description
+            // 
+            this.Description.HeaderText = "Descripción";
+            this.Description.Name = "Description";
+            this.Description.ReadOnly = true;
+            this.Description.Width = 300;
+            // 
+            // Price
+            // 
+            this.Price.HeaderText = "Precio";
+            this.Price.Name = "Price";
+            this.Price.ReadOnly = true;
+            this.Price.Width = 150;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Cantidad";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.Width = 150;
+            // 
             // dgProductsList
             // 
             this.dgProductsList.AllowUserToAddRows = false;
             this.dgProductsList.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dgProductsList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dgProductsList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgProductsList.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgProductsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgProductsList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.LightSteelBlue;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgProductsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.LightSteelBlue;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgProductsList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.dgProductsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgProductsList.DoubleBuffered = true;
             this.dgProductsList.EnableHeadersVisualStyles = false;
@@ -398,40 +433,6 @@
             this.cmbStatus.TabIndex = 98;
             this.cmbStatus.SelectedIndexChanged += new System.EventHandler(this.cmbStatus_SelectedIndexChanged);
             // 
-            // IdSale
-            // 
-            this.IdSale.HeaderText = "Id Venta";
-            this.IdSale.Name = "IdSale";
-            this.IdSale.ReadOnly = true;
-            this.IdSale.Visible = false;
-            // 
-            // IdProduct
-            // 
-            this.IdProduct.HeaderText = "Id Producto";
-            this.IdProduct.Name = "IdProduct";
-            this.IdProduct.ReadOnly = true;
-            this.IdProduct.Visible = false;
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Descripción";
-            this.Description.Name = "Description";
-            this.Description.ReadOnly = true;
-            this.Description.Width = 300;
-            // 
-            // Price
-            // 
-            this.Price.HeaderText = "Precio";
-            this.Price.Name = "Price";
-            this.Price.ReadOnly = true;
-            this.Price.Width = 150;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Cantidad";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.Width = 150;
-            // 
             // cmbSaleDate
             // 
             this.cmbSaleDate.CalendarFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -480,11 +481,48 @@
             this.saveChanges.TextFont = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.saveChanges.Click += new System.EventHandler(this.saveChanges_Click);
             // 
+            // btnPrintBill
+            // 
+            this.btnPrintBill.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPrintBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPrintBill.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPrintBill.BorderRadius = 0;
+            this.btnPrintBill.ButtonText = "Imprimir factura";
+            this.btnPrintBill.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPrintBill.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPrintBill.Font = new System.Drawing.Font("Segoe UI Light", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPrintBill.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPrintBill.Iconimage")));
+            this.btnPrintBill.Iconimage_right = null;
+            this.btnPrintBill.Iconimage_right_Selected = null;
+            this.btnPrintBill.Iconimage_Selected = null;
+            this.btnPrintBill.IconMarginLeft = 0;
+            this.btnPrintBill.IconMarginRight = 0;
+            this.btnPrintBill.IconRightVisible = true;
+            this.btnPrintBill.IconRightZoom = 0D;
+            this.btnPrintBill.IconVisible = false;
+            this.btnPrintBill.IconZoom = 90D;
+            this.btnPrintBill.IsTab = false;
+            this.btnPrintBill.Location = new System.Drawing.Point(315, 485);
+            this.btnPrintBill.Name = "btnPrintBill";
+            this.btnPrintBill.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPrintBill.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.btnPrintBill.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPrintBill.selected = false;
+            this.btnPrintBill.Size = new System.Drawing.Size(229, 48);
+            this.btnPrintBill.TabIndex = 101;
+            this.btnPrintBill.Text = "Imprimir factura";
+            this.btnPrintBill.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPrintBill.Textcolor = System.Drawing.Color.White;
+            this.btnPrintBill.TextFont = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
+            // 
             // ModifySale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnPrintBill);
             this.Controls.Add(this.saveChanges);
             this.Controls.Add(this.cmbSaleDate);
             this.Controls.Add(this.cmbStatus);
@@ -551,5 +589,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DateTimePicker cmbSaleDate;
         private Bunifu.Framework.UI.BunifuFlatButton saveChanges;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPrintBill;
     }
 }

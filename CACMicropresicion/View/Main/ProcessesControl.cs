@@ -16,6 +16,7 @@ namespace CACMicropresicion.View.Main
         {
             InitializeComponent();
             this.Location = new Point(0, 50);
+            this.btnBills.Visible = false;
             this.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
         }
 
