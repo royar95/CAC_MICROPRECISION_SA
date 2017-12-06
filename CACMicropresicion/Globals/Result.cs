@@ -25,7 +25,7 @@ namespace CACMicropresicion.Globals
 
         public static string Empty = "Existen espacios en blanco, por favor validar";
         public static string Same = "No se ha registrado cambios";
-        public static string NoItemsPurchase = "Debe seleccionar al menos un material para la compra";
+        public static string NoItems = "Debe seleccionar al menos un item para la compra";
         public static string CeroOrLess = "El monto total no puede ser inferior o igual a cero";
         public static string NoQuantity = "Debe indicar la cantidad de compra para cada uno de los items";
 

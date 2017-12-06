@@ -93,6 +93,7 @@
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\ProductTypeController.cs" />
     <Compile Include="Controller\PurchaseController.cs" />
+    <Compile Include="Controller\SalesController.cs" />
     <Compile Include="Controller\SalesRevenueController.cs" />
     <Compile Include="Controller\StateController.cs" />
     <Compile Include="Controller\UserCtrl.cs" />
@@ -440,6 +441,12 @@
     <Compile Include="View\Reports\SalesRevenue.Designer.cs">
       <DependentUpon>SalesRevenue.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Sales\NewSale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Sales\NewSale.Designer.cs">
+      <DependentUpon>NewSale.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\States\AddState.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -635,6 +642,9 @@
     <EmbeddedResource Include="View\Reports\SalesRevenue.resx">
       <DependentUpon>SalesRevenue.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Sales\NewSale.resx">
+      <DependentUpon>NewSale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\States\AddState.resx">
       <DependentUpon>AddState.cs</DependentUpon>
     </EmbeddedResource>
@@ -701,7 +711,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="View\Categories\" />
-    <Folder Include="View\Sales\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Model\Model1.Context.tt">

@@ -35,11 +35,11 @@
             this.bunifuCustomLabel4 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.modDropProduct = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblAddProduct = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.bunifuCustomLabel5 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.modProductType = new System.Windows.Forms.ComboBox();
+            this.modDropProductStatus = new System.Windows.Forms.ComboBox();
+            this.bunifuCustomLabel7 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.SuspendLayout();
             // 
             // modBtnProduct
@@ -64,7 +64,7 @@
             this.modBtnProduct.IconVisible = false;
             this.modBtnProduct.IconZoom = 90D;
             this.modBtnProduct.IsTab = false;
-            this.modBtnProduct.Location = new System.Drawing.Point(186, 333);
+            this.modBtnProduct.Location = new System.Drawing.Point(59, 358);
             this.modBtnProduct.Name = "modBtnProduct";
             this.modBtnProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.modBtnProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -88,7 +88,7 @@
             this.txtStock.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtStock.isPassword = false;
-            this.txtStock.Location = new System.Drawing.Point(373, 259);
+            this.txtStock.Location = new System.Drawing.Point(373, 282);
             this.txtStock.Margin = new System.Windows.Forms.Padding(4);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(235, 36);
@@ -105,10 +105,10 @@
             this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPrice.isPassword = false;
-            this.txtPrice.Location = new System.Drawing.Point(59, 259);
+            this.txtPrice.Location = new System.Drawing.Point(59, 282);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(225, 36);
+            this.txtPrice.Size = new System.Drawing.Size(229, 36);
             this.txtPrice.TabIndex = 87;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -122,7 +122,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescription.isPassword = false;
-            this.txtDescription.Location = new System.Drawing.Point(59, 178);
+            this.txtDescription.Location = new System.Drawing.Point(59, 201);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(549, 36);
@@ -134,7 +134,7 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(378, 230);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(368, 253);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(193, 25);
             this.bunifuCustomLabel4.TabIndex = 85;
@@ -145,7 +145,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(54, 230);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(54, 253);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(61, 25);
             this.bunifuCustomLabel3.TabIndex = 84;
@@ -156,33 +156,11 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(54, 149);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(54, 172);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 83;
             this.bunifuCustomLabel1.Text = "Descripción";
-            // 
-            // modDropProduct
-            // 
-            this.modDropProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.modDropProduct.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modDropProduct.FormattingEnabled = true;
-            this.modDropProduct.Location = new System.Drawing.Point(59, 110);
-            this.modDropProduct.Name = "modDropProduct";
-            this.modDropProduct.Size = new System.Drawing.Size(225, 25);
-            this.modDropProduct.TabIndex = 82;
-            this.modDropProduct.SelectedIndexChanged += new System.EventHandler(this.modDropProductType_SelectedIndexChanged);
-            // 
-            // bunifuCustomLabel2
-            // 
-            this.bunifuCustomLabel2.AutoSize = true;
-            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(54, 82);
-            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
-            this.bunifuCustomLabel2.Size = new System.Drawing.Size(287, 25);
-            this.bunifuCustomLabel2.TabIndex = 81;
-            this.bunifuCustomLabel2.Text = "Seleccione el producto a modificar";
             // 
             // lblAddProduct
             // 
@@ -201,7 +179,7 @@
             this.bunifuCustomLabel5.AutoSize = true;
             this.bunifuCustomLabel5.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel5.Location = new System.Drawing.Point(378, 82);
+            this.bunifuCustomLabel5.Location = new System.Drawing.Point(54, 103);
             this.bunifuCustomLabel5.Name = "bunifuCustomLabel5";
             this.bunifuCustomLabel5.Size = new System.Drawing.Size(90, 25);
             this.bunifuCustomLabel5.TabIndex = 90;
@@ -212,15 +190,38 @@
             this.modProductType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modProductType.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modProductType.FormattingEnabled = true;
-            this.modProductType.Location = new System.Drawing.Point(383, 110);
+            this.modProductType.Location = new System.Drawing.Point(59, 131);
             this.modProductType.Name = "modProductType";
             this.modProductType.Size = new System.Drawing.Size(225, 25);
             this.modProductType.TabIndex = 91;
+            // 
+            // modDropProductStatus
+            // 
+            this.modDropProductStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.modDropProductStatus.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modDropProductStatus.FormattingEnabled = true;
+            this.modDropProductStatus.Location = new System.Drawing.Point(373, 131);
+            this.modDropProductStatus.Name = "modDropProductStatus";
+            this.modDropProductStatus.Size = new System.Drawing.Size(235, 25);
+            this.modDropProductStatus.TabIndex = 93;
+            // 
+            // bunifuCustomLabel7
+            // 
+            this.bunifuCustomLabel7.AutoSize = true;
+            this.bunifuCustomLabel7.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuCustomLabel7.Location = new System.Drawing.Point(368, 103);
+            this.bunifuCustomLabel7.Name = "bunifuCustomLabel7";
+            this.bunifuCustomLabel7.Size = new System.Drawing.Size(66, 25);
+            this.bunifuCustomLabel7.TabIndex = 92;
+            this.bunifuCustomLabel7.Text = "Estado";
             // 
             // ModifyProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.modDropProductStatus);
+            this.Controls.Add(this.bunifuCustomLabel7);
             this.Controls.Add(this.modProductType);
             this.Controls.Add(this.bunifuCustomLabel5);
             this.Controls.Add(this.modBtnProduct);
@@ -230,8 +231,6 @@
             this.Controls.Add(this.bunifuCustomLabel4);
             this.Controls.Add(this.bunifuCustomLabel3);
             this.Controls.Add(this.bunifuCustomLabel1);
-            this.Controls.Add(this.modDropProduct);
-            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.lblAddProduct);
             this.Name = "ModifyProduct";
             this.Size = new System.Drawing.Size(673, 474);
@@ -249,10 +248,10 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel4;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
-        private System.Windows.Forms.ComboBox modDropProduct;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
         private Bunifu.Framework.UI.BunifuCustomLabel lblAddProduct;
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel5;
         private System.Windows.Forms.ComboBox modProductType;
+        private System.Windows.Forms.ComboBox modDropProductStatus;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel7;
     }
 }

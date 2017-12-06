@@ -5,13 +5,15 @@ using System.Windows.Forms;
 using CACMicropresicion.Controller;
 using CACMicropresicion.Globals;
 using CACMicropresicion.View.Purchases;
+using CACMicropresicion.View.Sales;
 
 namespace CACMicropresicion.View.Main
 {
     public partial class InOutOptions : UserControl
     {
 
-        private PurchaseController controller;
+        private PurchaseController purchaseController;
+        private SalesController salesController;
 
         public InOutOptions()
         {
@@ -25,16 +27,17 @@ namespace CACMicropresicion.View.Main
         {
             removeAllManagamentControls();
 
-            this.controller = new PurchaseController();
+            
 
             switch (this.Operation) {
                 case "Purchases":
 
+                    this.purchaseController = new PurchaseController();
                     Dictionary<Object, dynamic> resultMaterials, resultPaymentTypes;
-                    NewPurchase control = new NewPurchase();
+                    NewPurchase purchaseControl = new NewPurchase();
 
-                    resultMaterials = controller.getAllMaterials();
-                    resultPaymentTypes = controller.getAllPaymentTypes();
+                    resultMaterials = purchaseController.getAllMaterials();
+                    resultPaymentTypes = purchaseController.getAllPaymentTypes();
 
                     if (resultMaterials["code"] == Result.Failed ||
                         resultPaymentTypes["code"] == Result.Failed) {
@@ -42,9 +45,34 @@ namespace CACMicropresicion.View.Main
                             break;
                     }
 
-                    control.populateMaterialList(resultMaterials["content"]);
-                    control.populatePaymentTypes(resultPaymentTypes["content"]);
-                    Parent.Controls.Add(control);
+                    purchaseControl.populateMaterialList(resultMaterials["content"]);
+                    purchaseControl.populatePaymentTypes(resultPaymentTypes["content"]);
+                    Parent.Controls.Add(purchaseControl);
+
+                    break;
+
+                case "Sales":
+
+                    this.salesController = new SalesController();
+                    Dictionary<Object, dynamic> resultProducts, resultClients;
+                    NewSale salesControl = new NewSale();
+
+                    resultProducts = salesController.getAllProducts();
+                    resultPaymentTypes = salesController.getAllPaymentTypes();
+                    resultClients = salesController.getAllCustomers();
+
+                    if (resultProducts["code"] == Result.Failed ||
+                        resultPaymentTypes["code"] == Result.Failed ||
+                        resultClients["code"] == Result.Failed)
+                    {
+                        MessageBox.Show(resultProducts["msg"]);
+                        break;
+                    }
+
+                    salesControl.populateProducts(resultProducts["content"]);
+                    salesControl.populatePaymentTypes(resultPaymentTypes["content"]);
+                    salesControl.populateCustomerList(resultClients["content"]);
+                    Parent.Controls.Add(salesControl);
 
                     break;
             }
@@ -53,12 +81,14 @@ namespace CACMicropresicion.View.Main
         private void btnList_Click(object sender, EventArgs e)
         {
             this.removeAllManagamentControls();
-            this.controller = new PurchaseController();
+            this.purchaseController = new PurchaseController();
 
             switch (this.Operation) {
                 case "Purchases":
                     ViewPurchases control = new ViewPurchases();
                     Parent.Controls.Add(control);
+                    break;
+                case "Sales":
                     break;
             }
         }
@@ -107,6 +137,12 @@ namespace CACMicropresicion.View.Main
             Parent.Controls.RemoveByKey("NewPurchase");
             Parent.Controls.RemoveByKey("ViewPurchases");
             Parent.Controls.RemoveByKey("ModifyPurchase");
+            Parent.Controls.RemoveByKey("SalesRevenue");
+            Parent.Controls.RemoveByKey("ReportOptions");
+            Parent.Controls.RemoveByKey("SalesOptions");
+            Parent.Controls.RemoveByKey("CostsOptions");
+            Parent.Controls.RemoveByKey("CostOfGoodsSold");
+            Parent.Controls.RemoveByKey("NewSale");
 
         }
 

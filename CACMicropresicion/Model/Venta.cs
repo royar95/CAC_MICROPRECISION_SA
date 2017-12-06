@@ -40,5 +40,10 @@ namespace CACMicropresicion.Model
         public virtual ICollection<Factura> Factura { get; set; }
         public virtual TipoPago TipoPago { get; set; }
         public virtual Usuario Usuario { get; set; }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
     }
 }

@@ -11,6 +11,7 @@ namespace CACMicropresicion.Controller
     class ProductController : BaseController
     {
         public Dictionary<string, dynamic> data { get; set; }
+        private CAC_MICROPRECISION_SAEntities db = new CAC_MICROPRECISION_SAEntities();
 
         public ProductController()
         {
@@ -78,16 +79,18 @@ namespace CACMicropresicion.Controller
             {
 
                 var query = from t in db.Producto
+                            join s in db.Estado on t.IdEstado equals s.IdEstado
+                            join c in db.TipoProducto on t.IdTipoProducto equals c.IdTipoProducto
                             where t.Eliminado == 0
                             select new
                             {
                                 idProducto = t.IdProducto,
-                                idTipoCategoria = t.IdTipoProducto,
+                                categoria = c.Descripcion,
                                 description = t.Descripcion,
                                 precio = t.Precio,
                                 stock = t.CantidadInventariable,
-                                estado = t.IdEstado,
-                                eliminado = t.Eliminado
+                                estado = s.Descripcion,
+                                //eliminado = t.Eliminado
                             };
 
                 var users = query.ToList();
@@ -165,6 +168,27 @@ namespace CACMicropresicion.Controller
             catch (Exception ex)
             {
                 return result(Result.Failed, "Error al modificar el registro: " + ex.Message, null);
+            }
+
+        }
+
+        public Dictionary<Object, dynamic> getProductById(int id)
+        {
+
+            try
+            {
+
+                Producto user = (from u in db.Producto
+                                where u.IdProducto == id
+                                where u.Eliminado == 0
+                                select u).FirstOrDefault();
+
+                return result(Result.Processed, null, user);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
             }
 
         }

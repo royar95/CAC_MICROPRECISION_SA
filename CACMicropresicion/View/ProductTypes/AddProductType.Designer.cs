@@ -40,7 +40,7 @@
             this.lblNewPaymentMethod.AutoSize = true;
             this.lblNewPaymentMethod.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewPaymentMethod.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblNewPaymentMethod.Location = new System.Drawing.Point(108, 48);
+            this.lblNewPaymentMethod.Location = new System.Drawing.Point(50, 46);
             this.lblNewPaymentMethod.Name = "lblNewPaymentMethod";
             this.lblNewPaymentMethod.Size = new System.Drawing.Size(486, 40);
             this.lblNewPaymentMethod.TabIndex = 27;
@@ -68,7 +68,7 @@
             this.btnAddProductType.IconVisible = false;
             this.btnAddProductType.IconZoom = 90D;
             this.btnAddProductType.IsTab = false;
-            this.btnAddProductType.Location = new System.Drawing.Point(203, 269);
+            this.btnAddProductType.Location = new System.Drawing.Point(57, 235);
             this.btnAddProductType.Name = "btnAddProductType";
             this.btnAddProductType.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnAddProductType.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -92,10 +92,10 @@
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescription.isPassword = false;
-            this.txtDescription.Location = new System.Drawing.Point(115, 170);
+            this.txtDescription.Location = new System.Drawing.Point(57, 148);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(370, 44);
+            this.txtDescription.Size = new System.Drawing.Size(229, 36);
             this.txtDescription.TabIndex = 31;
             this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -104,7 +104,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(110, 119);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(52, 119);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 30;
@@ -119,7 +119,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.lblNewPaymentMethod);
             this.Name = "AddProductType";
-            this.Size = new System.Drawing.Size(673, 474);
+            this.Size = new System.Drawing.Size(673, 370);
             this.ResumeLayout(false);
             this.PerformLayout();
 

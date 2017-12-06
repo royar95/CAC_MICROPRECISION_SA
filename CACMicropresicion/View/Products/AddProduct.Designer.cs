@@ -45,7 +45,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(71, 73);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(54, 106);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(348, 25);
             this.bunifuCustomLabel2.TabIndex = 71;
@@ -57,7 +57,7 @@
             this.lblAddProduct.BackColor = System.Drawing.Color.Transparent;
             this.lblAddProduct.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAddProduct.Location = new System.Drawing.Point(69, 19);
+            this.lblAddProduct.Location = new System.Drawing.Point(52, 37);
             this.lblAddProduct.Name = "lblAddProduct";
             this.lblAddProduct.Size = new System.Drawing.Size(323, 40);
             this.lblAddProduct.TabIndex = 70;
@@ -68,7 +68,7 @@
             this.modDropProductType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.modDropProductType.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modDropProductType.FormattingEnabled = true;
-            this.modDropProductType.Location = new System.Drawing.Point(76, 101);
+            this.modDropProductType.Location = new System.Drawing.Point(59, 134);
             this.modDropProductType.Name = "modDropProductType";
             this.modDropProductType.Size = new System.Drawing.Size(225, 25);
             this.modDropProductType.TabIndex = 72;
@@ -78,7 +78,7 @@
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(71, 140);
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(54, 173);
             this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
             this.bunifuCustomLabel1.TabIndex = 73;
@@ -89,7 +89,7 @@
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel3.Location = new System.Drawing.Point(71, 221);
+            this.bunifuCustomLabel3.Location = new System.Drawing.Point(54, 254);
             this.bunifuCustomLabel3.Name = "bunifuCustomLabel3";
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(61, 25);
             this.bunifuCustomLabel3.TabIndex = 74;
@@ -100,7 +100,7 @@
             this.bunifuCustomLabel4.AutoSize = true;
             this.bunifuCustomLabel4.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel4.Location = new System.Drawing.Point(329, 221);
+            this.bunifuCustomLabel4.Location = new System.Drawing.Point(312, 254);
             this.bunifuCustomLabel4.Name = "bunifuCustomLabel4";
             this.bunifuCustomLabel4.Size = new System.Drawing.Size(193, 25);
             this.bunifuCustomLabel4.TabIndex = 75;
@@ -116,7 +116,7 @@
             this.txtDescription.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescription.isPassword = false;
-            this.txtDescription.Location = new System.Drawing.Point(76, 169);
+            this.txtDescription.Location = new System.Drawing.Point(59, 202);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(493, 36);
@@ -133,10 +133,10 @@
             this.txtPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtPrice.isPassword = false;
-            this.txtPrice.Location = new System.Drawing.Point(76, 250);
+            this.txtPrice.Location = new System.Drawing.Point(59, 283);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(225, 36);
+            this.txtPrice.Size = new System.Drawing.Size(229, 36);
             this.txtPrice.TabIndex = 77;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
@@ -150,7 +150,7 @@
             this.txtStock.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.txtStock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtStock.isPassword = false;
-            this.txtStock.Location = new System.Drawing.Point(334, 250);
+            this.txtStock.Location = new System.Drawing.Point(317, 283);
             this.txtStock.Margin = new System.Windows.Forms.Padding(4);
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(235, 36);
@@ -179,7 +179,7 @@
             this.addBtnProduct.IconVisible = false;
             this.addBtnProduct.IconZoom = 90D;
             this.addBtnProduct.IsTab = false;
-            this.addBtnProduct.Location = new System.Drawing.Point(203, 324);
+            this.addBtnProduct.Location = new System.Drawing.Point(59, 356);
             this.addBtnProduct.Name = "addBtnProduct";
             this.addBtnProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.addBtnProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));

@@ -99,26 +99,16 @@ namespace CACMicropresicion.View.Purchases
 
         private void txtSearch_OnTextChange(object sender, EventArgs e)
         {
-            dgMaterialsList.CurrentCell = null;
             String searchValue = txtSearch.text.TrimStart().TrimEnd();
-            int valueLength = searchValue.Length;
+            this.dgMaterialsList.CurrentCell = null;
 
             foreach (DataGridViewRow row in dgMaterialsList.Rows)
             {
-                
                 row.Visible = true;
 
                 if (!searchValue.Equals(String.Empty))
                 {
-                    if (valueLength > row.Cells[1].Value.ToString().Length)
-                    {
-                        row.Visible = false;
-                        continue;
-                    }
-
-                    string cellValue = row.Cells[1].Value.ToString().Substring(0, valueLength);
-
-                    if (!cellValue.Equals(searchValue))
+                    if (!row.Cells[1].Value.ToString().Contains(searchValue))
                     {
                         row.Visible = false;
                     }

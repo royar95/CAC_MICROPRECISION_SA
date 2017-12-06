@@ -17,6 +17,7 @@ namespace CACMicropresicion.View.ProductTypes
     {
 
         private TipoProducto registeredProductType;
+        string description;
         ProductTypeController controller;
         public ModifyProductType()
         {
@@ -29,6 +30,7 @@ namespace CACMicropresicion.View.ProductTypes
         {
             controller = new ProductTypeController();
             Dictionary<Object, dynamic> resultProductType = this.controller.getDataToFillProductTypesCombo();
+            Dictionary<Object, dynamic> resultStatus = this.controller.getAllRegisterStatus();
 
             if (resultProductType["code"] == Result.Failed)
             {
@@ -37,23 +39,22 @@ namespace CACMicropresicion.View.ProductTypes
             }
             if (resultProductType["code"] == Result.Processed)
             {
-                //loadPaymentComboBox(resultProductType["content"]);
-                this.modDropProductType.DataSource = resultProductType["content"];
-                this.modDropProductType.ValueMember = "IdTipoProducto";
-                this.modDropProductType.DisplayMember = "Descripcion";
+
+                loadStatusComboBox(resultStatus["content"]);
+
             }
         }
 
-        private void fillDescriptionField()
-        {
-            this.registeredProductType = (TipoProducto)this.modDropProductType.SelectedItem;
-            txtDescription.Text = this.registeredProductType.Descripcion;
+        //private void fillDescriptionField()
+        //{
+        //    this.registeredProductType = (TipoProducto)this.modDropProductType.SelectedItem;
+        //    txtDescription.Text = this.registeredProductType.Descripcion;
 
-        }
+        //}
 
         private void modDropProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            fillDescriptionField();
+            //fillDescriptionField();
         }
 
         private void modBtnProductType_Click(object sender, EventArgs e)
@@ -69,7 +70,7 @@ namespace CACMicropresicion.View.ProductTypes
                 FechaElimina = registeredProductType.FechaElimina,
                 UsuarioAgrega = registeredProductType.UsuarioAgrega,
                 Eliminado = registeredProductType.Eliminado,
-                IdEstado = registeredProductType.IdEstado
+                IdEstado = (int)modDropProductTypeStatus.SelectedValue
             };
 
             data["user"] = Session.getInstance().session["identification"];
@@ -81,9 +82,54 @@ namespace CACMicropresicion.View.ProductTypes
 
             if (result["code"] == Result.Processed)
             {
-                this.loadCombos();
+                loadDataGridView();
             }
             MessageBox.Show(result["msg"]);
+        }
+
+
+        public void fillProductTypeInputs(TipoProducto productType)
+        {
+            this.registeredProductType = productType;
+            txtDescription.Text = this.registeredProductType.Descripcion;
+            
+            //Estado del producto
+            modDropProductTypeStatus.SelectedValue = this.registeredProductType.IdEstado;
+
+        }
+
+        private void loadDataGridView()
+        {
+
+            ViewProductTypes viewProductTypes = new ViewProductTypes();
+            ProductTypeController productCtrl = new ProductTypeController();
+
+            viewProductTypes.Height = Parent.Height;
+            viewProductTypes.Width = Parent.Width;
+
+            Dictionary<Object, dynamic> result = productCtrl.getAllProductTypes();
+
+            if (result["code"] == Result.Failed)
+            {
+                MessageBox.Show(result["msg"]);
+                return;
+            }
+
+            if (result["code"] == Result.Processed)
+            {
+                viewProductTypes.loadDataGrid(result["content"]);
+                Parent.Controls.Add(viewProductTypes);
+            }
+
+            Parent.Controls.RemoveByKey("ModifyProductType");
+
+        }
+
+        public void loadStatusComboBox(Object data)
+        {
+            this.modDropProductTypeStatus.DataSource = data;
+            this.modDropProductTypeStatus.ValueMember = "IdEstado";
+            this.modDropProductTypeStatus.DisplayMember = "Descripcion";
         }
     }
 }

@@ -151,7 +151,7 @@ namespace CACMicropresicion.Controller
 
                 if (items.Count == 0)
                 {
-                    return result(Result.Failed, Result.NoItemsPurchase, null);
+                    return result(Result.Failed, Result.NoItems, null);
                 }
 
                 foreach (DataGridViewRow item in this.items)
@@ -300,9 +300,8 @@ namespace CACMicropresicion.Controller
                 Compra newPurchaseHeader = this.data["newHeader"];
                 Compra oldPurchaseHeader = this.data["oldHeader"];
 
-                //Validaciones
                 if (newPurchaseDetail.Count == 0) {
-                    return result(Result.Failed, Result.NoItemsPurchase, null);
+                    return result(Result.Failed, Result.NoItems, null);
                 }
 
                 foreach (DataGridViewRow item in newPurchaseDetail)
@@ -349,6 +348,8 @@ namespace CACMicropresicion.Controller
                         Renglon = line,
                         Cantidad = Convert.ToInt32(item.Cells[2].Value),
                         IdMaterial = Convert.ToInt32(item.Cells[0].Value),
+                        IdCompra = modPurchase.IdCompra
+
                     };
 
                     line++;

@@ -40,7 +40,7 @@
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel2.Location = new System.Drawing.Point(83, 117);
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(64, 131);
             this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(276, 25);
             this.bunifuCustomLabel2.TabIndex = 72;
@@ -51,7 +51,7 @@
             this.delDropProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.delDropProduct.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delDropProduct.FormattingEnabled = true;
-            this.delDropProduct.Location = new System.Drawing.Point(88, 159);
+            this.delDropProduct.Location = new System.Drawing.Point(69, 173);
             this.delDropProduct.Name = "delDropProduct";
             this.delDropProduct.Size = new System.Drawing.Size(229, 25);
             this.delDropProduct.TabIndex = 71;
@@ -78,7 +78,7 @@
             this.btnDeleteProduct.IconVisible = false;
             this.btnDeleteProduct.IconZoom = 90D;
             this.btnDeleteProduct.IsTab = false;
-            this.btnDeleteProduct.Location = new System.Drawing.Point(202, 240);
+            this.btnDeleteProduct.Location = new System.Drawing.Point(69, 245);
             this.btnDeleteProduct.Name = "btnDeleteProduct";
             this.btnDeleteProduct.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnDeleteProduct.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -97,7 +97,7 @@
             this.lblDeleteProduct.AutoSize = true;
             this.lblDeleteProduct.Font = new System.Drawing.Font("Segoe UI Light", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeleteProduct.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblDeleteProduct.Location = new System.Drawing.Point(81, 44);
+            this.lblDeleteProduct.Location = new System.Drawing.Point(62, 58);
             this.lblDeleteProduct.Name = "lblDeleteProduct";
             this.lblDeleteProduct.Size = new System.Drawing.Size(233, 40);
             this.lblDeleteProduct.TabIndex = 69;
@@ -112,7 +112,7 @@
             this.Controls.Add(this.btnDeleteProduct);
             this.Controls.Add(this.lblDeleteProduct);
             this.Name = "DeleteProduct";
-            this.Size = new System.Drawing.Size(673, 474);
+            this.Size = new System.Drawing.Size(673, 369);
             this.ResumeLayout(false);
             this.PerformLayout();
 
