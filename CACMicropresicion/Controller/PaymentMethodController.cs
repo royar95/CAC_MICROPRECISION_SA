@@ -132,7 +132,8 @@ namespace CACMicropresicion.Controller
                 return result(Result.Failed, Result.Empty, null);
             }
 
-            if (registeredPayment.Descripcion.Equals(modifiedPayment.Descripcion))
+            if (registeredPayment.Descripcion.Equals(modifiedPayment.Descripcion) &&
+                registeredPayment.IdEstado.Equals(modifiedPayment.IdEstado))
             {
                 return result(Result.Failed, Result.Same, null);
             }
@@ -169,15 +170,38 @@ namespace CACMicropresicion.Controller
             {
 
                 var query = from t in db.TipoPago
+                            join status in db.Estado on t.IdEstado equals status.IdEstado
                             where t.Eliminado == 0
                             select new
                             {
                                 idState = t.IdTipoPago,
-                                description = t.Descripcion
+                                description = t.Descripcion,
+                                Estado = status.Descripcion
                             };
 
                 var users = query.ToList();
                 return result(Result.Processed, null, users);
+
+            }
+            catch (Exception ex)
+            {
+                return result(Result.Failed, "Error al extraer los datos: " + ex.Message, null);
+            }
+
+        }
+
+        public Dictionary<Object, dynamic> getPaymenthMethoById (int id)
+        {
+
+            try
+            {
+
+                TipoPago paymentMethod = (from tp in db.TipoPago
+                                     where tp.IdTipoPago == id
+                                      where tp.Eliminado == 0
+                                      select tp).FirstOrDefault();
+
+                return result(Result.Processed, null, paymentMethod);
 
             }
             catch (Exception ex)

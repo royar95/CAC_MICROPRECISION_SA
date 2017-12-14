@@ -95,6 +95,7 @@
     <Compile Include="Controller\PaymentMethodController.cs" />
     <Compile Include="Controller\ProductController.cs" />
     <Compile Include="Controller\ProductTypeController.cs" />
+    <Compile Include="Controller\ProviderController.cs" />
     <Compile Include="Controller\PurchaseController.cs" />
     <Compile Include="Controller\SalesController.cs" />
     <Compile Include="Controller\SalesRevenueController.cs" />
@@ -390,6 +391,30 @@
     <Compile Include="View\ProductTypes\ViewProductTypes.Designer.cs">
       <DependentUpon>ViewProductTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Providers\AddProvider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Providers\AddProvider.designer.cs">
+      <DependentUpon>AddProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Providers\DeleteProvider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Providers\DeleteProvider.designer.cs">
+      <DependentUpon>DeleteProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Providers\EditProvider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Providers\EditProvider.designer.cs">
+      <DependentUpon>EditProvider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Providers\ViewProviders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\Providers\ViewProviders.Designer.cs">
+      <DependentUpon>ViewProviders.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Purchases\ModifyPurchase.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -629,6 +654,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\ProductTypes\ViewProductTypes.resx">
       <DependentUpon>ViewProductTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Providers\AddProvider.resx">
+      <DependentUpon>AddProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Providers\DeleteProvider.resx">
+      <DependentUpon>DeleteProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Providers\EditProvider.resx">
+      <DependentUpon>EditProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Providers\ViewProviders.resx">
+      <DependentUpon>ViewProviders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Purchases\ModifyPurchase.resx">
       <DependentUpon>ModifyPurchase.cs</DependentUpon>

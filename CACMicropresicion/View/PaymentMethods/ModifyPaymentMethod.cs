@@ -28,37 +28,26 @@ namespace CACMicropresicion.View.PaymentMethods
         public void loadCombos()
         {
             controller = new PaymentMethodController();
-            Dictionary<Object, dynamic> resultPayment = this.controller.getDataToFillPaymentsCombo();
+            Dictionary<Object, dynamic> resultStatus = this.controller.getAllRegisterStatus();
 
 
-            if (resultPayment["code"] == Result.Failed)
+            if (resultStatus["code"] == Result.Failed)
             {
-                MessageBox.Show(resultPayment["msg"]);
+                MessageBox.Show(resultStatus["msg"]);
                 return;
             }
 
-            if (resultPayment["code"] == Result.Processed)
+            if (resultStatus["code"] == Result.Processed)
             {
-                // loadTypesComboBox();
-                loadPaymentComboBox(resultPayment["content"]);
+                this.loadStatusCombo(resultStatus["content"]);
             }
 
         }
 
-
-        public void loadPaymentComboBox(Object data)
-        {
-
-            this.modDropPaymentId.DataSource = data;
-            this.modDropPaymentId.ValueMember = "IdTipoPago";
-            this.modDropPaymentId.DisplayMember = "Descripcion";
-
-        }
-
-        private void modDropPaymentId_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            this.registeredPaymentMethod = (TipoPago)this.modDropPaymentId.SelectedItem;
-            txtDescription.Text = this.registeredPaymentMethod.Descripcion;
+        private void loadStatusCombo(Object list) {
+            this.cmbStatus.DataSource = list;
+            this.cmbStatus.ValueMember = "IdEstado";
+            this.cmbStatus.DisplayMember = "Descripcion";
         }
 
         private void modBtnSavePaymentChanges_Click(object sender, EventArgs e)
@@ -74,7 +63,7 @@ namespace CACMicropresicion.View.PaymentMethods
                 FechaElimina = registeredPaymentMethod.FechaElimina,
                 UsuarioAgrega = registeredPaymentMethod.UsuarioAgrega,
                 Eliminado = registeredPaymentMethod.Eliminado,
-                IdEstado = registeredPaymentMethod.IdEstado
+                IdEstado = ((Estado)this.cmbStatus.SelectedItem).IdEstado
             };
 
 
@@ -85,10 +74,43 @@ namespace CACMicropresicion.View.PaymentMethods
 
             if (result["code"] == Result.Processed)
             {
-                this.loadCombos();
+                this.loadDataGridView();
             }
 
             MessageBox.Show(result["msg"]);
         }
+
+        private void loadDataGridView()
+        {
+
+            ViewPaymentMethods viewPayment = new ViewPaymentMethods();
+            PaymentMethodController cnt = new PaymentMethodController();
+
+            viewPayment.Height = Parent.Height;
+            viewPayment.Width = Parent.Width;
+
+            Dictionary<Object, dynamic> result = cnt.getAllPaymentMethods();
+            if (result["code"] == Result.Failed)
+            {
+                MessageBox.Show(result["msg"]);
+                return;
+            }
+
+            if (result["code"] == Result.Processed)
+            {
+                viewPayment.loadDataGrid(result["content"]);
+                Parent.Controls.Add(viewPayment);
+            }
+
+            Parent.Controls.RemoveByKey("ModifyPaymentMethod");
+
+        }
+
+        public void fillPaymentMethodInputs (TipoPago paymentMethod) {
+            this.registeredPaymentMethod = paymentMethod;
+            this.txtDescription.Text = paymentMethod.Descripcion;
+            this.cmbStatus.SelectedValue = paymentMethod.IdEstado;
+        }
+
     }
 }

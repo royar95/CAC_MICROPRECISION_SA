@@ -191,7 +191,7 @@ namespace CACMicropresicion.Controller
                 ICollection<DetalleVenta> newSaleDetail = this.createNewSaleDetail();
                 newSale.DetalleVenta = newSaleDetail;
 
-                Bitacora newSaleLog = this.createLog(Log.Insert, Log.Sale, null, newSale.ToString());
+                Bitacora newSaleLog = this.createLog(Log.Insert, Log.Sale, null, newSale.toString());
 
                 db.Venta.Add(newSale);
                 db.Bitacora.Add(newSaleLog);
@@ -219,47 +219,48 @@ namespace CACMicropresicion.Controller
                 Venta newSaleHeader = this.createNewSale(oldSaleHeader);
                 DataGridViewRowCollection newSaleDetail = this.data["saleDetail"];
 
+                //Verify if changes were made
                 if (!hasChanges(oldSaleHeader, newSaleHeader, oldSaleDetail, newSaleDetail))
                 {
                     return result(Result.Failed, Result.Same, null);
                 }
 
-                //Data for the modified sale header
-                string oldContent = oldSaleHeader.ToString();
-                string newContent = newSaleHeader.ToString();
+                //Validate product stoke
+                short line = 1;
+                foreach (DataGridViewRow product in newSaleDetail) {
 
-                Venta saleHeaderModified = db.Venta.Find(oldSaleHeader.IdVenta);
-                db.Entry(saleHeaderModified).CurrentValues.SetValues(newSaleHeader);
+                    int quantity = Convert.ToInt32(product.Cells[4].Value);
+                    Producto dbProduct = db.Producto.Find(Convert.ToInt32(product.Cells[1].Value));
+
+                    if (dbProduct.CantidadInventariable < quantity) {
+                        return result(
+                            Result.Failed, 
+                            "El producto en la línea " + line + " - " + product.Cells[2].Value + " no posee suficiente existencia", 
+                            null);
+                    }
+
+                    line++;
+
+                }
+
+                //Data for the modified sale header
+                string oldContent = oldSaleHeader.toString();
+                string newContent = newSaleHeader.toString();
+
+                Venta saleHeaderModified = db.Venta.Find(newSaleHeader.IdVenta);
                 db.Entry(saleHeaderModified).State = System.Data.Entity.EntityState.Modified;
+                db.Entry(saleHeaderModified).CurrentValues.SetValues(newSaleHeader);
+                saleHeaderModified.Usuario = db.Usuario.Find(newSaleHeader.Usuario.IdUsuario);
+                saleHeaderModified.Cliente = db.Cliente.Find(newSaleHeader.Cliente.IdCliente);
+                saleHeaderModified.Estado = db.Estado.Find(newSaleHeader.Estado.IdEstado);
+                saleHeaderModified.TipoPago = db.TipoPago.Find(newSaleHeader.TipoPago.IdTipoPago);
 
                 Bitacora saleHeaderModLog = createLog(Log.Modify, Log.Sale, oldContent, newContent);
                 db.Bitacora.Add(saleHeaderModLog);
 
                 //Data for the modified sale Detail
                 db.DetalleVenta.RemoveRange(db.DetalleVenta.Where(d => d.IdVenta == newSaleHeader.IdVenta));
-                ICollection<DetalleVenta> newDetail = new List<DetalleVenta>();
-
-                foreach (DataGridViewRow item in newSaleDetail)
-                {
-
-                    short line = 1;
-                    DetalleVenta newItem = new DetalleVenta()
-                    {
-                        IdVenta = Convert.ToInt32(item.Cells[0].Value),
-                        IdProducto = Convert.ToInt32(item.Cells[1].Value),
-                        Renglon = line,
-                        Precio = Convert.ToDecimal(item.Cells[3].Value),
-                        Cantidad = Convert.ToInt32(item.Cells[4].Value)
-                    };
-
-                    line++;
-                    newDetail.Add(newItem);
-
-                    Bitacora detailItemMod = createLog(Log.Modify, Log.PurchaseDetail, "", newItem.ToString());
-                    db.Bitacora.Add(detailItemMod);
-
-                }
-
+                ICollection<DetalleVenta> newDetail = this.createNewSaleDetailMod(newSaleDetail);
                 saleHeaderModified.DetalleVenta = newDetail;
                 db.SaveChanges();
 
@@ -324,10 +325,9 @@ namespace CACMicropresicion.Controller
 
         public Venta createNewSale (Venta oldSale) {
 
-            return new Venta()
+            Venta newSale = new Venta()
             {
                 IdVenta = oldSale.IdVenta,
-                IdUsuario = oldSale.IdUsuario,
                 Total = this.data["total"],
                 Subtotal = this.data["subtotal"],
                 Impuesto = this.data["tax"],
@@ -335,19 +335,25 @@ namespace CACMicropresicion.Controller
                 FechaAgrega = oldSale.FechaAgrega,
                 FechaElimina = oldSale.FechaElimina,
                 Eliminado = oldSale.Eliminado,
-                IdEstado = this.data["statusId"],
-                IdCliente = this.data["customerId"],
-                IdTipoPago = this.data["paymentMethodId"],
                 FechaVenta = this.data["saleDate"]
             };
+
+            Estado status = db.Estado.Find(Convert.ToInt32(data["statusId"]));
+            Cliente customer = db.Cliente.Find(Convert.ToInt32(data["customerId"]));
+            TipoPago paymentMethod = db.TipoPago.Find(Convert.ToInt32(data["paymentMethodId"]));
+
+            newSale.Usuario = oldSale.Usuario;
+            newSale.Estado = status;
+            newSale.Cliente = customer;
+            newSale.TipoPago = paymentMethod;
+
+            return newSale;
 
         }
 
         public Venta createsNewSale() {
 
-            return new Venta()
-            {
-                IdUsuario = this.data["userId"],
+            Venta newSale = new Venta() {
                 Total = this.data["total"],
                 Subtotal = this.data["subtotal"],
                 Impuesto = this.data["tax"],
@@ -355,11 +361,51 @@ namespace CACMicropresicion.Controller
                 FechaAgrega = this.data["dateAdded"],
                 FechaElimina = this.data["dateDeleted"],
                 Eliminado = this.data["deleted"],
-                IdEstado = this.data["statusId"],
-                IdCliente = this.data["customerId"],
-                IdTipoPago = this.data["paymentMethodId"],
                 FechaVenta = this.data["saleDate"]
             };
+
+            Usuario user = db.Usuario.Find(Convert.ToInt32(data["userId"]));
+            Estado status = db.Estado.Find(Convert.ToInt32(data["statusId"]));
+            Cliente customer = db.Cliente.Find(Convert.ToInt32(data["customerId"]));
+            TipoPago paymentMethod = db.TipoPago.Find(Convert.ToInt32(data["paymentMethodId"]));
+
+            newSale.Usuario = user;
+            newSale.Estado = status;
+            newSale.Cliente = customer;
+            newSale.TipoPago = paymentMethod;
+
+            return newSale;
+
+        }
+
+        public ICollection<DetalleVenta> createNewSaleDetailMod(DataGridViewRowCollection newSaleDetail) {
+
+            short line = 1;
+            this.detailList = new List<DetalleVenta>();
+
+            foreach (DataGridViewRow item in newSaleDetail)
+            {
+
+                DetalleVenta newItem = new DetalleVenta()
+                {
+                    IdVenta = Convert.ToInt32(item.Cells[0].Value),
+                    Renglon = line,
+                    Precio = Convert.ToDecimal(item.Cells[3].Value),
+                    Cantidad = Convert.ToInt32(item.Cells[4].Value)
+                };
+
+                Producto product = db.Producto.Find(Convert.ToInt32(item.Cells[1].Value));
+                newItem.Producto = product;
+                detailList.Add(newItem);
+
+                Bitacora detailItemMod = createLog(Log.Modify, Log.PurchaseDetail, null, newItem.toString());
+                db.Bitacora.Add(detailItemMod);
+
+                line++;
+
+            }
+
+            return detailList;
 
         }
 
@@ -373,13 +419,18 @@ namespace CACMicropresicion.Controller
                 {
                     Renglon = line,
                     Cantidad = Convert.ToInt32(item.Cells[3].Value),
-                    Precio = Convert.ToDecimal(item.Cells[2].Value),
-                    IdProducto = Convert.ToInt32(item.Cells[0].Value)
+                    Precio = Convert.ToDecimal(item.Cells[2].Value)
                 };
+
+                Producto product = db.Producto.Find(Convert.ToInt32(item.Cells[0].Value));
+                newItem.Producto = product;
+
                 this.detailList.Add(newItem);
+
+
                 line++;
 
-                Bitacora newItemLog = this.createLog(Log.Insert, Log.SaleDetail, null, newItem.ToString());
+                Bitacora newItemLog = this.createLog(Log.Insert, Log.SaleDetail, null, newItem.toString());
                 db.Bitacora.Add(newItemLog);
             }
 

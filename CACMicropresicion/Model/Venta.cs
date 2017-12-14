@@ -41,9 +41,13 @@ namespace CACMicropresicion.Model
         public virtual TipoPago TipoPago { get; set; }
         public virtual Usuario Usuario { get; set; }
 
-        public override string ToString()
+        public string toString ()
         {
-            return base.ToString();
+            return "Usuario: " + Usuario.Cedula + ", Total: " + Total + ", Subtotal: " +
+                Subtotal + ", Impuesto: " + Impuesto + ", Descuento: " + Descuento + ", Fecha Agregado: " +
+                FechaAgrega + ", Fecha Eliminado: " + FechaElimina + ", Eliminado: " + Eliminado + ", Estado: " +
+                Estado.Descripcion + ", Cliente: " + Cliente.Descripcion + ", Tipo pago: " + TipoPago.Descripcion + ", Fecha Venta: " +
+                FechaVenta;              
         }
     }
 }

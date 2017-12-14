@@ -172,6 +172,7 @@ namespace CACMicropresicion.Controller
 
                 var query = from material in db.Material
                             join status in db.Estado on material.IdEstado equals status.IdEstado
+
                             where material.Eliminado == 0
                             orderby material.Descripcion
                             select new
@@ -218,6 +219,7 @@ namespace CACMicropresicion.Controller
             {
 
                 var query = from type in db.TipoMaterial
+                            where type.IdEstado == Status.Active
                             where type.Eliminado == 0
                             orderby type.Descripcion
                             select type;
@@ -239,6 +241,7 @@ namespace CACMicropresicion.Controller
             {
 
                 var query = from provider in db.Proveedor
+                            where provider.IdEstado == Status.Active
                             where provider.Eliminado == 0
                             orderby provider.Descripcion
                             select provider;

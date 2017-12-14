@@ -24,9 +24,10 @@ namespace CACMicropresicion.Model
         public virtual Producto Producto { get; set; }
         public virtual Venta Venta { get; set; }
 
-        public override string ToString()
+        public string toString ()
         {
-            return base.ToString();
+            return "Venta: " + IdVenta + ", Renglón: " + Renglon + ", Producto: " + Producto.Descripcion + ", Precio: " +
+                Precio + ", Cantidad: " + Cantidad;
         }
     }
 }

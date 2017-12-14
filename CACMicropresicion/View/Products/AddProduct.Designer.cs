@@ -138,7 +138,9 @@
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(229, 36);
             this.txtPrice.TabIndex = 77;
+            this.txtPrice.Text = "1";
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPrice.OnValueChanged += new System.EventHandler(this.txtPrice_OnValueChanged);
             // 
             // txtStock
             // 
@@ -155,7 +157,9 @@
             this.txtStock.Name = "txtStock";
             this.txtStock.Size = new System.Drawing.Size(235, 36);
             this.txtStock.TabIndex = 78;
+            this.txtStock.Text = "1";
             this.txtStock.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtStock.OnValueChanged += new System.EventHandler(this.txtStock_OnValueChanged);
             // 
             // addBtnProduct
             // 

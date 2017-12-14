@@ -78,5 +78,20 @@ namespace CACMicropresicion.View.Products
             txtStock.Text = "";
 
         }
+
+        private void txtPrice_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txtPrice.Text.Equals(String.Empty)) {
+                txtPrice.Text = "1";
+            }
+        }
+
+        private void txtStock_OnValueChanged(object sender, EventArgs e)
+        {
+            if (txtStock.Text.Equals(String.Empty))
+            {
+                txtStock.Text = "1";
+            }
+        }
     }
 }

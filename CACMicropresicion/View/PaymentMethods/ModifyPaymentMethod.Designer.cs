@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.modBtnSavePaymentChanges = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.modDropPaymentId = new System.Windows.Forms.ComboBox();
-            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblEditClient = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.txtDescription = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.bunifuCustomLabel1 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.cmbStatus = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // modBtnSavePaymentChanges
@@ -71,28 +72,6 @@
             this.modBtnSavePaymentChanges.TextFont = new System.Drawing.Font("Segoe UI Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.modBtnSavePaymentChanges.Click += new System.EventHandler(this.modBtnSavePaymentChanges_Click);
             // 
-            // modDropPaymentId
-            // 
-            this.modDropPaymentId.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.modDropPaymentId.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modDropPaymentId.FormattingEnabled = true;
-            this.modDropPaymentId.Location = new System.Drawing.Point(78, 105);
-            this.modDropPaymentId.Name = "modDropPaymentId";
-            this.modDropPaymentId.Size = new System.Drawing.Size(225, 25);
-            this.modDropPaymentId.TabIndex = 51;
-            this.modDropPaymentId.SelectedIndexChanged += new System.EventHandler(this.modDropPaymentId_SelectedIndexChanged);
-            // 
-            // bunifuCustomLabel1
-            // 
-            this.bunifuCustomLabel1.AutoSize = true;
-            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuCustomLabel1.Location = new System.Drawing.Point(73, 161);
-            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
-            this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
-            this.bunifuCustomLabel1.TabIndex = 50;
-            this.bunifuCustomLabel1.Text = "Descripcion";
-            // 
             // lblEditClient
             // 
             this.lblEditClient.AutoSize = true;
@@ -114,20 +93,53 @@
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI Light", 9.75F);
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtDescription.isPassword = false;
-            this.txtDescription.Location = new System.Drawing.Point(78, 190);
+            this.txtDescription.Location = new System.Drawing.Point(78, 127);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(229, 34);
             this.txtDescription.TabIndex = 53;
             this.txtDescription.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // bunifuCustomLabel1
+            // 
+            this.bunifuCustomLabel1.AutoSize = true;
+            this.bunifuCustomLabel1.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuCustomLabel1.Location = new System.Drawing.Point(73, 98);
+            this.bunifuCustomLabel1.Name = "bunifuCustomLabel1";
+            this.bunifuCustomLabel1.Size = new System.Drawing.Size(104, 25);
+            this.bunifuCustomLabel1.TabIndex = 50;
+            this.bunifuCustomLabel1.Text = "Descripcion";
+            // 
+            // bunifuCustomLabel2
+            // 
+            this.bunifuCustomLabel2.AutoSize = true;
+            this.bunifuCustomLabel2.Font = new System.Drawing.Font("Segoe UI Light", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuCustomLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.bunifuCustomLabel2.Location = new System.Drawing.Point(73, 188);
+            this.bunifuCustomLabel2.Name = "bunifuCustomLabel2";
+            this.bunifuCustomLabel2.Size = new System.Drawing.Size(66, 25);
+            this.bunifuCustomLabel2.TabIndex = 54;
+            this.bunifuCustomLabel2.Text = "Estado";
+            // 
+            // cmbStatus
+            // 
+            this.cmbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStatus.Font = new System.Drawing.Font("Segoe UI Light", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStatus.FormattingEnabled = true;
+            this.cmbStatus.Location = new System.Drawing.Point(78, 216);
+            this.cmbStatus.Name = "cmbStatus";
+            this.cmbStatus.Size = new System.Drawing.Size(225, 25);
+            this.cmbStatus.TabIndex = 60;
+            // 
             // ModifyPaymentMethod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmbStatus);
+            this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.modBtnSavePaymentChanges);
-            this.Controls.Add(this.modDropPaymentId);
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.lblEditClient);
             this.Name = "ModifyPaymentMethod";
@@ -140,9 +152,10 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuFlatButton modBtnSavePaymentChanges;
-        private System.Windows.Forms.ComboBox modDropPaymentId;
-        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
         private Bunifu.Framework.UI.BunifuCustomLabel lblEditClient;
         private Bunifu.Framework.UI.BunifuMetroTextbox txtDescription;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel1;
+        private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel2;
+        private System.Windows.Forms.ComboBox cmbStatus;
     }
 }
