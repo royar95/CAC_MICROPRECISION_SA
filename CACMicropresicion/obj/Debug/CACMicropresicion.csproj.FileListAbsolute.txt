@@ -347,3 +347,6 @@ C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CAC_MICROPRECISION_SA\CAC
 C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.xml
 C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ADC-ROY\Documents\Visual Studio 2017\Projects\CAC_MICROPRECISION_SA\CACMicropresicion\bin\Debug\es\Microsoft.QualityTools.Testing.Fakes.resources.dll
+E:\Code\CAC_MICROPRECISION_SA\dev\CACMicropresicion\bin\Debug\CACMicropresicion.exe.config
+E:\Code\CAC_MICROPRECISION_SA\dev\CACMicropresicion\obj\Debug\CACMicropresicion.exe
+E:\Code\CAC_MICROPRECISION_SA\dev\CACMicropresicion\obj\Debug\CACMicropresicion.pdb
